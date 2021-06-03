@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" id="Definitions_1fbb0e4" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.7.3">
+  <bpmn:process id="Process_0gykinb" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_0pxexm1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_1nc4jp6">
+      <bpmn:incoming>Flow_0bopq8j</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:scriptTask id="Activity_1mb41t9" name="interDepReqs" scriptFormat="groovy" camunda:resultVariable="interDepReqs">
+      <bpmn:incoming>Flow_1r1021t</bpmn:incoming>
+      <bpmn:outgoing>Flow_02wk5dz</bpmn:outgoing>
+      <bpmn:script>[
+    [
+                "name": "egrn",
+                "class": "egrn",
+                "subject": "24:50:0400397:206",
+                "response": [
+                        "extract_about_property_room": [
+                                "recipient_statement": "Семенов Семен Семенович",
+                                "details_statement": [
+                                        "group_top_requisites": [
+                                                "registration_number": "КУВИ-006/2017-463",
+                                                "date_formation": "2017-06-21",
+                                                "organ_registr_rights": "Кольчугинский отдел Управления Росреестра по Владимирской области"
+                                        ]
+                                ],
+                                "room_record": [
+                                        "params": [
+                                                "area": 50.5,
+                                                "purpose": [
+                                                        "code": 206001000000,
+                                                        "value": "Нежилое"
+                                                ]
+                                        ],
+                                        "record_info": [
+                                                "registration_date": "2006-05-04T18:13:51.0"
+                                        ],
+                                        "object": [
+                                                "common_data": [
+                                                        "cad_number": "24:50:0400397:206",
+                                                        "quarter_cad_number": "24:50:0400397",
+                                                        "type": [
+                                                                "code": "002001003000",
+                                                                "value": "Помещение"
+                                                        ]
+                                                ]
+                                        ]
+                                ],
+                                "right_records": [
+                                        "right_record": [
+                                                "right_holders": [
+                                                        "right_holder": [
+                                                                "legal_entity": [
+                                                                        "entity": [
+                                                                                "resident": [
+                                                                                        "ogrn": 1112411001042,
+                                                                                        "name": "Общество с ограниченной ответственностью \"Балтинформ\"",
+                                                                                        "inn": 2411021770,
+                                                                                        "incorporation_form": [
+                                                                                                "code": "1 23 00",
+                                                                                                "value": "Общества с ограниченной ответственностью"
+                                                                                        ]
+                                                                                ]
+                                                                        ]
+                                                                ]
+                                                        ]
+                                                ],
+                                                "record_info": [
+                                                        "registration_date": "2006-05-04T18:13:51.0"
+                                                ],
+                                                "right_data": [
+                                                        "shares": [
+                                                                "share": [
+                                                                        "numerator": 2,
+                                                                        "denominator": 3
+                                                                ]
+                                                        ],
+                                                        "code": "001001000000",
+                                                        "reinstatement": [
+                                                                "prev_registration_date": "2006-05-04T18:13:51.0"
+                                                        ],
+                                                        "share_description": "share_description0",
+                                                        "value": "Собственность",
+                                                        "right_number": "24-24/001-24/001/001/2015-6576/1"
+                                                ]
+                                        ]
+                                ],
+                                "status": "success"
+                        ]
+                ]
+
+        ]
+]</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_0pxexm1" sourceRef="StartEvent_1" targetRef="Activity_0vosv28" />
+    <bpmn:exclusiveGateway id="Gateway_13kermt">
+      <bpmn:incoming>Flow_037bxwa</bpmn:incoming>
+      <bpmn:incoming>Flow_162n0ls</bpmn:incoming>
+      <bpmn:outgoing>Flow_0r79zog</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="Gateway_17jkp9g" default="Flow_1fomkf1">
+      <bpmn:incoming>Flow_02wk5dz</bpmn:incoming>
+      <bpmn:outgoing>Flow_037bxwa</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1fomkf1</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:scriptTask id="Activity_19khjm1" name="Получить сведения о EGRN" scriptFormat="groovy" camunda:resultVariable="EGRNMZ">
+      <bpmn:extensionElements>
+        <camunda:executionListener event="start">
+          <camunda:script scriptFormat="groovy">println "DATA PREPARE....FILTER PP MZ"</camunda:script>
+        </camunda:executionListener>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="certId">${0}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1fomkf1</bpmn:incoming>
+      <bpmn:outgoing>Flow_18inmvi</bpmn:outgoing>
+      <bpmn:script>def result = []
+
+interDepReqs.each { 
+  if (it.class == "egrn") {
+    result &lt;&lt; it
+  }
+}
+
+return result[0].response</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_18inmvi" sourceRef="Activity_19khjm1" targetRef="Activity_10pdx3g" />
+    <bpmn:sequenceFlow id="Flow_037bxwa" name="interDepReqs == null" sourceRef="Gateway_17jkp9g" targetRef="Gateway_13kermt">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${interDepReqs == null}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1fomkf1" sourceRef="Gateway_17jkp9g" targetRef="Activity_19khjm1" />
+    <bpmn:sequenceFlow id="Flow_02wk5dz" sourceRef="Activity_1mb41t9" targetRef="Gateway_17jkp9g" />
+    <bpmn:sequenceFlow id="Flow_0r79zog" sourceRef="Gateway_13kermt" targetRef="Activity_1uh8qdr" />
+    <bpmn:sequenceFlow id="Flow_0bopq8j" sourceRef="Activity_0xhbh1q" targetRef="Event_1nc4jp6" />
+    <bpmn:userTask id="Activity_0xhbh1q">
+      <bpmn:incoming>Flow_0tceqaz</bpmn:incoming>
+      <bpmn:outgoing>Flow_0bopq8j</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_162n0ls" sourceRef="Activity_10pdx3g" targetRef="Gateway_13kermt" />
+    <bpmn:scriptTask id="Activity_10pdx3g" name="Определить&#10;Extract type" scriptFormat="groovy" camunda:resultVariable="EGRNMZ">
+      <bpmn:incoming>Flow_18inmvi</bpmn:incoming>
+      <bpmn:outgoing>Flow_162n0ls</bpmn:outgoing>
+      <bpmn:script>def mz = execution.getVariable("EGRNMZ")
+
+if (mz.isEmpty()) {
+    return [:];
+} else if (mz.containsKey('extract_about_property_room')) {
+   return mz.extract_about_property_room;
+} else if (mz.containsKey('extract_base_params_room')) {
+    return mz.extract_base_params_room;
+};</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:scriptTask id="Activity_1ezeta1" scriptFormat="groovy" camunda:resultVariable="DataIsEGRNApproved">
+      <bpmn:incoming>Flow_01cf0vn</bpmn:incoming>
+      <bpmn:outgoing>Flow_05o2x9u</bpmn:outgoing>
+      <bpmn:script>def mz = execution.getVariable("EGRNMZ")?.room_record?.object?.common_data?.cad_number
+
+if (mz == null) {
+  return false
+}  
+
+
+execution.getVariable("application")?.statement?.premisesData?.premisesCadastralNumberBlock?.premisesCadastralNumber?.toString().equalsIgnoreCase(execution.getVariable("EGRNMZ")?.room_record?.object?.common_data?.cad_number as String)</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:task id="Activity_1uh8qdr" name="Подготовка проверки кадастрового номера">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="DataIsEGRNApproved">${false}</camunda:outputParameter>
+          <camunda:outputParameter name="roomAddress">${""}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0r79zog</bpmn:incoming>
+      <bpmn:outgoing>Flow_01cf0vn</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_01cf0vn" sourceRef="Activity_1uh8qdr" targetRef="Activity_1ezeta1" />
+    <bpmn:task id="Activity_0vosv28" name="application">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="application">
+            <camunda:script scriptFormat="groovy">def EGRNMZ = [
+        extract_about_property_room: [
+                room_record: [
+                        object: [
+                                common_data: [
+                                        cad_number:
+                                                '11.22.33.44'
+
+                                ]
+                        ]
+                ]
+        ]
+]
+
+
+//.extract_about_property_room?.room_record?.object?.common_data?.cad_number?.toString()
+//def mz = execution.getVariable("EGRNMZ")?.extract_about_property_room
+//def result = false
+
+
+mz = EGRNMZ
+//def mz = execution.getVariable("EGRNMZ")
+
+if (mz.isEmpty()) {
+    return false;
+};
+
+def result = false
+//def cad_num = application?.statement?.premisesData?.premisesCadastralNumberBlock?.premisesCadastralNumber;
+def cad_num = '11.22.33.44';
+
+
+if (mz.containsKey('extract_about_property_room')) {
+    mz = mz.extract_about_property_room;
+} else if (mz.containsKey('extract_base_params_room')) {
+    mz = mz.extract_base_params_room;
+};
+
+println cad_num?.equalsIgnoreCase(mz?.room_record?.object?.common_data?.cad_number?.toString())
+
+
+//?.room_record?.object?.common_data?.cad_number?.toString()
+
+
+[
+        common   : [
+                userType: "EMPLOYEE"
+        ],
+        applicant: [
+                ogrn: "1112411001042",
+                inn : "2411021770"
+        ],
+        statement: [
+                premisesData : [
+                        premisesCadastralNumberBlock: [
+                                premisesCadastralNumber: "24:50:0400397:206"
+                        ]
+                ],
+                variantChoice: [
+                        kpOa03: 1
+                ],
+        ]
+]</camunda:script>
+          </camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0pxexm1</bpmn:incoming>
+      <bpmn:outgoing>Flow_1r1021t</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1r1021t" sourceRef="Activity_0vosv28" targetRef="Activity_1mb41t9" />
+    <bpmn:exclusiveGateway id="Gateway_0kcefmd">
+      <bpmn:incoming>Flow_1dmnoco</bpmn:incoming>
+      <bpmn:outgoing>Flow_0fcrwkn</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1wx9bjr</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0lv88yk</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="Activity_0fgt6dr" name="Проверить&#10;ЕГРН&#10;ИП">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="DocNameIsEqual">
+            <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.documents[0]?.name?.equalsIgnoreCase(execution.getVariable("EGRNMZ")?.right_records?.right_record?.right_holders?.right_holder?.individual?.identity_doc?.document_name?.toString())</camunda:script>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="DocSeriesIsEqual">
+            <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.documents[0]?.series?.equalsIgnoreCase(execution.getVariable("EGRNMZ")?.right_records?.right_record?.right_holders?.right_holder?.individual?.identity_doc?.document_series?.toString())</camunda:script>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="DocNumberIsEqual">
+            <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.documents[0]?.number?.equalsIgnoreCase(execution.getVariable("EGRNMZ")?.right_records?.right_record?.right_holders?.right_holder?.individual?.identity_doc?.document_number?.toString())</camunda:script>
+          </camunda:inputParameter>
+          <camunda:outputParameter name="DataIsEGRNApprovedOwner">${DocNameIsEqual &amp;&amp; DocSeriesIsEqual &amp;&amp; DocNumberIsEqual}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0zp6x4s</bpmn:incoming>
+      <bpmn:outgoing>Flow_1xnwiof</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_1ne3dei" name="Проверить&#10;ЕГРН&#10;ЮЛ">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="OGRNIsEqual">
+            <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.ogrn?.equalsIgnoreCase(execution.getVariable("EGRNMZ")?.right_records?.right_record?.right_holders?.right_holder?.legal_entity?.entity?.resident?.ogrn?.toString())</camunda:script>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="InnIsEqual">
+            <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.inn?.equalsIgnoreCase(execution.getVariable("EGRNMZ")?.right_records?.right_record?.right_holders?.right_holder?.legal_entity?.entity?.resident?.inn?.toString())</camunda:script>
+          </camunda:inputParameter>
+          <camunda:outputParameter name="DataIsEGRNApprovedOwner">${OGRNIsEqual &amp;&amp; InnIsEqual}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0izlmsd</bpmn:incoming>
+      <bpmn:outgoing>Flow_13a68wj</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_1ftjfsx" name="Проверить&#10;ЕГРН&#10;ФЛ">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="FirstNameIsEqual">
+            <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.firstName?.equalsIgnoreCase(execution.getVariable("EGRNMZ")?.right_records?.right_record?.right_holders?.right_holder?.individual?.name?.toString())</camunda:script>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="LastNameIsEqual">
+            <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.lastName?.equalsIgnoreCase(execution.getVariable("EGRNMZ")?.right_records?.right_record?.right_holders?.right_holder?.individual?.surname?.toString())</camunda:script>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="MiddleNameIsEqual">
+            <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.middleName?.equalsIgnoreCase(execution.getVariable("EGRNMZ")?.right_records?.right_record?.right_holders?.right_holder?.individual?.patronymic?.toString())</camunda:script>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="DocNameIsEqual">
+            <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.documents[0]?.name?.equalsIgnoreCase(execution.getVariable("EGRNMZ")?.right_records?.right_record?.right_holders?.right_holder?.individual?.identity_doc?.document_name?.toString())</camunda:script>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="DocSeriesIsEqual">
+            <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.documents[0]?.series?.equalsIgnoreCase(execution.getVariable("EGRNMZ")?.right_records?.right_record?.right_holders?.right_holder?.individual?.identity_doc?.document_series?.toString())</camunda:script>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="DocNumberIsEqual">
+            <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.documents[0]?.number?.equalsIgnoreCase(execution.getVariable("EGRNMZ")?.right_records?.right_record?.right_holders?.right_holder?.individual?.identity_doc?.document_number?.toString())</camunda:script>
+          </camunda:inputParameter>
+          <camunda:outputParameter name="DataIsEGRNApprovedOwner">${FirstNameIsEqual &amp;&amp; LastNameIsEqual &amp;&amp; MiddleNameIsEqual &amp;&amp; DocNameIsEqual &amp;&amp; DocSeriesIsEqual &amp;&amp; DocNumberIsEqual}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0xgbf0y</bpmn:incoming>
+      <bpmn:outgoing>Flow_0zzlv40</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_0vy644n">
+      <bpmn:incoming>Flow_1xnwiof</bpmn:incoming>
+      <bpmn:incoming>Flow_13a68wj</bpmn:incoming>
+      <bpmn:incoming>Flow_0zzlv40</bpmn:incoming>
+      <bpmn:incoming>Flow_13bgopo</bpmn:incoming>
+      <bpmn:incoming>Flow_070g8bq</bpmn:incoming>
+      <bpmn:incoming>Flow_0zgzfmn</bpmn:incoming>
+      <bpmn:outgoing>Flow_05g219x</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="Gateway_1partws" default="Flow_0xgbf0y">
+      <bpmn:incoming>Flow_0fcrwkn</bpmn:incoming>
+      <bpmn:outgoing>Flow_0xgbf0y</bpmn:outgoing>
+      <bpmn:outgoing>Flow_13bgopo</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="Gateway_1p98feu" default="Flow_0izlmsd">
+      <bpmn:incoming>Flow_1wx9bjr</bpmn:incoming>
+      <bpmn:outgoing>Flow_0izlmsd</bpmn:outgoing>
+      <bpmn:outgoing>Flow_070g8bq</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="Gateway_0m45k3r" default="Flow_0zp6x4s">
+      <bpmn:incoming>Flow_0lv88yk</bpmn:incoming>
+      <bpmn:outgoing>Flow_0zp6x4s</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0zgzfmn</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="Activity_1wwpy33" name="Подготовка проверки ЕГРН номера">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="DataIsEGRNApprovedOwner">${false}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0uge3yw</bpmn:incoming>
+      <bpmn:outgoing>Flow_1dmnoco</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_09ovxmx" default="Flow_0q38vil">
+      <bpmn:incoming>Flow_05o2x9u</bpmn:incoming>
+      <bpmn:outgoing>Flow_0uge3yw</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0q38vil</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="Gateway_18ais94">
+      <bpmn:incoming>Flow_05g219x</bpmn:incoming>
+      <bpmn:incoming>Flow_1i3m8e2</bpmn:incoming>
+      <bpmn:outgoing>Flow_1b2upil</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1dmnoco" sourceRef="Activity_1wwpy33" targetRef="Gateway_0kcefmd" />
+    <bpmn:sequenceFlow id="Flow_0fcrwkn" name="Физическое лицо" sourceRef="Gateway_0kcefmd" targetRef="Gateway_1partws">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${application.common.userType == "PERSON_RF"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1wx9bjr" name="Юридическое лицо" sourceRef="Gateway_0kcefmd" targetRef="Gateway_1p98feu">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${application.common.userType == "EMPLOYEE"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0lv88yk" name="Индивидуальный предприниматель" sourceRef="Gateway_0kcefmd" targetRef="Gateway_0m45k3r">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${application.common.userType == "BUSINESSMAN"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0zp6x4s" sourceRef="Gateway_0m45k3r" targetRef="Activity_0fgt6dr" />
+    <bpmn:sequenceFlow id="Flow_1xnwiof" sourceRef="Activity_0fgt6dr" targetRef="Gateway_0vy644n" />
+    <bpmn:sequenceFlow id="Flow_0izlmsd" sourceRef="Gateway_1p98feu" targetRef="Activity_1ne3dei" />
+    <bpmn:sequenceFlow id="Flow_13a68wj" sourceRef="Activity_1ne3dei" targetRef="Gateway_0vy644n" />
+    <bpmn:sequenceFlow id="Flow_0xgbf0y" sourceRef="Gateway_1partws" targetRef="Activity_1ftjfsx" />
+    <bpmn:sequenceFlow id="Flow_0zzlv40" sourceRef="Activity_1ftjfsx" targetRef="Gateway_0vy644n" />
+    <bpmn:sequenceFlow id="Flow_13bgopo" sourceRef="Gateway_1partws" targetRef="Gateway_0vy644n">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" language="groovy">execution.getVariable("EGRNMZ")?.right_records?.right_record?.right_holders?.right_holder?.individual == null</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_070g8bq" sourceRef="Gateway_1p98feu" targetRef="Gateway_0vy644n">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" language="groovy">execution.getVariable("EGRNMZ")?.right_records?.right_record?.right_holders?.right_holder?.legal_entity?.entity?.resident == null</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0zgzfmn" sourceRef="Gateway_0m45k3r" targetRef="Gateway_0vy644n">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" language="groovy">execution.getVariable("EGRNMZ")?.right_records?.right_record?.right_holders?.right_holder?.individual == null</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_05g219x" sourceRef="Gateway_0vy644n" targetRef="Gateway_18ais94" />
+    <bpmn:sequenceFlow id="Flow_0uge3yw" name="kpOa03 == 1" sourceRef="Gateway_09ovxmx" targetRef="Activity_1wwpy33">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${application.statement.variantChoice.kpOa03 == 1}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0q38vil" sourceRef="Gateway_09ovxmx" targetRef="Activity_00vz791" />
+    <bpmn:sequenceFlow id="Flow_05o2x9u" sourceRef="Activity_1ezeta1" targetRef="Gateway_09ovxmx" />
+    <bpmn:sequenceFlow id="Flow_1b2upil" sourceRef="Gateway_18ais94" targetRef="Activity_0p6ihot" />
+    <bpmn:task id="Activity_00vz791">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="kp">${2}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0q38vil</bpmn:incoming>
+      <bpmn:outgoing>Flow_1i3m8e2</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1i3m8e2" sourceRef="Activity_00vz791" targetRef="Gateway_18ais94" />
+    <bpmn:sequenceFlow id="Flow_0tceqaz" sourceRef="Activity_0p6ihot" targetRef="Activity_0xhbh1q" />
+    <bpmn:task id="Activity_0p6ihot" name="custom roomAddress">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="roomAddress">
+            <camunda:script scriptFormat="groovy">execution.getVariable("EGRNMZ")?.room_record?.address_room?.address?.address?.readable_address</camunda:script>
+          </camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1b2upil</bpmn:incoming>
+      <bpmn:outgoing>Flow_0tceqaz</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_00r92tr" name="Подготовка&#10;данных &#10;заявителя">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="document">
+            <camunda:map>
+              <camunda:entry key="number">${application.applicant.documents[0].number}</camunda:entry>
+              <camunda:entry key="series">${application.applicant.documents[0].series}</camunda:entry>
+              <camunda:entry key="date">${application.applicant.documents[0].date}</camunda:entry>
+              <camunda:entry key="issuer">${application.applicant.documents[0].issuer}</camunda:entry>
+              <camunda:entry key="type">${application.applicant.documents[0].type}</camunda:entry>
+            </camunda:map>
+          </camunda:inputParameter>
+          <camunda:outputParameter name="applicant">
+            <camunda:map>
+              <camunda:entry key="firstname">${application.applicant.firstName}</camunda:entry>
+              <camunda:entry key="lastname">${application.applicant.lastName}</camunda:entry>
+              <camunda:entry key="middlename">${application.applicant.middleName}</camunda:entry>
+              <camunda:entry key="dateBirth">${application.applicant.dateBirth}</camunda:entry>
+              <camunda:entry key="snils">${application.applicant.snils}</camunda:entry>
+              <camunda:entry key="document">${application.documents[0]}</camunda:entry>
+            </camunda:map>
+          </camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+    </bpmn:task>
+    <bpmn:group id="Group_07c4u9q" categoryValueRef="CategoryValue_0x3dxlw" />
+  </bpmn:process>
+  <bpmn:category id="Category_0bcw8gh">
+    <bpmn:categoryValue id="CategoryValue_0x3dxlw" />
+  </bpmn:category>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_0gykinb">
+      <bpmndi:BPMNEdge id="Flow_0pxexm1_di" bpmnElement="Flow_0pxexm1">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="280" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_18inmvi_di" bpmnElement="Flow_18inmvi">
+        <di:waypoint x="832" y="117" />
+        <di:waypoint x="880" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_037bxwa_di" bpmnElement="Flow_037bxwa">
+        <di:waypoint x="662" y="142" />
+        <di:waypoint x="662" y="177" />
+        <di:waypoint x="1050" y="177" />
+        <di:waypoint x="1050" y="142" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="800" y="163" width="84" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1fomkf1_di" bpmnElement="Flow_1fomkf1">
+        <di:waypoint x="687" y="117" />
+        <di:waypoint x="732" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_02wk5dz_di" bpmnElement="Flow_02wk5dz">
+        <di:waypoint x="600" y="117" />
+        <di:waypoint x="637" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0r79zog_di" bpmnElement="Flow_0r79zog">
+        <di:waypoint x="1075" y="117" />
+        <di:waypoint x="1100" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0bopq8j_di" bpmnElement="Flow_0bopq8j">
+        <di:waypoint x="2940" y="117" />
+        <di:waypoint x="2962" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_162n0ls_di" bpmnElement="Flow_162n0ls">
+        <di:waypoint x="980" y="117" />
+        <di:waypoint x="1025" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01cf0vn_di" bpmnElement="Flow_01cf0vn">
+        <di:waypoint x="1200" y="117" />
+        <di:waypoint x="1240" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1r1021t_di" bpmnElement="Flow_1r1021t">
+        <di:waypoint x="380" y="117" />
+        <di:waypoint x="500" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1dmnoco_di" bpmnElement="Flow_1dmnoco">
+        <di:waypoint x="1700" y="117" />
+        <di:waypoint x="1755" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0fcrwkn_di" bpmnElement="Flow_0fcrwkn">
+        <di:waypoint x="1805" y="117" />
+        <di:waypoint x="1925" y="117" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1808" y="99" width="89" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1wx9bjr_di" bpmnElement="Flow_1wx9bjr">
+        <di:waypoint x="1780" y="142" />
+        <di:waypoint x="1780" y="243" />
+        <di:waypoint x="1925" y="243" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1804" y="229" width="71" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0lv88yk_di" bpmnElement="Flow_0lv88yk">
+        <di:waypoint x="1780" y="142" />
+        <di:waypoint x="1780" y="372" />
+        <di:waypoint x="1925" y="372" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1795" y="357" width="89" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0zp6x4s_di" bpmnElement="Flow_0zp6x4s">
+        <di:waypoint x="1975" y="372" />
+        <di:waypoint x="2056" y="372" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1xnwiof_di" bpmnElement="Flow_1xnwiof">
+        <di:waypoint x="2156" y="372" />
+        <di:waypoint x="2260" y="372" />
+        <di:waypoint x="2260" y="142" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0izlmsd_di" bpmnElement="Flow_0izlmsd">
+        <di:waypoint x="1975" y="243" />
+        <di:waypoint x="2056" y="243" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13a68wj_di" bpmnElement="Flow_13a68wj">
+        <di:waypoint x="2156" y="243" />
+        <di:waypoint x="2260" y="243" />
+        <di:waypoint x="2260" y="142" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0xgbf0y_di" bpmnElement="Flow_0xgbf0y">
+        <di:waypoint x="1975" y="117" />
+        <di:waypoint x="2056" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0zzlv40_di" bpmnElement="Flow_0zzlv40">
+        <di:waypoint x="2156" y="117" />
+        <di:waypoint x="2235" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13bgopo_di" bpmnElement="Flow_13bgopo">
+        <di:waypoint x="1950" y="142" />
+        <di:waypoint x="1950" y="187" />
+        <di:waypoint x="2260" y="187" />
+        <di:waypoint x="2260" y="142" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_070g8bq_di" bpmnElement="Flow_070g8bq">
+        <di:waypoint x="1950" y="268" />
+        <di:waypoint x="1950" y="307" />
+        <di:waypoint x="2260" y="307" />
+        <di:waypoint x="2260" y="142" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0zgzfmn_di" bpmnElement="Flow_0zgzfmn">
+        <di:waypoint x="1950" y="397" />
+        <di:waypoint x="1950" y="437" />
+        <di:waypoint x="2260" y="437" />
+        <di:waypoint x="2260" y="142" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05g219x_di" bpmnElement="Flow_05g219x">
+        <di:waypoint x="2285" y="117" />
+        <di:waypoint x="2465" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0uge3yw_di" bpmnElement="Flow_0uge3yw">
+        <di:waypoint x="1475" y="117" />
+        <di:waypoint x="1600" y="117" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1506" y="99" width="64" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0q38vil_di" bpmnElement="Flow_0q38vil">
+        <di:waypoint x="1450" y="142" />
+        <di:waypoint x="1450" y="467" />
+        <di:waypoint x="1600" y="467" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05o2x9u_di" bpmnElement="Flow_05o2x9u">
+        <di:waypoint x="1340" y="117" />
+        <di:waypoint x="1425" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1b2upil_di" bpmnElement="Flow_1b2upil">
+        <di:waypoint x="2515" y="117" />
+        <di:waypoint x="2640" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1i3m8e2_di" bpmnElement="Flow_1i3m8e2">
+        <di:waypoint x="1700" y="467" />
+        <di:waypoint x="2490" y="467" />
+        <di:waypoint x="2490" y="142" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0tceqaz_di" bpmnElement="Flow_0tceqaz">
+        <di:waypoint x="2740" y="117" />
+        <di:waypoint x="2840" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1fxg93c_di" bpmnElement="Activity_1mb41t9">
+        <dc:Bounds x="500" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_17jkp9g_di" bpmnElement="Gateway_17jkp9g" isMarkerVisible="true">
+        <dc:Bounds x="637" y="92" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_19khjm1_di" bpmnElement="Activity_19khjm1" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="732" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_13kermt_di" bpmnElement="Gateway_13kermt" isMarkerVisible="true">
+        <dc:Bounds x="1025" y="92" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0bzuvdt_di" bpmnElement="Activity_10pdx3g" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="880" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1uh8qdr_di" bpmnElement="Activity_1uh8qdr">
+        <dc:Bounds x="1100" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1ezeta1_di" bpmnElement="Activity_1ezeta1" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="1240" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0vosv28_di" bpmnElement="Activity_0vosv28">
+        <dc:Bounds x="280" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1nc4jp6_di" bpmnElement="Event_1nc4jp6">
+        <dc:Bounds x="2962" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_072a16f_di" bpmnElement="Activity_0xhbh1q">
+        <dc:Bounds x="2840" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0kcefmd_di" bpmnElement="Gateway_0kcefmd" isMarkerVisible="true">
+        <dc:Bounds x="1755" y="92" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0fgt6dr_di" bpmnElement="Activity_0fgt6dr" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="2056" y="332" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1ne3dei_di" bpmnElement="Activity_1ne3dei" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="2056" y="203" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1ftjfsx_di" bpmnElement="Activity_1ftjfsx" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="2056" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0vy644n_di" bpmnElement="Gateway_0vy644n" isMarkerVisible="true">
+        <dc:Bounds x="2235" y="92" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1partws_di" bpmnElement="Gateway_1partws" isMarkerVisible="true">
+        <dc:Bounds x="1925" y="92" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1p98feu_di" bpmnElement="Gateway_1p98feu" isMarkerVisible="true">
+        <dc:Bounds x="1925" y="218" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0m45k3r_di" bpmnElement="Gateway_0m45k3r" isMarkerVisible="true">
+        <dc:Bounds x="1925" y="347" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1wwpy33_di" bpmnElement="Activity_1wwpy33">
+        <dc:Bounds x="1600" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_09ovxmx_di" bpmnElement="Gateway_09ovxmx" isMarkerVisible="true">
+        <dc:Bounds x="1425" y="92" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_18ais94_di" bpmnElement="Gateway_18ais94" isMarkerVisible="true">
+        <dc:Bounds x="2465" y="92" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_00vz791_di" bpmnElement="Activity_00vz791">
+        <dc:Bounds x="1600" y="427" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1h5mue8_di" bpmnElement="Activity_0p6ihot" bioc:stroke="rgb(251, 140, 0)" bioc:fill="rgb(255, 224, 178)">
+        <dc:Bounds x="2640" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_00r92tr_di" bpmnElement="Activity_00r92tr">
+        <dc:Bounds x="810" y="710" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Group_07c4u9q_di" bpmnElement="Group_07c4u9q">
+        <dc:Bounds x="1410" y="47" width="1120" height="440" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

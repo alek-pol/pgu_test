@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" id="Definitions_1xcl9pc" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.7.3">
+  <bpmn:process id="Process_1t44wcm" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_05ibr09</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_16j9014">
+      <bpmn:incoming>Flow_0ozvee1</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:task id="Activity_1bjpvux" name="AGS&#10;MOCK">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="AGS2">
+            <camunda:script scriptFormat="groovy">[
+        "response": [
+                "SvedRegZaklBrak" : [
+                        "params": [
+                                [
+                                        "FamiliyaPosle"                : "Иванов",
+                                        "Imya"                         : "Valdemar"
+                                ],
+                                [
+                                        "DataNachStatus"               : "2015-09-16",
+                                        "AdrRFTekst"                   : "Россия, Оренбургская область, Сакмарский район, с. Степные Огни",
+                                        "DataZapis"                    : "2015-09-16",
+                                        "NaimZAGS"                     : "Администрация Верхнечебеньковского сельсовета Сакмарского района Оренбургской области",
+                                        "SuprugaImya"                  : "Мария",
+                                        "AdrMZHRFAdrKLADRKodRegion"    : 56,
+                                        "KodZAGS"                      : "R5600332",
+                                        "KodRegion"                    : 56,
+                                        "NaimRegion"                   : "Нет данных",
+                                        "NomerZapis"                   : "120159560033200004002",
+                                        "DataZaklBrak"                 : "2015-09-16",
+                                        "PrizSved"                     : 1,
+                                        "MestoRozhdenNaimStrany"       : "Российская федерация",
+                                        "FamiliyaPosle"                : "Иванов",
+                                        "Imya"                         : "Иван",
+                                        "SuprugaAdrMZHRFAdrRFTekst"    : "Россия, Оренбургская область, Сакмарский район, с. Нижние Чебеньки, пер. Тупой",
+                                        "AdrMZHRFAdrKLADRNaimRegion"   : "Нет данных",
+                                        "SuprugaMestoRozhdenNaimStrany": "Российская федерация",
+                                        "SuprugaMestoRozhdenMestoTekst": "Россия, Оренбургская область, г. Орск",
+                                        "SuprugaNaimStrany"            : "Россия",
+                                        "DataVydSvidet"                : "2015-09-16",
+                                        "SuprugaFamiliyaPosle"         : "Иванова",
+                                        "KodStatus"                    : "01",
+                                        "SeriyaSvidet"                 : "I-РА",
+                                        "Otchestvo"                    : "Иванович",
+                                        "FamiliyaDo"                   : "Иванов",
+                                        "SuprugaOtchestvo"             : "Тестовна",
+                                        "SuprugaDataRozhd"             : "1994-07-25",
+                                        "NaimStrany"                   : "Россия",
+                                        "NaimStatus"                   : "Запись акта первичная",
+                                        "SuprugaFamiliyaDo"            : "Иванова",
+                                        "MestoTekst"                   : "Оренбургская область, Сакмарский район, с. Верхние Чебеньки",
+                                        "NomerSvidet"                  : 758428,
+                                        "DataRozhd"                    : "1992-10-08"
+                                ]
+                        ]
+                ],
+                "IdZapros"        : "32f5da95-9eb7-46d2-b5da-959eb756d255",
+                "RezObrab"        : 1,
+                "TipZapros"       : 2,
+                "NomerZapisZapros": "a",
+                "DataSved"        : "2018-08-13",
+                "KodStatus"       : "01",
+                "messageId"       : "ca0fdd43-721c-11eb-bceb-8d5b4aac823a"
+        ]
+]</camunda:script>
+          </camunda:outputParameter>
+          <camunda:outputParameter name="AGS3">
+            <camunda:script scriptFormat="groovy">[
+        "response": [
+                "SvedRegRstrzhBrak": [
+                        "params": [
+                                [
+                                        "FamiliyaPosle": "Иванов",
+                                        "Imya"         : "test"
+                                ],
+                                [
+                                        "DataNachStatus"            : "2006-04-25",
+                                        "AdrRFTekst"                : "Оренбургская область, город Гай",
+                                        "DataZapis"                 : "1993-12-22",
+                                        "NaimZAGS"                  : "Отдел ЗАГС администрации города Гая Оренбургской области",
+                                        "SuprugaImya"               : "Мария",
+                                        "DataPrekrBrak"             : "1993-12-22",
+                                        "AdrMZHRFAdrKLADRKodRegion" : 56,
+                                        "KodZAGS"                   : "R5600460",
+                                        "KodRegion"                 : 56,
+                                        "NaimRegion"                : "Нет данных",
+                                        "NomerZapis"                : "139939560046000224004",
+                                        "PrizSved"                  : 2,
+                                        "FamiliyaPosle"             : "Иванов",
+                                        "Imya"                      : "Иван",
+                                        "SuprugaAdrMZHRFAdrRFTekst" : "Оренбургская область Россия, город Гай, Ленина улица",
+                                        "AdrMZHRFAdrKLADRNaimRegion": "Нет данных",
+                                        "SuprugaNaimStrany"         : "Россия",
+                                        "SuprugaFamiliyaPosle"      : "Иванова",
+                                        "KodStatus"                 : "01",
+                                        "Otchestvo"                 : "Иванович",
+                                        "FamiliyaDo"                : "Иванов",
+                                        "SuprugaOtchestvo"          : "Тестовна",
+                                        "SuprugaDataRozhd"          : "1994-07-25",
+                                        "NaimStatus"                : "Запись акта первичная",
+                                        "SuprugaFamiliyaDo"         : "Иванова",
+                                        "DataRozhd"                 : "1992-10-08"
+                                ]
+                        ]
+                ],
+                "IdZapros"         : "32f5da95-9eb7-46d2-b5da-959eb756d255",
+                "RezObrab"         : 1,
+                "TipZapros"        : 2,
+                "NomerZapisZapros" : "a",
+                "DataSved"         : "2018-08-13",
+                "KodStatus"        : "01",
+                "messageId"        : "4be43650-721c-11eb-bceb-1f648e43dfd1"
+        ]
+]</camunda:script>
+          </camunda:outputParameter>
+          <camunda:outputParameter name="AGS6">
+            <camunda:script scriptFormat="groovy">[
+        "response": [
+                "SvedRegPerImya": [
+                        "params": [
+                                [
+                                        "DataNachStatus"   : "1980-01-01",
+                                        "AdrRFTekst"       : "Российская Федерация, край Хабаровский, г Хабаровск, ул Ленина, д.1, кв.1,",
+                                        "Ulica"            : "ул Ленина",
+                                        "DataZapis"        : "1980-01-01",
+                                        "OKSM"             : 643,
+                                        "DataVydSvidet"    : "1980-01-01",
+                                        "Kvart"            : 1,
+                                        "KodStatus"        : "01",
+                                        "Dom"              : 1,
+                                        "NaimZAGS"         : "Отдел ЗАГС Первого района администрации города Хабаровска",
+                                        "SeriyaSvidet"     : "I-ДВ",
+                                        "Familiya"         : "Иванова",
+                                        "Otchestvo"        : "Ивановна",
+                                        "FIOPosleOtchestvo": "Ивановна",
+                                        "KodZAGS"          : "R2700000",
+                                        "KodRegion"        : 27,
+                                        "NaimRegion"       : "край Хабаровский",
+                                        "NomerZapis"       : "a",
+                                        "NaimStrany"       : "Российская Федерация",
+                                        "FIOPosleFamiliya" : "Петрова",
+                                        "NaimStatus"       : "Запись акта первичная",
+                                        "Imya"             : "Иванна",
+                                        "FIOPosleImya"     : "Иванна",
+                                        "MestoTekst"       : "край Хабаровский, г Хабаровск",
+                                        "AdrKLADRGorod"    : "г Хабаровск",
+                                        "NomerSvidet"      : "000000",
+                                        "DataRozhd"        : "1980-01-01"
+                                ]
+                        ]
+                ],
+                "IdZapros"      : "32f5da95-9eb7-46d2-b5da-959eb756d249",
+                "RezObrab"      : 1,
+                "TipZapros"     : 2,
+                "TipAGSZapros"  : 6,
+                "DataSved"      : "2020-07-04",
+                "KodStatus"     : "01",
+                "messageId"     : "42c2c276-721d-11eb-bceb-395ff0ab5e69"
+        ]
+]</camunda:script>
+          </camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0hxzadp</bpmn:incoming>
+      <bpmn:outgoing>Flow_1behwsh</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_05ibr09" sourceRef="StartEvent_1" targetRef="Activity_0x46z78" />
+    <bpmn:sequenceFlow id="Flow_1behwsh" sourceRef="Activity_1bjpvux" targetRef="Activity_1lgupd1" />
+    <bpmn:sequenceFlow id="Flow_0ozvee1" sourceRef="Activity_04cqc8u" targetRef="Event_16j9014" />
+    <bpmn:userTask id="Activity_04cqc8u">
+      <bpmn:incoming>Flow_1048m0h</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ozvee1</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:scriptTask id="Activity_1lgupd1" name="Type" scriptFormat="groovy" camunda:resultVariable="type">
+      <bpmn:incoming>Flow_1behwsh</bpmn:incoming>
+      <bpmn:outgoing>Flow_0cuuc3n</bpmn:outgoing>
+      <bpmn:script>// 2 3 6
+6</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_05e446p" sourceRef="Activity_0oozis2" targetRef="Activity_14id5mo" />
+    <bpmn:scriptTask id="Activity_0oozis2" name="TAKE&#10;MZ" scriptFormat="groovy" camunda:resultVariable="MZZAGS">
+      <bpmn:incoming>Flow_1uh5l4u</bpmn:incoming>
+      <bpmn:outgoing>Flow_05e446p</bpmn:outgoing>
+      <bpmn:script>switch (type) {
+    case 2:
+        return AGS2
+    case 3:
+        return AGS3
+    case 6:
+        return AGS6
+};</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:task id="Activity_14id5mo" name="Under&#10;Response">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="MZZAGS">${MZZAGS.response}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_05e446p</bpmn:incoming>
+      <bpmn:outgoing>Flow_0y46xng</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0y46xng" sourceRef="Activity_14id5mo" targetRef="Gateway_0z56trl" />
+    <bpmn:exclusiveGateway id="Gateway_0z56trl" default="Flow_1ti00t4">
+      <bpmn:incoming>Flow_0y46xng</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ti00t4</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0t765xv</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1sf9r29</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1ti00t4" sourceRef="Gateway_0z56trl" targetRef="Activity_0jlpl29" />
+    <bpmn:sequenceFlow id="Flow_0t765xv" name="2" sourceRef="Gateway_0z56trl" targetRef="Activity_1ri6ns0">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${type == 2}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:exclusiveGateway id="Gateway_0n8dgrp">
+      <bpmn:incoming>Flow_12oajk1</bpmn:incoming>
+      <bpmn:incoming>Flow_1jgl2v8</bpmn:incoming>
+      <bpmn:incoming>Flow_1kzl3sx</bpmn:incoming>
+      <bpmn:outgoing>Flow_1048m0h</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1048m0h" sourceRef="Gateway_0n8dgrp" targetRef="Activity_04cqc8u" />
+    <bpmn:task id="Activity_1ri6ns0" name="Проверить смену ФИО (заключение брака)">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="DataIsZAGSApprovedMarriage">
+            <camunda:script scriptFormat="groovy">def params = execution.getVariable("MZZAGS")?.SvedRegZaklBrak?.params;
+def applicant = execution.getVariable("application")?.applicant;
+
+if (!params || !applicant) {
+    return false;
+};
+
+mapping = [
+        "lastName"  : "FamiliyaPosle",
+        "firstName" : "Imya",
+        "middleName": "Otchestvo",
+        "dateBirth" : "DataRozhd"
+];
+
+for (param in params) {
+    def result = true;
+    mapping.each { app, ags -&gt;
+        if (!applicant[app]?.equalsIgnoreCase(param[ags] as String)) {
+            result = false;
+        }
+    }
+
+    if (result) {
+        return true;
+    };
+};
+
+return false</camunda:script>
+          </camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0t765xv</bpmn:incoming>
+      <bpmn:outgoing>Flow_12oajk1</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_12oajk1" sourceRef="Activity_1ri6ns0" targetRef="Gateway_0n8dgrp" />
+    <bpmn:task id="Activity_1dvwo4g" name="Проверить смену ФИО (расторжение брака)">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="DataIsZAGSApprovedDivorce">
+            <camunda:script scriptFormat="groovy">def params = execution.getVariable("MZZAGS")?.SvedRegRstrzhBrak?.params;
+def applicant = execution.getVariable("application")?.applicant;
+
+
+if (!params || !applicant) {
+    return false;
+};
+
+mapping = [
+        "lastName"  : "FamiliyaPosle",
+        "firstName" : "Imya",
+        "middleName": "Otchestvo",
+        "dateBirth" : "DataRozhd"
+];
+
+
+for (param in params) {
+    def result = true;
+
+    mapping.each { app, ags -&gt;
+        if (!applicant[app]?.equalsIgnoreCase(param[ags] as String)) {
+            result = false;
+        }
+    }
+
+    if (result) {
+        return true;
+    };
+};
+
+return false</camunda:script>
+          </camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1sf9r29</bpmn:incoming>
+      <bpmn:outgoing>Flow_1jgl2v8</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1sf9r29" name="3" sourceRef="Gateway_0z56trl" targetRef="Activity_1dvwo4g">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${type == 3}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1jgl2v8" sourceRef="Activity_1dvwo4g" targetRef="Gateway_0n8dgrp" />
+    <bpmn:task id="Activity_0jlpl29" name="Проверить смену ФИО (иная причина)">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="DataIsZAGSApprovedOtherReasons">
+            <camunda:script scriptFormat="groovy">def params = execution.getVariable("MZZAGS")?.SvedRegPerImya?.params;
+def applicant = execution.getVariable("application")?.applicant;
+
+if (!params || !applicant) {
+    return false;
+};
+
+mapping = [
+        "lastName"  : "FIOPosleFamiliya",
+        "firstName" : "FIOPosleImya",
+        "middleName": "FIOPosleOtchestvo",
+        "dateBirth" : "DataRozhd"
+];
+
+for (param in params) {
+    def result = true;
+
+    mapping.each { app, ags -&gt;
+        if (!applicant[app]?.equalsIgnoreCase(param[ags] as String)) {
+            result = false;
+        }
+    }
+
+    if (result) {
+        return true;
+    };
+};
+
+return false</camunda:script>
+          </camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1ti00t4</bpmn:incoming>
+      <bpmn:outgoing>Flow_1kzl3sx</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1kzl3sx" sourceRef="Activity_0jlpl29" targetRef="Gateway_0n8dgrp" />
+    <bpmn:task id="Activity_0x46z78" name="Applicantion proto">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="APP2">
+            <camunda:script scriptFormat="groovy">[
+        applicant: [
+                lastName  : "Иванов",
+                firstName : "Иван",
+                middleName: "Иванович",
+                dateBirth: "1992-10-08",
+                snils     : "99999999901"
+        ]
+]</camunda:script>
+          </camunda:outputParameter>
+          <camunda:outputParameter name="APP3">
+            <camunda:script scriptFormat="groovy">[
+        applicant: [
+                lastName  : "Иванов",
+                firstName : "Иван",
+                middleName: "Иванович",
+                dateBirth : "1992-10-08",
+                snils     : "99999999901"
+        ]
+]</camunda:script>
+          </camunda:outputParameter>
+          <camunda:outputParameter name="APP6">
+            <camunda:script scriptFormat="groovy">[
+        applicant: [
+                lastName  : "Петрова",
+                firstName : "Иванна",
+                middleName: "Ивановна",
+                dateBirth : "1980-01-01",
+                snils     : "99999999902"
+        ]
+]</camunda:script>
+          </camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_05ibr09</bpmn:incoming>
+      <bpmn:outgoing>Flow_0hxzadp</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0hxzadp" sourceRef="Activity_0x46z78" targetRef="Activity_1bjpvux" />
+    <bpmn:scriptTask id="Activity_0orj78d" name="TAKE Application" scriptFormat="groovy" camunda:resultVariable="application">
+      <bpmn:incoming>Flow_0cuuc3n</bpmn:incoming>
+      <bpmn:outgoing>Flow_1uh5l4u</bpmn:outgoing>
+      <bpmn:script>switch (type) {
+    case 2:
+        return APP2
+    case 3:
+        return APP3
+    case 6:
+        return APP6
+};</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_0cuuc3n" sourceRef="Activity_1lgupd1" targetRef="Activity_0orj78d" />
+    <bpmn:sequenceFlow id="Flow_1uh5l4u" sourceRef="Activity_0orj78d" targetRef="Activity_0oozis2" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1t44wcm">
+      <bpmndi:BPMNEdge id="Flow_1uh5l4u_di" bpmnElement="Flow_1uh5l4u">
+        <di:waypoint x="540" y="347" />
+        <di:waypoint x="590" y="347" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0cuuc3n_di" bpmnElement="Flow_0cuuc3n">
+        <di:waypoint x="370" y="347" />
+        <di:waypoint x="440" y="347" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0hxzadp_di" bpmnElement="Flow_0hxzadp">
+        <di:waypoint x="540" y="170" />
+        <di:waypoint x="590" y="170" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1kzl3sx_di" bpmnElement="Flow_1kzl3sx">
+        <di:waypoint x="1220" y="347" />
+        <di:waypoint x="1365" y="347" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1jgl2v8_di" bpmnElement="Flow_1jgl2v8">
+        <di:waypoint x="1220" y="230" />
+        <di:waypoint x="1390" y="230" />
+        <di:waypoint x="1390" y="322" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1sf9r29_di" bpmnElement="Flow_1sf9r29">
+        <di:waypoint x="1000" y="322" />
+        <di:waypoint x="1000" y="230" />
+        <di:waypoint x="1120" y="230" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1036" y="203" width="7" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12oajk1_di" bpmnElement="Flow_12oajk1">
+        <di:waypoint x="1220" y="120" />
+        <di:waypoint x="1390" y="120" />
+        <di:waypoint x="1390" y="322" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1048m0h_di" bpmnElement="Flow_1048m0h">
+        <di:waypoint x="1415" y="347" />
+        <di:waypoint x="1470" y="347" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0t765xv_di" bpmnElement="Flow_0t765xv">
+        <di:waypoint x="1000" y="322" />
+        <di:waypoint x="1000" y="120" />
+        <di:waypoint x="1120" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1036" y="103" width="7" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ti00t4_di" bpmnElement="Flow_1ti00t4">
+        <di:waypoint x="1025" y="347" />
+        <di:waypoint x="1120" y="347" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0y46xng_di" bpmnElement="Flow_0y46xng">
+        <di:waypoint x="850" y="347" />
+        <di:waypoint x="975" y="347" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05e446p_di" bpmnElement="Flow_05e446p">
+        <di:waypoint x="690" y="347" />
+        <di:waypoint x="750" y="347" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ozvee1_di" bpmnElement="Flow_0ozvee1">
+        <di:waypoint x="1570" y="347" />
+        <di:waypoint x="1642" y="347" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1behwsh_di" bpmnElement="Flow_1behwsh">
+        <di:waypoint x="640" y="210" />
+        <di:waypoint x="640" y="250" />
+        <di:waypoint x="320" y="250" />
+        <di:waypoint x="320" y="307" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05ibr09_di" bpmnElement="Flow_05ibr09">
+        <di:waypoint x="188" y="347" />
+        <di:waypoint x="229" y="347" />
+        <di:waypoint x="229" y="170" />
+        <di:waypoint x="440" y="170" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="152" y="329" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1bjpvux_di" bpmnElement="Activity_1bjpvux">
+        <dc:Bounds x="590" y="130" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0qhw3e2_di" bpmnElement="Activity_1lgupd1">
+        <dc:Bounds x="270" y="307" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1mm7kf9_di" bpmnElement="Activity_0oozis2">
+        <dc:Bounds x="590" y="307" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_14id5mo_di" bpmnElement="Activity_14id5mo">
+        <dc:Bounds x="750" y="307" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0z56trl_di" bpmnElement="Gateway_0z56trl" isMarkerVisible="true">
+        <dc:Bounds x="975" y="322" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0x46z78_di" bpmnElement="Activity_0x46z78">
+        <dc:Bounds x="440" y="130" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0orj78d_di" bpmnElement="Activity_0orj78d">
+        <dc:Bounds x="440" y="307" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_16j9014_di" bpmnElement="Event_16j9014">
+        <dc:Bounds x="1642" y="329" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0n8dgrp_di" bpmnElement="Gateway_0n8dgrp" isMarkerVisible="true">
+        <dc:Bounds x="1365" y="322" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1ri6ns0_di" bpmnElement="Activity_1ri6ns0" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
+        <dc:Bounds x="1120" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1dvwo4g_di" bpmnElement="Activity_1dvwo4g" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
+        <dc:Bounds x="1120" y="190" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0jlpl29_di" bpmnElement="Activity_0jlpl29" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
+        <dc:Bounds x="1120" y="307" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1so1pl7_di" bpmnElement="Activity_04cqc8u">
+        <dc:Bounds x="1470" y="307" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

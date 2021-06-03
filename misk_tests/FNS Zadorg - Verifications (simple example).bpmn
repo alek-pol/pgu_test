@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" id="Definitions_06seirw" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.7.3">
+  <bpmn:process id="Process_19qhx0q" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_01nztk8</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_0tnp6fm">
+      <bpmn:incoming>Flow_1u28x7j</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_01nztk8" sourceRef="StartEvent_1" targetRef="Activity_1tdlzec" />
+    <bpmn:scriptTask id="Activity_1tdlzec" name="FNS&#10;Response" scriptFormat="groovy" camunda:resultVariable="MZFNS">
+      <bpmn:incoming>Flow_01nztk8</bpmn:incoming>
+      <bpmn:outgoing>Flow_1soqiwd</bpmn:outgoing>
+      <bpmn:script>[
+        "response": [
+                "respInn"  : 520203989178,
+                "hasDebts" : 0,
+                "messageId": "cd8d755b-71f8-11eb-bceb-ad5f755b9a77",
+                "respDate" : "2015-08-13"
+        ]
+]</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_1soqiwd" sourceRef="Activity_1tdlzec" targetRef="Activity_0mcsihz" />
+    <bpmn:task id="Activity_0mcsihz" name="Under&#10;Response">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="MZFNS">${MZFNS.response}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1soqiwd</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ilivhg</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0ilivhg" sourceRef="Activity_0mcsihz" targetRef="Activity_1oiqn7a" />
+    <bpmn:sequenceFlow id="Flow_1u28x7j" sourceRef="Activity_1tdvipv" targetRef="Event_0tnp6fm" />
+    <bpmn:userTask id="Activity_1tdvipv" name="out">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="fns" label="fns" type="string" defaultValue="${MZFNS}" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1qb3xep</bpmn:incoming>
+      <bpmn:outgoing>Flow_1u28x7j</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_1qb3xep" sourceRef="Activity_1oiqn7a" targetRef="Activity_1tdvipv" />
+    <bpmn:scriptTask id="Activity_1oiqn7a" name="Check" scriptFormat="groovy" camunda:resultVariable="DataIsFNSDebtApprovedLegal">
+      <bpmn:incoming>Flow_0ilivhg</bpmn:incoming>
+      <bpmn:outgoing>Flow_1qb3xep</bpmn:outgoing>
+      <bpmn:script>if (execution.getVariable("MZFNS")?.hasDebts?.toString() == '0') {
+    return true;
+};
+return false;
+</bpmn:script>
+    </bpmn:scriptTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_19qhx0q">
+      <bpmndi:BPMNEdge id="Flow_01nztk8_di" bpmnElement="Flow_01nztk8">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="270" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1soqiwd_di" bpmnElement="Flow_1soqiwd">
+        <di:waypoint x="370" y="117" />
+        <di:waypoint x="420" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ilivhg_di" bpmnElement="Flow_0ilivhg">
+        <di:waypoint x="520" y="117" />
+        <di:waypoint x="630" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1u28x7j_di" bpmnElement="Flow_1u28x7j">
+        <di:waypoint x="960" y="117" />
+        <di:waypoint x="992" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1qb3xep_di" bpmnElement="Flow_1qb3xep">
+        <di:waypoint x="730" y="117" />
+        <di:waypoint x="860" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1fsj89m_di" bpmnElement="Activity_1tdlzec">
+        <dc:Bounds x="270" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0mcsihz_di" bpmnElement="Activity_0mcsihz">
+        <dc:Bounds x="420" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0tnp6fm_di" bpmnElement="Event_0tnp6fm">
+        <dc:Bounds x="992" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1n8hvls_di" bpmnElement="Activity_1tdvipv">
+        <dc:Bounds x="860" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1f3d68t_di" bpmnElement="Activity_1oiqn7a" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="630" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

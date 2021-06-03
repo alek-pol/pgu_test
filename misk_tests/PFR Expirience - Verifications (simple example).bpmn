@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" id="Definitions_12slhm3" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.7.3">
+  <bpmn:process id="Process_0qmryvb" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_0n1orm9</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_1xg2k5i">
+      <bpmn:incoming>Flow_0fpliur</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0n1orm9" sourceRef="StartEvent_1" targetRef="Activity_1nqgvjv" />
+    <bpmn:scriptTask id="Activity_1w67yvb" name="PFR" scriptFormat="groovy" camunda:resultVariable="PFR">
+      <bpmn:incoming>Flow_1kstirb</bpmn:incoming>
+      <bpmn:outgoing>Flow_1siy3yo</bpmn:outgoing>
+      <bpmn:script>[
+        [
+                "response": [
+                        "Snils"                  : 99999999901,
+                        "ExperienceDurationMonth": "02",
+                        "FamilyName"             : "Тест",
+                        "OszDate"                : "2016-08-03",
+                        "FirstName"              : "Иван",
+                        "messageId"              : "30344839-721e-11eb-bceb-37d13894fa4b",
+                        "ExperienceDurationYear" : 20,
+                        "Patronymic"             : "Иванович",
+                        "ExperienceDurationDay"  : "05",
+                        "BirthDate"              : "1967-08-13"
+                ]
+        ],
+        []
+]</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:task id="Activity_13wzqbi" name="Under&#10;Response">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="EXPERIENCE">${PFR[0].response}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1siy3yo</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ftj0tq</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1siy3yo" sourceRef="Activity_1w67yvb" targetRef="Activity_13wzqbi" />
+    <bpmn:sequenceFlow id="Flow_0ftj0tq" sourceRef="Activity_13wzqbi" targetRef="Activity_0tz4jle" />
+    <bpmn:sequenceFlow id="Flow_0fpliur" sourceRef="Activity_1wqjhat" targetRef="Event_1xg2k5i" />
+    <bpmn:userTask id="Activity_1wqjhat">
+      <bpmn:incoming>Flow_1t042f1</bpmn:incoming>
+      <bpmn:outgoing>Flow_0fpliur</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:task id="Activity_0tz4jle" name="Проверить&#10;стаж">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="firstName">
+            <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.firstName?.equalsIgnoreCase(execution.getVariable("EXPERIENCE")?.FirstName?.toString())</camunda:script>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="lastName">
+            <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.lastName?.equalsIgnoreCase(execution.getVariable("EXPERIENCE")?.FamilyName?.toString())</camunda:script>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="middleName">
+            <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.middleName?.equalsIgnoreCase(execution.getVariable("EXPERIENCE")?.Patronymic?.toString())</camunda:script>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="dateBirth">
+            <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.dateBirth?.equalsIgnoreCase(execution.getVariable("EXPERIENCE")?.BirthDate?.toString())</camunda:script>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="snils">
+            <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.snils?.equalsIgnoreCase(execution.getVariable("EXPERIENCE")?.Snils?.toString())</camunda:script>
+          </camunda:inputParameter>
+          <camunda:outputParameter name="DataIsPFRExperienceApproved">${firstName &amp;&amp; lastName &amp;&amp; middleName &amp;&amp; dateBirth &amp;&amp; snils}</camunda:outputParameter>
+          <camunda:outputParameter name="firstName">${firstName}</camunda:outputParameter>
+          <camunda:outputParameter name="lastName">${lastName}</camunda:outputParameter>
+          <camunda:outputParameter name="middleName">${middleName}</camunda:outputParameter>
+          <camunda:outputParameter name="dateBirth">${dateBirth}</camunda:outputParameter>
+          <camunda:outputParameter name="snils">${snils}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0ftj0tq</bpmn:incoming>
+      <bpmn:outgoing>Flow_1sqm5mw</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1sqm5mw" sourceRef="Activity_0tz4jle" targetRef="Activity_15ywcrx" />
+    <bpmn:sequenceFlow id="Flow_1kstirb" sourceRef="Activity_1nqgvjv" targetRef="Activity_1w67yvb" />
+    <bpmn:scriptTask id="Activity_1nqgvjv" name="application" scriptFormat="groovy" camunda:resultVariable="application">
+      <bpmn:incoming>Flow_0n1orm9</bpmn:incoming>
+      <bpmn:outgoing>Flow_1kstirb</bpmn:outgoing>
+      <bpmn:script>[
+        applicant: [
+                lastName  : "Тест",
+                firstName : "Иван",
+                middleName: "Иванович",
+                dateBirth : "1967-08-13",
+                snils     : "99999999901"
+        ]
+]</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:task id="Activity_15ywcrx">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="snils1">
+            <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.snils</camunda:script>
+          </camunda:inputParameter>
+          <camunda:outputParameter name="sni">
+            <camunda:script scriptFormat="groovy">"snusnu " + snils1</camunda:script>
+          </camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1sqm5mw</bpmn:incoming>
+      <bpmn:outgoing>Flow_1t042f1</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1t042f1" sourceRef="Activity_15ywcrx" targetRef="Activity_1wqjhat" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_0qmryvb">
+      <bpmndi:BPMNEdge id="Flow_1t042f1_di" bpmnElement="Flow_1t042f1">
+        <di:waypoint x="1160" y="117" />
+        <di:waypoint x="1350" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1kstirb_di" bpmnElement="Flow_1kstirb">
+        <di:waypoint x="380" y="117" />
+        <di:waypoint x="490" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1sqm5mw_di" bpmnElement="Flow_1sqm5mw">
+        <di:waypoint x="950" y="117" />
+        <di:waypoint x="1060" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0fpliur_di" bpmnElement="Flow_0fpliur">
+        <di:waypoint x="1450" y="117" />
+        <di:waypoint x="1492" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ftj0tq_di" bpmnElement="Flow_0ftj0tq">
+        <di:waypoint x="760" y="117" />
+        <di:waypoint x="850" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1siy3yo_di" bpmnElement="Flow_1siy3yo">
+        <di:waypoint x="590" y="117" />
+        <di:waypoint x="660" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0n1orm9_di" bpmnElement="Flow_0n1orm9">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="280" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1xg2k5i_di" bpmnElement="Event_1xg2k5i">
+        <dc:Bounds x="1492" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1e0g8nh_di" bpmnElement="Activity_1w67yvb">
+        <dc:Bounds x="490" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_13wzqbi_di" bpmnElement="Activity_13wzqbi">
+        <dc:Bounds x="660" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1k1ztiu_di" bpmnElement="Activity_1wqjhat">
+        <dc:Bounds x="1350" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_17x0r0g_di" bpmnElement="Activity_1nqgvjv">
+        <dc:Bounds x="280" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_15ywcrx_di" bpmnElement="Activity_15ywcrx">
+        <dc:Bounds x="1060" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0tz4jle_di" bpmnElement="Activity_0tz4jle" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="850" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

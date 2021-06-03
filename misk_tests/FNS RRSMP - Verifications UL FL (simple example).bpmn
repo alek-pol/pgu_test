@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" id="Definitions_0tlgg99" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.7.3">
+  <bpmn:process id="Process_04c20xp" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_1kbtz46</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_0vqkdfj">
+      <bpmn:incoming>Flow_0q9qbef</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:scriptTask id="Activity_15mnmz9" name="Application&#10;Type" scriptFormat="groovy" camunda:resultVariable="type">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="result">""</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1kbtz46</bpmn:incoming>
+      <bpmn:outgoing>Flow_0anax3e</bpmn:outgoing>
+      <bpmn:script>"fl"</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:exclusiveGateway id="Gateway_1nrj4u8" default="Flow_1753nxt">
+      <bpmn:incoming>Flow_0anax3e</bpmn:incoming>
+      <bpmn:outgoing>Flow_1753nxt</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1ixm7kt</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1753nxt" name="UL" sourceRef="Gateway_1nrj4u8" targetRef="Activity_158f4v9" />
+    <bpmn:sequenceFlow id="Flow_0anax3e" sourceRef="Activity_15mnmz9" targetRef="Gateway_1nrj4u8" />
+    <bpmn:sequenceFlow id="Flow_1ixm7kt" name="FL" sourceRef="Gateway_1nrj4u8" targetRef="Activity_0szuiri">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${type == "fl"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:scriptTask id="Activity_158f4v9" name="Application&#10;UL" scriptFormat="groovy" camunda:resultVariable="application">
+      <bpmn:incoming>Flow_1753nxt</bpmn:incoming>
+      <bpmn:outgoing>Flow_0eqccur</bpmn:outgoing>
+      <bpmn:script>[
+        applicant: [
+                inn     : "7701725181",
+                fullName: "Общество С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СКАРТЕЛ\"",
+        ]
+]</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:scriptTask id="Activity_0szuiri" name="Application&#10;FL" scriptFormat="groovy" camunda:resultVariable="application">
+      <bpmn:incoming>Flow_1ixm7kt</bpmn:incoming>
+      <bpmn:outgoing>Flow_0bc38wr</bpmn:outgoing>
+      <bpmn:script>[
+                applicant: [
+                        inn       : "772003441339",
+                        "fullName": "Индивидуальный предприниматель БОРДАКОВ ВЛАДИМИР АЛЕКСАНДРОВИЧ",
+                ]
+        ]</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_1kbtz46" sourceRef="StartEvent_1" targetRef="Activity_15mnmz9" />
+    <bpmn:sequenceFlow id="Flow_0eqccur" sourceRef="Activity_158f4v9" targetRef="Activity_1tdsd93" />
+    <bpmn:sequenceFlow id="Flow_0bc38wr" sourceRef="Activity_0szuiri" targetRef="Activity_0cxb1x0" />
+    <bpmn:exclusiveGateway id="Gateway_07tklgk">
+      <bpmn:incoming>Flow_05ku1lr</bpmn:incoming>
+      <bpmn:incoming>Flow_0oa3ikr</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ecz70w</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1ecz70w" sourceRef="Gateway_07tklgk" targetRef="Activity_0phaoo4" />
+    <bpmn:sequenceFlow id="Flow_0q9qbef" sourceRef="Activity_0phaoo4" targetRef="Event_0vqkdfj" />
+    <bpmn:userTask id="Activity_0phaoo4">
+      <bpmn:incoming>Flow_1ecz70w</bpmn:incoming>
+      <bpmn:outgoing>Flow_0q9qbef</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_17mnu0t" sourceRef="Activity_0cxb1x0" targetRef="Activity_1rfnuez" />
+    <bpmn:scriptTask id="Activity_0cxb1x0" name="FNS&#10;Response" scriptFormat="groovy" camunda:resultVariable="FNS">
+      <bpmn:incoming>Flow_0bc38wr</bpmn:incoming>
+      <bpmn:outgoing>Flow_17mnu0t</bpmn:outgoing>
+      <bpmn:script>[
+        "response": [
+                "PrizNovMSP": 2,
+                "FamilyName": "БОРДАКОВ",
+                "xmlns:t"   : "urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.1",
+                "KodOKVED"  : 71.34,
+                "NaimOKVED" : "Аренда прочих машин и оборудования, не включенных в другие группировки",
+                "DataVklMSP": "2016-08-01",
+                "SvOKVEDDop": [
+                        "smvFNSReestrPredpr30SvOKVEDDop": [
+                                [
+                                        "KodOKVED" : 71.21,
+                                        "NaimOKVED": "Аренда прочих сухопутных транспортных средств и оборудования",
+                                        "VersOKVED": 2001
+                                ],
+                                [
+                                        "KodOKVED" : 74.84,
+                                        "NaimOKVED": "Предоставление прочих услуг",
+                                        "VersOKVED": 2001
+                                ]
+                        ]
+                ],
+                "DataSost"  : "2016-04-26",
+                "VersOKVED" : 2001,
+                "INNFL"     : 772003441339,
+                "FirstName" : "ВЛАДИМИР",
+                "regionTip" : "ГОРОД",
+                "SvProgPart": [
+                        "smvFNSReestrPredpr30SvProgPart": [
+                                [
+                                        "NaimYULPP": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЕВРОСЕТЬ-РИТЕЙЛ\"",
+                                        "INNYULPP" : 7714617793,
+                                        "NomDog"   : "ЕСЕТЬ-1",
+                                        "DataDog"  : "2015-06-07"
+                                ],
+                                [
+                                        "NaimYULPP": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОМПЬЮТЕРНЫЙ ЦЕНТР ДНС\"",
+                                        "INNYULPP" : 2536120293,
+                                        "NomDog"   : "ДНС-98-2015",
+                                        "DataDog"  : "2015-12-28"
+                                ]
+                        ]
+                ],
+                "VidSubMSP" : 2,
+                "regionNaim": "МОСКВА",
+                "KatSubMSP" : 1,
+                "Patronymic": "АЛЕКСАНДРОВИЧ",
+                "SvProd"    : [
+                        "smvFNSReestrPredpr30SvProd": [
+                                [
+                                        "KodProd"  : "61.20.20.000-0000",
+                                        "NaimProd" : "Услуги операторов связи в сфере беспроводных телекоммуникаций",
+                                        "PrOtnProd": 1
+                                ],
+                                [
+                                        "KodProd"  : "61.20.30.110-0000",
+                                        "NaimProd" : "Услуги подвижной связи для целей передачи голоса",
+                                        "PrOtnProd": 2
+                                ],
+                                [
+                                        "KodProd"  : "63.99.10.140-0000",
+                                        "NaimProd" : "Услуги компьютерные информационные телефонной связи",
+                                        "PrOtnProd": 1
+                                ],
+                                [
+                                        "KodProd"  : "63.99.10.140-0000",
+                                        "NaimProd" : "Услуги компьютерные информационные телефонной связи",
+                                        "PrOtnProd": 1
+                                ]
+                        ]
+                ],
+                "KodRegion" : 77
+        ]
+]</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:task id="Activity_1rfnuez" name="Under&#10;Response">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="MZERSMSP">${FNS.response}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_17mnu0t</bpmn:incoming>
+      <bpmn:outgoing>Flow_1vg7vft</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1vg7vft" sourceRef="Activity_1rfnuez" targetRef="Activity_18q1au5" />
+    <bpmn:scriptTask id="Activity_1tdsd93" name="FNS&#10;Response" scriptFormat="groovy" camunda:resultVariable="FNS">
+      <bpmn:incoming>Flow_0eqccur</bpmn:incoming>
+      <bpmn:outgoing>Flow_1rbb1vy</bpmn:outgoing>
+      <bpmn:script>[
+        response: [
+                "INNYUL" : 7701725181,
+                "NaimOrg": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СКАРТЕЛ\"",
+        ]
+]</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_1rbb1vy" sourceRef="Activity_1tdsd93" targetRef="Activity_03tvfwi" />
+    <bpmn:task id="Activity_03tvfwi" name="Under&#10;Response">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="MZERSMSP">${FNS.response}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1rbb1vy</bpmn:incoming>
+      <bpmn:outgoing>Flow_1hzeqhx</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1hzeqhx" sourceRef="Activity_03tvfwi" targetRef="Activity_09upmpu" />
+    <bpmn:task id="Activity_09upmpu" name="Проверить&#10;ЕРСМСП ЮЛ">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="inn">
+            <camunda:script scriptFormat="groovy">execution.getVariable("MZERSMSP")?.INNYUL?.toString().equalsIgnoreCase(execution.getVariable("application")?.applicant?.inn as String)</camunda:script>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="fullName">
+            <camunda:script scriptFormat="groovy">execution.getVariable("MZERSMSP")?.NaimOrg?.toString()?.equalsIgnoreCase(execution.getVariable("application")?.applicant?.fullName as String)</camunda:script>
+          </camunda:inputParameter>
+          <camunda:outputParameter name="DataIsERSMSPApprovedLegal">${inn &amp;&amp; fullName}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1hzeqhx</bpmn:incoming>
+      <bpmn:outgoing>Flow_05ku1lr</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_05ku1lr" sourceRef="Activity_09upmpu" targetRef="Gateway_07tklgk" />
+    <bpmn:task id="Activity_18q1au5" name="Проверить&#10;ЕРСМСП ИП">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="inn">
+            <camunda:script scriptFormat="groovy">execution.getVariable("MZERSMSP")?.INNFL?.toString()?.equalsIgnoreCase(execution.getVariable("application")?.applicant?.inn as String)</camunda:script>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="fullName">
+            <camunda:script scriptFormat="groovy">def mz = execution.getVariable("MZERSMSP");
+def app_fname = application?.applicant?.fullName?.toLowerCase()?.split(" ");
+
+if (!(app_fname &amp;&amp; mz)) {
+    return false;
+};
+
+def result = true;
+
+["FamilyName", "FirstName", "Patronymic"].each {
+    if (!(app_fname.contains(mz[it]?.toLowerCase()))) {
+        result = false;
+    };
+};
+
+return result;</camunda:script>
+          </camunda:inputParameter>
+          <camunda:outputParameter name="DataIsERSMSPApprovedBusinessman">${fullName &amp;&amp; inn}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1vg7vft</bpmn:incoming>
+      <bpmn:outgoing>Flow_0oa3ikr</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0oa3ikr" sourceRef="Activity_18q1au5" targetRef="Gateway_07tklgk" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_04c20xp">
+      <bpmndi:BPMNEdge id="Flow_1hzeqhx_di" bpmnElement="Flow_1hzeqhx">
+        <di:waypoint x="860" y="80" />
+        <di:waypoint x="970" y="80" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1rbb1vy_di" bpmnElement="Flow_1rbb1vy">
+        <di:waypoint x="720" y="80" />
+        <di:waypoint x="760" y="80" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1vg7vft_di" bpmnElement="Flow_1vg7vft">
+        <di:waypoint x="860" y="270" />
+        <di:waypoint x="970" y="270" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_17mnu0t_di" bpmnElement="Flow_17mnu0t">
+        <di:waypoint x="720" y="270" />
+        <di:waypoint x="760" y="270" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0q9qbef_di" bpmnElement="Flow_0q9qbef">
+        <di:waypoint x="1300" y="177" />
+        <di:waypoint x="1322" y="177" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ecz70w_di" bpmnElement="Flow_1ecz70w">
+        <di:waypoint x="1171" y="177" />
+        <di:waypoint x="1200" y="177" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0bc38wr_di" bpmnElement="Flow_0bc38wr">
+        <di:waypoint x="570" y="270" />
+        <di:waypoint x="620" y="270" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0eqccur_di" bpmnElement="Flow_0eqccur">
+        <di:waypoint x="570" y="80" />
+        <di:waypoint x="620" y="80" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1kbtz46_di" bpmnElement="Flow_1kbtz46">
+        <di:waypoint x="215" y="177" />
+        <di:waypoint x="260" y="177" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ixm7kt_di" bpmnElement="Flow_1ixm7kt">
+        <di:waypoint x="430" y="202" />
+        <di:waypoint x="430" y="270" />
+        <di:waypoint x="470" y="270" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="439" y="233" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0anax3e_di" bpmnElement="Flow_0anax3e">
+        <di:waypoint x="360" y="177" />
+        <di:waypoint x="405" y="177" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1753nxt_di" bpmnElement="Flow_1753nxt">
+        <di:waypoint x="430" y="152" />
+        <di:waypoint x="430" y="80" />
+        <di:waypoint x="470" y="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="438" y="113" width="15" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05ku1lr_di" bpmnElement="Flow_05ku1lr">
+        <di:waypoint x="1070" y="80" />
+        <di:waypoint x="1146" y="80" />
+        <di:waypoint x="1146" y="152" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0oa3ikr_di" bpmnElement="Flow_0oa3ikr">
+        <di:waypoint x="1070" y="270" />
+        <di:waypoint x="1146" y="270" />
+        <di:waypoint x="1146" y="202" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="159" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0vqkdfj_di" bpmnElement="Event_0vqkdfj">
+        <dc:Bounds x="1322" y="159" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0twklj4_di" bpmnElement="Activity_15mnmz9">
+        <dc:Bounds x="260" y="137" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1nrj4u8_di" bpmnElement="Gateway_1nrj4u8" isMarkerVisible="true">
+        <dc:Bounds x="405" y="152" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0pyqb8y_di" bpmnElement="Activity_158f4v9">
+        <dc:Bounds x="470" y="40" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ydx0e9_di" bpmnElement="Activity_0szuiri">
+        <dc:Bounds x="470" y="230" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_07tklgk_di" bpmnElement="Gateway_07tklgk" isMarkerVisible="true">
+        <dc:Bounds x="1121" y="152" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1yp5slv_di" bpmnElement="Activity_0phaoo4">
+        <dc:Bounds x="1200" y="137" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_16z2u7z_di" bpmnElement="Activity_0cxb1x0">
+        <dc:Bounds x="620" y="230" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1rfnuez_di" bpmnElement="Activity_1rfnuez">
+        <dc:Bounds x="760" y="230" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1tdsd93_di" bpmnElement="Activity_1tdsd93">
+        <dc:Bounds x="620" y="40" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_03tvfwi_di" bpmnElement="Activity_03tvfwi">
+        <dc:Bounds x="760" y="40" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_09upmpu_di" bpmnElement="Activity_09upmpu" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="970" y="40" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_18q1au5_di" bpmnElement="Activity_18q1au5" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="970" y="230" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
