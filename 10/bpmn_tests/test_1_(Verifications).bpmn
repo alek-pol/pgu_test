@@ -1,0 +1,3474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" id="Definitions_0ok0k38" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.7.3">
+  <bpmn:process id="Process_0lxpcls" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_1h0cyyz</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Activity_189hvoh" name="response">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="response">
+            <camunda:script scriptFormat="groovy">[
+  "id": "b4fe6738-583c-40f6-8a8d-bd17c354b32a",
+  "modified": 1616842368,
+  "schema": "Applications",
+  "messageId": "6be519ff-8eea-11eb-a50f-4b66d39ff385",
+  "history": [
+    [
+      "id": "d198c5cf-3f75-4632-b474-30c7cbeef516",
+      "modified": 1616842308,
+      "schema": "History",
+      "date": "2021-03-27T14:51:48.972+04:00",
+      "_vertex_collection_traversal": "history",
+      "topic": "Заявление получено ведомством",
+      "comment": "Заявление получено ведомством",
+      "assignee": "Система"
+    ],
+    [
+      "id": "0f9f69b6-b409-4068-9d80-7c070c43471c",
+      "modified": 1616842352,
+      "schema": "History",
+      "date": "2021-03-27T14:52:32.617+04:00",
+      "_vertex_collection_traversal": "history",
+      "topic": "Назначен исполнитель",
+      "comment": "Назначен исполнитель: Тихонов Виктор Борисович",
+      "assignee": "Тихонов Виктор Борисович"
+    ],
+    [
+      "id": "bfef1732-96c3-4701-83d3-8e8085c4763b",
+      "modified": 1616842354,
+      "schema": "History",
+      "date": "2021-03-27T14:52:34.764+04:00",
+      "_vertex_collection_traversal": "history",
+      "topic": "Принятие решения о приёме документов",
+      "comment": "Проверка документов для принятия решения о регистрации заявления",
+      "assignee": "Тихонов Виктор Борисович"
+    ],
+    [
+      "id": "2e9b0abe-4c03-4ba1-9b87-0ab669ca8225",
+      "modified": 1616842364,
+      "schema": "History",
+      "date": "2021-03-27T14:52:44.530+04:00",
+      "_vertex_collection_traversal": "history",
+      "topic": "Заявление зарегистрировано",
+      "comment": "Заявление зарегистрировано, присвоен внутренний номер: Адресация-20210327-15587 ",
+      "assignee": "Тихонов Виктор Борисович"
+    ],
+    [
+      "id": "c08f4f92-b888-4af9-80f5-f4c7da1fcdd4",
+      "modified": 1616842365,
+      "schema": "History",
+      "date": "2021-03-27T14:52:45.827+04:00",
+      "_vertex_collection_traversal": "history",
+      "topic": "Запрос сведения по СМЭВ",
+      "comment": "Получение сведений по запросам в СМЭВ",
+      "assignee": "Система"
+    ],
+    [
+      "id": "8bf27ae4-da08-4675-bc0e-64415b5cf8db",
+      "modified": 1616842368,
+      "schema": "History",
+      "date": "2021-03-27T14:52:48.148+04:00",
+      "_vertex_collection_traversal": "history",
+      "topic": "Ожидаем ответы на запросы СМЭВ",
+      "comment": "Ожидаем ответы на запросы СМЭВ",
+      "assignee": "Система"
+    ]
+  ],
+  "applicant": [
+    "id": "fe8f2146-6b2a-4487-8e4f-510f9c11e066",
+    "modified": 1616842308,
+    "schema": "Subject",
+    "lastName": "Иванов",
+    "address": [
+      "postal": [
+        "text": "620034, обл. Свердловская, г. Екатеринбург, ул. Кондратьева, д. 11, кв. 4"
+      ],
+      "register": [
+        "text": "400010, обл. Волгоградская, г. Волгоград, ул. Московская, д. 1, кв. 12"
+      ]
+    ],
+    "gender": 2,
+    "documents": [
+      [
+        "number": 231232,
+        "series": 1231,
+        "name": "Паспорт гражданина РФ",
+        "issueIdCode": 112312,
+        "issueDate": "05.10.2020",
+        "type": "Паспорт гражданина РФ",
+        "issueOrg": "УФМС по району Твин Пикс"
+      ]
+    ],
+    "citizenship": "РОССИЯ",
+    "fullName": "Иванов Иван Иванович",
+    "_vertex_collection_traversal": "subject",
+    "firstName": "Иван",
+    "phone": "+7(916)3119400",
+    "middleName": "Иванович",
+    "dateBirth": "14.01.1950",
+    "snils": "000-000-600 22",
+    "email": "tyu_yty@inbox.ru"
+  ],
+  "system": [
+    "applicant": [
+      "fullName": "Иванов Иван Иванович",
+      "id": "fe8f2146-6b2a-4487-8e4f-510f9c11e066"
+    ],
+    "avaliable": true,
+    "department": [
+      "fullName": "Администрация города Канаш",
+      "id": "06bfdb59-d8ab-461b-a48d-c8968612cc20"
+    ],
+    "fullName": "Присвоение адреса объекту адресации, изменение и аннулирование такого адреса",
+    "orderStatusCode": "addition",
+    "processId": "6dffbc80-8eea-11eb-93f3-46a07ba41c02",
+    "regionCode": "21",
+    "regionId": "27948d01-58d4-44a0-bce8-20252e1453f9",
+    "service": "Адресация",
+    "serviceId": "134a9fd6-9682-48e2-aaab-8b5733ce5616",
+    "shortName": "Адресация",
+    "startDate": "26.03.2021",
+    "startDateIso": "2021-03-26",
+    "status": [
+      "external": "1",
+      "internal": "05.1",
+      "system": "06.3"
+    ]
+  ],
+  "common": [
+    "assignee": [
+      "fullName": "Не назначен",
+      "id": "-"
+    ],
+    "chanel": "ЕПГУ",
+    "currentDate": "26.03.2021",
+    "dueDate": "2021-04-07T13:51:48.778+0300",
+    "locationCodeOktmo": "MNSV75_3T",
+    "oktmo": "MNSV75_3T",
+    "orderId": 763760736,
+    "regNumber": "Адресация-20210327-15587",
+    "registrationDate": "2021-03-27T14:52:35.355+04:00",
+    "userType": "PERSON_RF"
+  ],
+  "service": "Присвоение адреса объекту адресации, изменение и аннулирование такого адреса",
+  "mzclass": "request@urn://rostelekom.ru/Addressing/1.0.2",
+  "orderStatusCode": "addition",
+  "replyTo": "eyJtaWQiOiI2YmU1MTlmZi04ZWVhLTExZWItYTUwZi00YjY2ZDM5ZmYzODUifQ==",
+  "statement": [
+    "competentOrganizationId": "C601E909FE6D4CD39D4FCE30DCF0FF63",
+    "competentOrganizationName": "Администрация города Канаш",
+    "formTarget": [
+      "id": -10000115329,
+      "name": "Присвоение адреса объекту адресации, изменение и аннулирование такого адреса"
+    ],
+    "gettingResults": [
+      "isPaperDocumentRequired": true,
+      "methodGettingResults": 1
+    ],
+    "goal": 1,
+    "methodGettingResults": [
+      "isPaperDocumentRequired": true
+    ],
+    "parkingPlace": [
+      "lackOfAddress": [
+        "fiasLandPlot": "344011, обл. Ростовская, г. Ростов-на-Дону, пер. 1-й Пламенный",
+        "isAdditionalInformation": false,
+        "isDescriptionLocationRequired": false,
+        "isIdNumberRequired": false,
+        "landPlotCadastralNumber": "11:22:4324343:434"
+      ]
+    ],
+    "premise": [
+      "lackOfAddress": [
+        "fiasPremise": "344068, обл. Ростовская, г. Ростов-на-Дону, пер. 1-й Автосборочный",
+        "isAdditionalInformation": false,
+        "isIdNumberRequired": false,
+        "premiseCadastralNumber": "11:22:1235454:354"
+      ]
+    ],
+    "unfinishedBuilding": [
+      "lackOfAddress": [
+        "fiasPremise": "344011, обл. Ростовская, г. Ростов-на-Дону, пер. 1-й Пламенный",
+        "isAdditionalInformation": false,
+        "isDescriptionLocationRequired": false,
+        "isIdNumberRequired": false,
+        "landPlotCadastralNumber": "11:22:4325352:353"
+      ]
+    ],
+    "variantChoice": [
+      "kpOa04": 1,
+      "kpOa05": [
+        "build": true,
+        "landPlot": true,
+        "parkingPlace": true,
+        "premise": true
+      ],
+      "kpPa07": 1,
+      "kpPa13": 3
+    ]
+  ],
+  "interDepartmentReq": [
+    [
+      "id": "6553f9d7-a4a5-4ff7-93e7-314d594c9779",
+      "modified": 1616842454,
+      "schema": "InterDepReq",
+      "traceId": "6dffbc80-8eea-11eb-93f3-46a07ba41c02",
+      "request": [
+        "otherOgrn": "1027200844868",
+        "requestDataType": "extractRealty",
+        "otherInn": "9204002877",
+        "otherKpp": "920401001",
+        "actualDataAgreement": [
+          "code": "01"
+        ],
+        "recieveResultTypeCode": [
+          "code": "webService"
+        ],
+        "otherRegDate": "1983-11-02",
+        "persDataProcessingAgreement": [
+          "code": "01"
+        ],
+        "actionCode": [
+          "code": "659511111112"
+        ],
+        "otherName": "Администрация города Канаш",
+        "region": "21",
+        "declarantKind": [
+          "code": "357013000000"
+        ],
+        "object": [
+          "fs3RREGRNRequestObject": [
+            "objectTypeCode": [
+              "code": "002001002000"
+            ],
+            "cadastralNumber": "11:22:4325352:353"
+          ]
+        ]
+      ],
+      "personalCertificate": "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",
+      "documents": [
+        [
+          "fileName": "report_659511111111_23.xml",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report_659511111111_23.xml"
+        ],
+        [
+          "fileName": "report.pdf",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report.pdf"
+        ],
+        [
+          "fileName": "report 23 сценарий 659511111111.pdf",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report 23 сценарий 659511111111.pdf"
+        ],
+        [
+          "fileName": "report 23 сценарий 659511111111.pdf.sig",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report 23 сценарий 659511111111.pdf.sig"
+        ],
+        [
+          "fileName": "report.pdf.sig",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report.pdf.sig"
+        ],
+        [
+          "fileName": "report_659511111111_23.xml.sig",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report_659511111111_23.xml.sig"
+        ]
+      ],
+      "sendDate": "2021-03-27T13:52:46.799+0300",
+      "subject": "11:22:4325352:353",
+      "description": "Выписка из Единого государственного реестра недвижимости об объекте недвижимости",
+      "receiveDate": "2021-03-27T13:54:14.785+0300",
+      "requestName": "Прием обращений в ФГИС ЕГРН",
+      "_vertex_collection_traversal": "interdepreq",
+      "provider": "Росреестр",
+      "response": [
+        "extract_base_params_land": [
+          "restrict_records": [
+            "restrict_record": [
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "citizenship": [
+                            "person_citizenship_country": [
+                              "citizenship_country": [
+                                "code": 848000000643,
+                                "value": "Российская Федерация"
+                              ]
+                            ]
+                          ],
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "05",
+                        "value": "Залогодержатель"
+                      ]
+                    ]
+                  ]
+                ],
+                "underlying_documents": [
+                  "underlying_document": [
+                    "document_name": "Договор аренды земельного участка",
+                    "document_number": "№ 81",
+                    "document_date": "2017-04-03",
+                    "document_code": [
+                      "code": 558401010209,
+                      "value": "Договор аренды (субаренды)"
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-04-14T10:44:47+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "period": [
+                    "period_info": [
+                      "end_date": "2019-04-14",
+                      "start_date": "2017-04-14"
+                    ]
+                  ],
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-40",
+                  "restriction_encumbrance_type": [
+                    "code": "022007000000",
+                    "value": "Ипотека"
+                  ]
+                ]
+              ],
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "citizenship": [
+                            "person_citizenship_country": [
+                              "citizenship_country": [
+                                "code": 848000000643,
+                                "value": "Российская Федерация"
+                              ]
+                            ]
+                          ],
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "05",
+                        "value": "Залогодержатель"
+                      ]
+                    ]
+                  ]
+                ],
+                "underlying_documents": [
+                  "underlying_document": [
+                    "document_name": "Договор аренды земельного участка",
+                    "document_number": "№ 81",
+                    "document_date": "2017-04-11",
+                    "document_code": [
+                      "code": 558401010209,
+                      "value": "Договор аренды (субаренды)"
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-04-14T10:32:07+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "period": [
+                    "period_info": [
+                      "end_date": "2020-04-27",
+                      "start_date": "2017-04-03"
+                    ]
+                  ],
+                  "restriction_encumbrance_number": "33:18:000604:566-77/048/2017-38",
+                  "restriction_encumbrance_type": [
+                    "code": "022007000000",
+                    "value": "Ипотека"
+                  ]
+                ]
+              ],
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "citizenship": [
+                            "person_citizenship_country": [
+                              "citizenship_country": [
+                                "code": 848000000643,
+                                "value": "Российская Федерация"
+                              ]
+                            ]
+                          ],
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "05",
+                        "value": "Залогодержатель"
+                      ]
+                    ]
+                  ]
+                ],
+                "underlying_documents": [
+                  "underlying_document": [
+                    "document_name": "Договор аренды земельного участка",
+                    "document_number": "№ 81",
+                    "document_date": "2017-04-12",
+                    "document_code": [
+                      "code": 558401010209,
+                      "value": "Договор аренды (субаренды)"
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-04-13T12:37:05+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "restriction_encumbrance_number": "33:18:000604:566-77/048/2017-36",
+                  "restriction_encumbrance_type": [
+                    "code": "022007000000",
+                    "value": "Ипотека"
+                  ]
+                ]
+              ],
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "01",
+                        "value": "Арендатор"
+                      ]
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-03-14T14:15:00+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-34",
+                  "restriction_encumbrance_type": [
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  ]
+                ]
+              ],
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "01",
+                        "value": "Арендатор"
+                      ]
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-02-01T12:47:44+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-32",
+                  "restriction_encumbrance_type": [
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  ]
+                ]
+              ],
+              [
+                "record_info": [
+                  "registration_date": "2017-01-31T15:32:59+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-31"
+                ]
+              ],
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "01",
+                        "value": "Арендатор"
+                      ]
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-01-27T12:14:23+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-29",
+                  "restriction_encumbrance_type": [
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  ]
+                ]
+              ],
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "01",
+                        "value": "Арендатор"
+                      ]
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-01-27T10:00:08+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-27",
+                  "restriction_encumbrance_type": [
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  ]
+                ]
+              ],
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "01",
+                        "value": "Арендатор"
+                      ]
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-01-27T09:13:28+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-25",
+                  "restriction_encumbrance_type": [
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  ]
+                ]
+              ],
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "01",
+                        "value": "Арендатор"
+                      ]
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-01-16T15:02:30+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-23",
+                  "restriction_encumbrance_type": [
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  ]
+                ]
+              ],
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "01",
+                        "value": "Арендатор"
+                      ]
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-01-16T08:51:04+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-21",
+                  "restriction_encumbrance_type": [
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  ]
+                ]
+              ]
+            ]
+          ],
+          "recipient_statement": "Семенов Семен Семенович",
+          "details_statement": [
+            "group_top_requisites": [
+              "registration_number": "КУВИ-004/2017-2018",
+              "date_formation": "2017-05-02",
+              "organ_registr_rights": "Кольчугинский отдел Управления Росреестра по Владимирской области"
+            ]
+          ],
+          "land_record": [
+            "cost": [
+              "value": 21286127.84
+            ],
+            "contours_location": [
+              "contours": [
+                "contour": [
+                  "entity_spatial": [
+                    "sk_id": "МСК-33",
+                    "spatials_elements": [
+                      "spatial_element": [
+                        [
+                          "ordinates": [
+                            "ordinate": [
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 1,
+                                "x": 207880.58,
+                                "y": 157121.74,
+                                "ord_nmb": 1
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 2,
+                                "x": 207831.6,
+                                "y": 157188.91,
+                                "ord_nmb": 2
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 3,
+                                "x": 207804.92,
+                                "y": 157164.58,
+                                "ord_nmb": 3
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 4,
+                                "x": 207794.48,
+                                "y": 157154.87,
+                                "ord_nmb": 4
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 5,
+                                "x": 207772.68,
+                                "y": 157173.87,
+                                "ord_nmb": 5
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 6,
+                                "x": 207763.14,
+                                "y": 157191.87,
+                                "ord_nmb": 6
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 7,
+                                "x": 207760.02,
+                                "y": 157208.74,
+                                "ord_nmb": 7
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 8,
+                                "x": 207745.97,
+                                "y": 157209.63,
+                                "ord_nmb": 8
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 9,
+                                "x": 207745.62,
+                                "y": 157209.65,
+                                "ord_nmb": 9
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 10,
+                                "x": 207684.19,
+                                "y": 157175.13,
+                                "ord_nmb": 10
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 11,
+                                "x": 207667.07,
+                                "y": 157171.46,
+                                "ord_nmb": 11
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 12,
+                                "x": 207684.55,
+                                "y": 157081.52,
+                                "ord_nmb": 12
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 13,
+                                "x": 207713.59,
+                                "y": 156956.85,
+                                "ord_nmb": 13
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 14,
+                                "x": 207757.56,
+                                "y": 156975.54,
+                                "ord_nmb": 14
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 15,
+                                "x": 207763.08,
+                                "y": 156977.89,
+                                "ord_nmb": 15
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 16,
+                                "x": 207770.34,
+                                "y": 156981.39,
+                                "ord_nmb": 16
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 17,
+                                "x": 207769.76,
+                                "y": 156982.61,
+                                "ord_nmb": 17
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 18,
+                                "x": 207804.17,
+                                "y": 156997.47,
+                                "ord_nmb": 18
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 19,
+                                "x": 207800.42,
+                                "y": 157002.59,
+                                "ord_nmb": 19
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 20,
+                                "x": 207780.69,
+                                "y": 157023.38,
+                                "ord_nmb": 20
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 21,
+                                "x": 207847.9,
+                                "y": 157088.86,
+                                "ord_nmb": 21
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 1,
+                                "x": 207880.58,
+                                "y": 157121.74,
+                                "ord_nmb": 22
+                              ]
+                            ]
+                          ]
+                        ],
+                        [
+                          "ordinates": [
+                            "ordinate": [
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 22,
+                                "x": 207812.97,
+                                "y": 157055.87,
+                                "ord_nmb": 1
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 23,
+                                "x": 207788.18,
+                                "y": 157084.31,
+                                "ord_nmb": 2
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 24,
+                                "x": 207815.25,
+                                "y": 157108.1,
+                                "ord_nmb": 3
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 25,
+                                "x": 207746.16,
+                                "y": 157190.47,
+                                "ord_nmb": 4
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 26,
+                                "x": 207691.75,
+                                "y": 157145.73,
+                                "ord_nmb": 5
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 27,
+                                "x": 207681.75,
+                                "y": 157115.73,
+                                "ord_nmb": 6
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 28,
+                                "x": 207767.49,
+                                "y": 157015.72,
+                                "ord_nmb": 7
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 22,
+                                "x": 207812.97,
+                                "y": 157055.87,
+                                "ord_nmb": 8
+                              ]
+                            ]
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            "address_location": [
+              "address": [
+                "readable_address": "Владимирская обл, район Кольчугинский, МО г. Кольчугино (городское поселение), г. Кольчугино, ул. Луговая, д. 13"
+              ]
+            ],
+            "params": [
+              "area": [
+                "value": 17474
+              ],
+              "permitted_use": [
+                "permitted_use_established": [
+                  "by_document": "Для производственных целей"
+                ]
+              ],
+              "category": [
+                "type": [
+                  "code": "003002000000",
+                  "value": "Земли населенных пунктов"
+                ]
+              ]
+            ],
+            "record_info": [
+              "registration_date": "2012-03-11T06:57:37+00:00"
+            ],
+            "object": [
+              "common_data": [
+                "cad_number": "33:18:000604:566",
+                "quarter_cad_number": "33:18:000604",
+                "type": [
+                  "code": "002001001000",
+                  "value": "land_record"
+                ]
+              ],
+              "subtype": [
+                "code": "01",
+                "value": "Землепользование"
+              ]
+            ]
+          ],
+          "details_request": [
+            "date_received_request": "2017-05-02",
+            "date_receipt_request_reg_authority_rights": "2017-05-02"
+          ],
+          "status": "Сведения об объекте недвижимости имеют статус \"временные\""
+        ]
+      ],
+      "name": "egrn",
+      "senderCertificate": "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",
+      "mzStateHold": [
+        "internalId": "6553f9d7-a4a5-4ff7-93e7-314d594c9779",
+        "messageId": "93994941-8eea-11eb-a50f-cd08ac1662f4",
+        "traceId": "6dffbc80-8eea-11eb-93f3-46a07ba41c02",
+        "reqObjId": "6553f9d7-a4a5-4ff7-93e7-314d594c9779",
+        "type": "Mz"
+      ],
+      "originalMessageId": "93994941-8eea-11eb-a50f-cd08ac1662f4",
+      "class": "egrn",
+      "clazz": "Request@urn://x-artefacts-rosreestr-gov-ru/virtual-services/egrn-statement/1.1.2",
+      "status": "ok"
+    ],
+    [
+      "id": "10102fd8-a41a-4d34-9847-42ac60fab8cd",
+      "modified": 1616842449,
+      "schema": "InterDepReq",
+      "traceId": "6dffbc80-8eea-11eb-93f3-46a07ba41c02",
+      "request": [
+        "otherOgrn": "1027200844868",
+        "requestDataType": "extractRealty",
+        "otherInn": "9204002877",
+        "otherKpp": "920401001",
+        "actualDataAgreement": [
+          "code": "01"
+        ],
+        "recieveResultTypeCode": [
+          "code": "webService"
+        ],
+        "otherRegDate": "1983-11-02",
+        "persDataProcessingAgreement": [
+          "code": "01"
+        ],
+        "actionCode": [
+          "code": "659511111112"
+        ],
+        "otherName": "Администрация города Канаш",
+        "region": "21",
+        "declarantKind": [
+          "code": "357013000000"
+        ],
+        "object": [
+          "fs3RREGRNRequestObject": [
+            "objectTypeCode": [
+              "code": "002001003000"
+            ],
+            "cadastralNumber": "11:22:1235454:354"
+          ]
+        ]
+      ],
+      "personalCertificate": "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",
+      "documents": [
+        [
+          "fileName": "report_659511111111_23.xml",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report_659511111111_23.xml"
+        ],
+        [
+          "fileName": "report.pdf",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report.pdf"
+        ],
+        [
+          "fileName": "report 23 сценарий 659511111111.pdf",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report 23 сценарий 659511111111.pdf"
+        ],
+        [
+          "fileName": "report 23 сценарий 659511111111.pdf.sig",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report 23 сценарий 659511111111.pdf.sig"
+        ],
+        [
+          "fileName": "report.pdf.sig",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report.pdf.sig"
+        ],
+        [
+          "fileName": "report_659511111111_23.xml.sig",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report_659511111111_23.xml.sig"
+        ]
+      ],
+      "sendDate": "2021-03-27T13:52:47.311+0300",
+      "subject": "11:22:1235454:354",
+      "description": "Выписка из Единого государственного реестра недвижимости об объекте недвижимости",
+      "receiveDate": "2021-03-27T13:54:09.336+0300",
+      "requestName": "Прием обращений в ФГИС ЕГРН",
+      "_vertex_collection_traversal": "interdepreq",
+      "provider": "Росреестр",
+      "response": [
+        "extract_base_params_land": [
+          "restrict_records": [
+            "restrict_record": [
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "citizenship": [
+                            "person_citizenship_country": [
+                              "citizenship_country": [
+                                "code": 848000000643,
+                                "value": "Российская Федерация"
+                              ]
+                            ]
+                          ],
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "05",
+                        "value": "Залогодержатель"
+                      ]
+                    ]
+                  ]
+                ],
+                "underlying_documents": [
+                  "underlying_document": [
+                    "document_name": "Договор аренды земельного участка",
+                    "document_number": "№ 81",
+                    "document_date": "2017-04-03",
+                    "document_code": [
+                      "code": 558401010209,
+                      "value": "Договор аренды (субаренды)"
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-04-14T10:44:47+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "period": [
+                    "period_info": [
+                      "end_date": "2019-04-14",
+                      "start_date": "2017-04-14"
+                    ]
+                  ],
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-40",
+                  "restriction_encumbrance_type": [
+                    "code": "022007000000",
+                    "value": "Ипотека"
+                  ]
+                ]
+              ],
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "citizenship": [
+                            "person_citizenship_country": [
+                              "citizenship_country": [
+                                "code": 848000000643,
+                                "value": "Российская Федерация"
+                              ]
+                            ]
+                          ],
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "05",
+                        "value": "Залогодержатель"
+                      ]
+                    ]
+                  ]
+                ],
+                "underlying_documents": [
+                  "underlying_document": [
+                    "document_name": "Договор аренды земельного участка",
+                    "document_number": "№ 81",
+                    "document_date": "2017-04-11",
+                    "document_code": [
+                      "code": 558401010209,
+                      "value": "Договор аренды (субаренды)"
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-04-14T10:32:07+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "period": [
+                    "period_info": [
+                      "end_date": "2020-04-27",
+                      "start_date": "2017-04-03"
+                    ]
+                  ],
+                  "restriction_encumbrance_number": "33:18:000604:566-77/048/2017-38",
+                  "restriction_encumbrance_type": [
+                    "code": "022007000000",
+                    "value": "Ипотека"
+                  ]
+                ]
+              ],
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "citizenship": [
+                            "person_citizenship_country": [
+                              "citizenship_country": [
+                                "code": 848000000643,
+                                "value": "Российская Федерация"
+                              ]
+                            ]
+                          ],
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "05",
+                        "value": "Залогодержатель"
+                      ]
+                    ]
+                  ]
+                ],
+                "underlying_documents": [
+                  "underlying_document": [
+                    "document_name": "Договор аренды земельного участка",
+                    "document_number": "№ 81",
+                    "document_date": "2017-04-12",
+                    "document_code": [
+                      "code": 558401010209,
+                      "value": "Договор аренды (субаренды)"
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-04-13T12:37:05+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "restriction_encumbrance_number": "33:18:000604:566-77/048/2017-36",
+                  "restriction_encumbrance_type": [
+                    "code": "022007000000",
+                    "value": "Ипотека"
+                  ]
+                ]
+              ],
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "01",
+                        "value": "Арендатор"
+                      ]
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-03-14T14:15:00+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-34",
+                  "restriction_encumbrance_type": [
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  ]
+                ]
+              ],
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "01",
+                        "value": "Арендатор"
+                      ]
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-02-01T12:47:44+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-32",
+                  "restriction_encumbrance_type": [
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  ]
+                ]
+              ],
+              [
+                "record_info": [
+                  "registration_date": "2017-01-31T15:32:59+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-31"
+                ]
+              ],
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "01",
+                        "value": "Арендатор"
+                      ]
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-01-27T12:14:23+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-29",
+                  "restriction_encumbrance_type": [
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  ]
+                ]
+              ],
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "01",
+                        "value": "Арендатор"
+                      ]
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-01-27T10:00:08+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-27",
+                  "restriction_encumbrance_type": [
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  ]
+                ]
+              ],
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "01",
+                        "value": "Арендатор"
+                      ]
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-01-27T09:13:28+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-25",
+                  "restriction_encumbrance_type": [
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  ]
+                ]
+              ],
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "01",
+                        "value": "Арендатор"
+                      ]
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-01-16T15:02:30+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-23",
+                  "restriction_encumbrance_type": [
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  ]
+                ]
+              ],
+              [
+                "restrict_parties": [
+                  "restricted_rights_parties": [
+                    "restricted_rights_party": [
+                      "subject": [
+                        "individual": [
+                          "patronymic": "Семенович",
+                          "identity_doc": [
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": [
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            ],
+                            "document_series": 4511
+                          ],
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": [
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          ]
+                        ]
+                      ],
+                      "type": [
+                        "code": "01",
+                        "value": "Арендатор"
+                      ]
+                    ]
+                  ]
+                ],
+                "record_info": [
+                  "registration_date": "2017-01-16T08:51:04+00:00"
+                ],
+                "restrictions_encumbrances_data": [
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-21",
+                  "restriction_encumbrance_type": [
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  ]
+                ]
+              ]
+            ]
+          ],
+          "recipient_statement": "Семенов Семен Семенович",
+          "details_statement": [
+            "group_top_requisites": [
+              "registration_number": "КУВИ-004/2017-2018",
+              "date_formation": "2017-05-02",
+              "organ_registr_rights": "Кольчугинский отдел Управления Росреестра по Владимирской области"
+            ]
+          ],
+          "land_record": [
+            "cost": [
+              "value": 21286127.84
+            ],
+            "contours_location": [
+              "contours": [
+                "contour": [
+                  "entity_spatial": [
+                    "sk_id": "МСК-33",
+                    "spatials_elements": [
+                      "spatial_element": [
+                        [
+                          "ordinates": [
+                            "ordinate": [
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 1,
+                                "x": 207880.58,
+                                "y": 157121.74,
+                                "ord_nmb": 1
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 2,
+                                "x": 207831.6,
+                                "y": 157188.91,
+                                "ord_nmb": 2
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 3,
+                                "x": 207804.92,
+                                "y": 157164.58,
+                                "ord_nmb": 3
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 4,
+                                "x": 207794.48,
+                                "y": 157154.87,
+                                "ord_nmb": 4
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 5,
+                                "x": 207772.68,
+                                "y": 157173.87,
+                                "ord_nmb": 5
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 6,
+                                "x": 207763.14,
+                                "y": 157191.87,
+                                "ord_nmb": 6
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 7,
+                                "x": 207760.02,
+                                "y": 157208.74,
+                                "ord_nmb": 7
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 8,
+                                "x": 207745.97,
+                                "y": 157209.63,
+                                "ord_nmb": 8
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 9,
+                                "x": 207745.62,
+                                "y": 157209.65,
+                                "ord_nmb": 9
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 10,
+                                "x": 207684.19,
+                                "y": 157175.13,
+                                "ord_nmb": 10
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 11,
+                                "x": 207667.07,
+                                "y": 157171.46,
+                                "ord_nmb": 11
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 12,
+                                "x": 207684.55,
+                                "y": 157081.52,
+                                "ord_nmb": 12
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 13,
+                                "x": 207713.59,
+                                "y": 156956.85,
+                                "ord_nmb": 13
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 14,
+                                "x": 207757.56,
+                                "y": 156975.54,
+                                "ord_nmb": 14
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 15,
+                                "x": 207763.08,
+                                "y": 156977.89,
+                                "ord_nmb": 15
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 16,
+                                "x": 207770.34,
+                                "y": 156981.39,
+                                "ord_nmb": 16
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 17,
+                                "x": 207769.76,
+                                "y": 156982.61,
+                                "ord_nmb": 17
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 18,
+                                "x": 207804.17,
+                                "y": 156997.47,
+                                "ord_nmb": 18
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 19,
+                                "x": 207800.42,
+                                "y": 157002.59,
+                                "ord_nmb": 19
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 20,
+                                "x": 207780.69,
+                                "y": 157023.38,
+                                "ord_nmb": 20
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 21,
+                                "x": 207847.9,
+                                "y": 157088.86,
+                                "ord_nmb": 21
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 1,
+                                "x": 207880.58,
+                                "y": 157121.74,
+                                "ord_nmb": 22
+                              ]
+                            ]
+                          ]
+                        ],
+                        [
+                          "ordinates": [
+                            "ordinate": [
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 22,
+                                "x": 207812.97,
+                                "y": 157055.87,
+                                "ord_nmb": 1
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 23,
+                                "x": 207788.18,
+                                "y": 157084.31,
+                                "ord_nmb": 2
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 24,
+                                "x": 207815.25,
+                                "y": 157108.1,
+                                "ord_nmb": 3
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 25,
+                                "x": 207746.16,
+                                "y": 157190.47,
+                                "ord_nmb": 4
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 26,
+                                "x": 207691.75,
+                                "y": 157145.73,
+                                "ord_nmb": 5
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 27,
+                                "x": 207681.75,
+                                "y": 157115.73,
+                                "ord_nmb": 6
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 28,
+                                "x": 207767.49,
+                                "y": 157015.72,
+                                "ord_nmb": 7
+                              ],
+                              [
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 22,
+                                "x": 207812.97,
+                                "y": 157055.87,
+                                "ord_nmb": 8
+                              ]
+                            ]
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            "address_location": [
+              "address": [
+                "readable_address": "Владимирская обл, район Кольчугинский, МО г. Кольчугино (городское поселение), г. Кольчугино, ул. Луговая, д. 13"
+              ]
+            ],
+            "params": [
+              "area": [
+                "value": 17474
+              ],
+              "permitted_use": [
+                "permitted_use_established": [
+                  "by_document": "Для производственных целей"
+                ]
+              ],
+              "category": [
+                "type": [
+                  "code": "003002000000",
+                  "value": "Земли населенных пунктов"
+                ]
+              ]
+            ],
+            "record_info": [
+              "registration_date": "2012-03-11T06:57:37+00:00"
+            ],
+            "object": [
+              "common_data": [
+                "cad_number": "33:18:000604:566",
+                "quarter_cad_number": "33:18:000604",
+                "type": [
+                  "code": "002001001000",
+                  "value": "land_record"
+                ]
+              ],
+              "subtype": [
+                "code": "01",
+                "value": "Землепользование"
+              ]
+            ]
+          ],
+          "details_request": [
+            "date_received_request": "2017-05-02",
+            "date_receipt_request_reg_authority_rights": "2017-05-02"
+          ],
+          "status": "Сведения об объекте недвижимости имеют статус \"временные\""
+        ]
+      ],
+      "name": "egrn",
+      "senderCertificate": "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",
+      "mzStateHold": [
+        "internalId": "10102fd8-a41a-4d34-9847-42ac60fab8cd",
+        "messageId": "95bdfe03-8eea-11eb-a50f-991555ab746b",
+        "traceId": "6dffbc80-8eea-11eb-93f3-46a07ba41c02",
+        "reqObjId": "10102fd8-a41a-4d34-9847-42ac60fab8cd",
+        "type": "Mz"
+      ],
+      "originalMessageId": "95bdfe03-8eea-11eb-a50f-991555ab746b",
+      "class": "egrn",
+      "clazz": "Request@urn://x-artefacts-rosreestr-gov-ru/virtual-services/egrn-statement/1.1.2",
+      "status": "ok"
+    ],
+    [
+      "id": "62ef1ddc-2425-4f7d-a3e9-31834758386d",
+      "modified": 1616842379,
+      "schema": "InterDepReq",
+      "traceId": "6dffbc80-8eea-11eb-93f3-46a07ba41c02",
+      "request": [
+        "otherOgrn": "1027200844868",
+        "requestDataType": "extractRealty",
+        "otherInn": "9204002877",
+        "otherKpp": "920401001",
+        "actualDataAgreement": [
+          "code": "01"
+        ],
+        "recieveResultTypeCode": [
+          "code": "webService"
+        ],
+        "otherRegDate": "1983-11-02",
+        "persDataProcessingAgreement": [
+          "code": "01"
+        ],
+        "actionCode": [
+          "code": "659511111112"
+        ],
+        "otherName": "Администрация города Канаш",
+        "region": "21",
+        "declarantKind": [
+          "code": "357013000000"
+        ],
+        "object": [
+          "fs3RREGRNRequestObject": [
+            "objectTypeCode": [
+              "code": "002001009000"
+            ],
+            "cadastralNumber": "11:22:4324343:434"
+          ]
+        ]
+      ],
+      "sendDate": "2021-03-27T13:52:47.690+0300",
+      "subject": "11:22:4324343:434",
+      "description": "Выписка из Единого государственного реестра недвижимости об объекте недвижимости",
+      "requestName": "Прием обращений в ФГИС ЕГРН",
+      "_vertex_collection_traversal": "interdepreq",
+      "provider": "Росреестр",
+      "name": "egrn",
+      "mzStateHold": [
+        "internalId": "62ef1ddc-2425-4f7d-a3e9-31834758386d",
+        "messageId": "98772a95-8eea-11eb-a50f-09990bc3468b",
+        "traceId": "6dffbc80-8eea-11eb-93f3-46a07ba41c02",
+        "reqObjId": "62ef1ddc-2425-4f7d-a3e9-31834758386d",
+        "type": "Mz"
+      ],
+      "originalMessageId": "98772a95-8eea-11eb-a50f-09990bc3468b",
+      "class": "egrn",
+      "clazz": "Request@urn://x-artefacts-rosreestr-gov-ru/virtual-services/egrn-statement/1.1.2",
+      "status": "waitingResponse"
+    ]
+  ]
+]</camunda:script>
+          </camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1h0cyyz</bpmn:incoming>
+      <bpmn:outgoing>Flow_00rlwc9</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1h0cyyz" sourceRef="StartEvent_1" targetRef="Activity_189hvoh" />
+    <bpmn:task id="Activity_0hi9g51" name="Получить заявление">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="application">${response}</camunda:outputParameter>
+          <camunda:outputParameter name="interDepReqs">${response.interDepartmentReq}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_00rlwc9</bpmn:incoming>
+      <bpmn:outgoing>Flow_1n4fw8p</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_00rlwc9" sourceRef="Activity_189hvoh" targetRef="Activity_0hi9g51" />
+    <bpmn:endEvent id="Event_08lhvqu">
+      <bpmn:incoming>Flow_12evome</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1n4fw8p" sourceRef="Activity_0hi9g51" targetRef="Activity_0x0obdq" />
+    <bpmn:sequenceFlow id="Flow_12evome" sourceRef="Activity_0ygq4jj" targetRef="Event_08lhvqu" />
+    <bpmn:userTask id="Activity_0ygq4jj">
+      <bpmn:incoming>Flow_0yhau2x</bpmn:incoming>
+      <bpmn:outgoing>Flow_12evome</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:task id="Activity_0x0obdq" name="Подготовить данные">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="applicantVerifications">
+            <camunda:map />
+          </camunda:outputParameter>
+          <camunda:outputParameter name="objectId">${0}</camunda:outputParameter>
+          <camunda:outputParameter name="fullfilledList">
+            <camunda:list />
+          </camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1n4fw8p</bpmn:incoming>
+      <bpmn:outgoing>Flow_0axwxs3</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0axwxs3" sourceRef="Activity_0x0obdq" targetRef="Activity_1i6k224" />
+    <bpmn:task id="Activity_1i6k224" name="Заполнить данные для заявителя">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="applicant">
+            <camunda:map>
+              <camunda:entry key="id">${objectId+1}</camunda:entry>
+              <camunda:entry key="name">${application.system.applicant.fullName}</camunda:entry>
+              <camunda:entry key="type">Заявитель</camunda:entry>
+              <camunda:entry key="applicantType">1</camunda:entry>
+              <camunda:entry key="subjectType">1</camunda:entry>
+              <camunda:entry key="typeRecipient">${application.system.delegateInfo.typeRecipient}</camunda:entry>
+            </camunda:map>
+          </camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0axwxs3</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ppmvbd</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1ppmvbd" sourceRef="Activity_1i6k224" targetRef="Activity_1b2qebu" />
+    <bpmn:scriptTask id="Activity_1b2qebu" name="Формируем список ЗУ с кадастровыми номерами" scriptFormat="groovy" camunda:resultVariable="landPlotData">
+      <bpmn:incoming>Flow_1ppmvbd</bpmn:incoming>
+      <bpmn:outgoing>Flow_1mcmi0u</bpmn:outgoing>
+      <bpmn:script>def normalize(numbers) {
+    if (!numbers) {
+        return [];
+    }
+
+    if (!(numbers instanceof java.util.List)) {
+        numbers = [numbers];
+    };
+
+    numbers.removeAll([null])
+    return numbers;
+};
+
+def takeData(data, results) {
+    results.cadastral += normalize(data?.landPlotCadastralNumber);
+};
+
+def base = application?.statement1?.landPlot;
+
+def results = [cadastral: []];
+
+takeData(base?.divideLandPlot, results);
+takeData(base?.unitedLandPlot?.unitedLandPlotData, results);
+takeData(base?.selectedLandPlotInformation, results);
+takeData(base?.infoRepartitionLandPlot?.infoRepartitionLandPlotTypeData, results);
+takeData(base?.lackOfAddress, results);
+takeData(base?.bringingAddressAccordanceLayoutTerritory, results);
+
+return results.cadastral;</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:subProcess id="Activity_08h68z1" name="Земельный участок">
+      <bpmn:incoming>Flow_0kog4by</bpmn:incoming>
+      <bpmn:outgoing>Flow_0vqmly3</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics isSequential="true" camunda:collection="${landPlotData}" camunda:elementVariable="cadastralNumber">
+        <bpmn:loopCardinality xsi:type="bpmn:tFormalExpression">${landPlotData.size()}</bpmn:loopCardinality>
+      </bpmn:multiInstanceLoopCharacteristics>
+      <bpmn:startEvent id="Event_0phbekw">
+        <bpmn:outgoing>Flow_0u8bvzo</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:task id="Activity_0nmu6hp" name="Заполнить данные по объекту">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:outputParameter name="newObject">
+              <camunda:map>
+                <camunda:entry key="id">${objectId+1}</camunda:entry>
+                <camunda:entry key="type">Земельный участок</camunda:entry>
+                <camunda:entry key="name">${cadastralNumber}</camunda:entry>
+                <camunda:entry key="subjectType">2</camunda:entry>
+              </camunda:map>
+            </camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:executionListener event="start">
+            <camunda:script scriptFormat="groovy">def element = execution.getVariable("landPlotDataElement")
+println "Адресация, проверка данных, ЗУ, element: ${element}"</camunda:script>
+          </camunda:executionListener>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_0u8bvzo</bpmn:incoming>
+        <bpmn:outgoing>Flow_0i4srhg</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:endEvent id="Event_1crjpdv">
+        <bpmn:incoming>Flow_1iniq03</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:serviceTask id="Activity_1cteix0" name="Получить МЗ ЕГРН" implementation="##WebService" camunda:expression="${result[0]}" camunda:resultVariable="EGRNMZ">
+        <bpmn:extensionElements>
+          <camunda:properties>
+            <camunda:property name="command" value="filterCollection" />
+          </camunda:properties>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="input">${interDepReqs}</camunda:inputParameter>
+            <camunda:inputParameter name="fieldName">subject</camunda:inputParameter>
+            <camunda:inputParameter name="fieldValues">
+              <camunda:list>
+                <camunda:value>cadastralNumber</camunda:value>
+              </camunda:list>
+            </camunda:inputParameter>
+          </camunda:inputOutput>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_1cnhiim</bpmn:incoming>
+        <bpmn:outgoing>Flow_00mlrm4</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:exclusiveGateway id="Gateway_0vgqcd9" default="Flow_1cnhiim">
+        <bpmn:incoming>Flow_10zof72</bpmn:incoming>
+        <bpmn:outgoing>Flow_0qp549y</bpmn:outgoing>
+        <bpmn:outgoing>Flow_1cnhiim</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:task id="Activity_0o1arej" name="Подготовить&#10;проверку">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:outputParameter name="LandDataVerifications">
+              <camunda:map />
+            </camunda:outputParameter>
+            <camunda:outputParameter name="autoAddressingEgrnLandPlot">${false}</camunda:outputParameter>
+            <camunda:outputParameter name="autoAddressingEgrnOwnership">${false}</camunda:outputParameter>
+          </camunda:inputOutput>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_0i4srhg</bpmn:incoming>
+        <bpmn:outgoing>Flow_1aie7u5</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:exclusiveGateway id="Gateway_178rd76">
+        <bpmn:incoming>Flow_06nn4ts</bpmn:incoming>
+        <bpmn:incoming>Flow_1mmmuuo</bpmn:incoming>
+        <bpmn:outgoing>Flow_17m83u7</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:scriptTask id="Activity_0qtljdf" name="Определить&#10;Extract type" scriptFormat="groovy" camunda:resultVariable="EGRNMZElement">
+        <bpmn:incoming>Flow_1ljisr7</bpmn:incoming>
+        <bpmn:outgoing>Flow_0htgk6a</bpmn:outgoing>
+        <bpmn:script>def mz = execution.getVariable("EGRNMZ")?.response
+
+if (mz.isEmpty()) {
+    return [:];
+} else if (mz.containsKey('extract_about_property_land')) {
+    return mz.extract_about_property_land;
+} else if (mz.containsKey('extract_base_params_land')) {
+    return mz.extract_base_params_land;
+};</bpmn:script>
+      </bpmn:scriptTask>
+      <bpmn:scriptTask id="Activity_17atel5" name="Проверить кадастровый номер" scriptFormat="groovy" camunda:resultVariable="autoAddressingEgrnLandPlot">
+        <bpmn:incoming>Flow_0r9rxuv</bpmn:incoming>
+        <bpmn:outgoing>Flow_0xqrh8z</bpmn:outgoing>
+        <bpmn:script>cadastralNumber?.toString()?.equalsIgnoreCase(execution.getVariable("EGRNMZElement")?.land_record?.object?.common_data?.cad_number as String)</bpmn:script>
+      </bpmn:scriptTask>
+      <bpmn:exclusiveGateway id="Gateway_1r7lh8y" default="Flow_0rm06hk">
+        <bpmn:incoming>Flow_06hjrp4</bpmn:incoming>
+        <bpmn:outgoing>Flow_0rm06hk</bpmn:outgoing>
+        <bpmn:outgoing>Flow_1pwrzr3</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="Gateway_10585vl">
+        <bpmn:incoming>Flow_1a6l10v</bpmn:incoming>
+        <bpmn:incoming>Flow_1pwrzr3</bpmn:incoming>
+        <bpmn:outgoing>Flow_0sfgwoh</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="Gateway_04kl762">
+        <bpmn:incoming>Flow_0rm06hk</bpmn:incoming>
+        <bpmn:outgoing>Flow_0ltvuo4</bpmn:outgoing>
+        <bpmn:outgoing>Flow_16yip39</bpmn:outgoing>
+        <bpmn:outgoing>Flow_0osnj5e</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:task id="Activity_0mr957a" name="Проверить&#10;ЕГРН&#10;ИП">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="DocSeriesIsEqual">
+              <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.documents[0]?.series?.toString()?.equalsIgnoreCase(execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.individual?.identity_doc?.document_series as String)</camunda:script>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="DocNumberIsEqual">
+              <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.documents[0]?.series?.toString()?.equalsIgnoreCase(execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.individual?.identity_doc?.document_series as String)</camunda:script>
+            </camunda:inputParameter>
+            <camunda:outputParameter name="autoAddressingEgrnOwnership">${DocSeriesIsEqual &amp;&amp; DocNumberIsEqual}</camunda:outputParameter>
+          </camunda:inputOutput>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_0iyqru1</bpmn:incoming>
+        <bpmn:outgoing>Flow_0qhtyzh</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:task id="Activity_0asbftz" name="Проверить&#10;ЕГРН&#10;ЮЛ">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="OGRNIsEqual">
+              <camunda:script scriptFormat="groovy">def resident = execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.legal_entity?.entity?.resident?.ogrn?.toString()
+def govement = execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.legal_entity?.entity?.govement_entity?.ogrn?.toString()
+def ogrn = resident ?: govement
+execution.getVariable("application")?.applicant?.ogrn?.toString()?.equalsIgnoreCase(ogrn)</camunda:script>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="InnIsEqual">
+              <camunda:script scriptFormat="groovy">def resident = execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.legal_entity?.entity?.resident?.inn?.toString()
+def govement = execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.legal_entity?.entity?.govement_entity?.inn?.toString()
+def inn = resident ?: govement
+execution.getVariable("application")?.applicant?.ogrn?.toString()?.equalsIgnoreCase(inn)</camunda:script>
+            </camunda:inputParameter>
+            <camunda:outputParameter name="autoAddressingEgrnOwnership">${OGRNIsEqual &amp;&amp; InnIsEqual}</camunda:outputParameter>
+          </camunda:inputOutput>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_1l6b9sc</bpmn:incoming>
+        <bpmn:outgoing>Flow_1s99blu</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:task id="Activity_071kpqp" name="Проверить&#10;ЕГРН&#10;ФЛ">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="FirstNameIsEqual">
+              <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.firstName?.equalsIgnoreCase(execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.individual?.name as String)</camunda:script>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="LastNameIsEqual">
+              <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.lastName?.equalsIgnoreCase(execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.individual?.surname as String)</camunda:script>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="MiddleNameIsEqual">
+              <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.middleName?.equalsIgnoreCase(execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.individual?.patronymic as String)</camunda:script>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="DocSeriesIsEqual">
+              <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.documents[0]?.series?.toString()?.equalsIgnoreCase(execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.individual?.identity_doc?.document_series as String)</camunda:script>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="DocNumberIsEqual">
+              <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.documents[0]?.number?.toString()?.equalsIgnoreCase(execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.individual?.identity_doc?.document_number as String)</camunda:script>
+            </camunda:inputParameter>
+            <camunda:outputParameter name="autoAddressingEgrnOwnership">${FirstNameIsEqual &amp;&amp; LastNameIsEqual &amp;&amp; MiddleNameIsEqual &amp;&amp; DocSeriesIsEqual &amp;&amp; DocNumberIsEqual}</camunda:outputParameter>
+          </camunda:inputOutput>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_0y4dfn7</bpmn:incoming>
+        <bpmn:outgoing>Flow_1vxiv3y</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:exclusiveGateway id="Gateway_0xqav0s">
+        <bpmn:incoming>Flow_0xmfjg1</bpmn:incoming>
+        <bpmn:incoming>Flow_0qjd9r9</bpmn:incoming>
+        <bpmn:incoming>Flow_026jgqj</bpmn:incoming>
+        <bpmn:incoming>Flow_1vxiv3y</bpmn:incoming>
+        <bpmn:incoming>Flow_1s99blu</bpmn:incoming>
+        <bpmn:incoming>Flow_0qhtyzh</bpmn:incoming>
+        <bpmn:outgoing>Flow_1a6l10v</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="Gateway_0u24z5s" default="Flow_0y4dfn7">
+        <bpmn:incoming>Flow_0osnj5e</bpmn:incoming>
+        <bpmn:outgoing>Flow_026jgqj</bpmn:outgoing>
+        <bpmn:outgoing>Flow_0y4dfn7</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="Gateway_09ti4e1" default="Flow_1l6b9sc">
+        <bpmn:incoming>Flow_16yip39</bpmn:incoming>
+        <bpmn:outgoing>Flow_0qjd9r9</bpmn:outgoing>
+        <bpmn:outgoing>Flow_1l6b9sc</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="Gateway_0pal93r" default="Flow_0iyqru1">
+        <bpmn:incoming>Flow_0ltvuo4</bpmn:incoming>
+        <bpmn:outgoing>Flow_0xmfjg1</bpmn:outgoing>
+        <bpmn:outgoing>Flow_0iyqru1</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="Gateway_0284dcm">
+        <bpmn:incoming>Flow_00mlrm4</bpmn:incoming>
+        <bpmn:incoming>Flow_0qp549y</bpmn:incoming>
+        <bpmn:outgoing>Flow_1ljisr7</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="Gateway_13hafkc" default="Flow_0r9rxuv">
+        <bpmn:incoming>Flow_0htgk6a</bpmn:incoming>
+        <bpmn:outgoing>Flow_1inruoh</bpmn:outgoing>
+        <bpmn:outgoing>Flow_0r9rxuv</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="Gateway_1ru3w8w">
+        <bpmn:incoming>Flow_1inruoh</bpmn:incoming>
+        <bpmn:incoming>Flow_0sk7vjj</bpmn:incoming>
+        <bpmn:outgoing>Flow_12hcyvy</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="Gateway_0r0hymu" default="Flow_10zof72">
+        <bpmn:incoming>Flow_1aie7u5</bpmn:incoming>
+        <bpmn:outgoing>Flow_06nn4ts</bpmn:outgoing>
+        <bpmn:outgoing>Flow_10zof72</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:sequenceFlow id="Flow_12hcyvy" sourceRef="Gateway_1ru3w8w" targetRef="Activity_0ndzrj3" />
+      <bpmn:sequenceFlow id="Flow_06nn4ts" name="kpOa06 == 5" sourceRef="Gateway_0r0hymu" targetRef="Gateway_178rd76">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${application.statement.variantChoice.kpOa06 == 5}</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_10zof72" sourceRef="Gateway_0r0hymu" targetRef="Gateway_0vgqcd9" />
+      <bpmn:sequenceFlow id="Flow_1inruoh" name="kpOa04 == 2" sourceRef="Gateway_13hafkc" targetRef="Gateway_1ru3w8w">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${application.statement.variantChoice.kpOa04 == 2}</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_0r9rxuv" sourceRef="Gateway_13hafkc" targetRef="Activity_17atel5" />
+      <bpmn:sequenceFlow id="Flow_1ljisr7" sourceRef="Gateway_0284dcm" targetRef="Activity_0qtljdf" />
+      <bpmn:sequenceFlow id="Flow_00mlrm4" sourceRef="Activity_1cteix0" targetRef="Gateway_0284dcm" />
+      <bpmn:sequenceFlow id="Flow_0xmfjg1" name="individual == null" sourceRef="Gateway_0pal93r" targetRef="Gateway_0xqav0s">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" language="groovy">execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.individual == null</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_0qjd9r9" name="entity  == null" sourceRef="Gateway_09ti4e1" targetRef="Gateway_0xqav0s">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" language="groovy">execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.legal_entity?.entity == null</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_026jgqj" name="individual == null" sourceRef="Gateway_0u24z5s" targetRef="Gateway_0xqav0s">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" language="groovy">execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.individual == null</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_1vxiv3y" sourceRef="Activity_071kpqp" targetRef="Gateway_0xqav0s" />
+      <bpmn:sequenceFlow id="Flow_0y4dfn7" sourceRef="Gateway_0u24z5s" targetRef="Activity_071kpqp" />
+      <bpmn:sequenceFlow id="Flow_1s99blu" sourceRef="Activity_0asbftz" targetRef="Gateway_0xqav0s" />
+      <bpmn:sequenceFlow id="Flow_1l6b9sc" sourceRef="Gateway_09ti4e1" targetRef="Activity_0asbftz" />
+      <bpmn:sequenceFlow id="Flow_0qhtyzh" sourceRef="Activity_0mr957a" targetRef="Gateway_0xqav0s" />
+      <bpmn:sequenceFlow id="Flow_0iyqru1" sourceRef="Gateway_0pal93r" targetRef="Activity_0mr957a" />
+      <bpmn:sequenceFlow id="Flow_0ltvuo4" name="ИП" sourceRef="Gateway_04kl762" targetRef="Gateway_0pal93r">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${application.common.userType == "BUSINESSMAN"}</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_16yip39" name="ЮЛ" sourceRef="Gateway_04kl762" targetRef="Gateway_09ti4e1">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${application.common.userType == "EMPLOYEE"}</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_0osnj5e" name="ФЛ" sourceRef="Gateway_04kl762" targetRef="Gateway_0u24z5s">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${application.common.userType == "PERSON_RF"}</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_1a6l10v" sourceRef="Gateway_0xqav0s" targetRef="Gateway_10585vl" />
+      <bpmn:sequenceFlow id="Flow_0rm06hk" sourceRef="Gateway_1r7lh8y" targetRef="Gateway_04kl762" />
+      <bpmn:sequenceFlow id="Flow_1pwrzr3" name="! autoAddressingEgrnLandPlot" sourceRef="Gateway_1r7lh8y" targetRef="Gateway_10585vl">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${!autoAddressingEgrnLandPlot}</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_0xqrh8z" sourceRef="Activity_17atel5" targetRef="Activity_09bux3w" />
+      <bpmn:sequenceFlow id="Flow_0htgk6a" sourceRef="Activity_0qtljdf" targetRef="Gateway_13hafkc" />
+      <bpmn:sequenceFlow id="Flow_0sfgwoh" sourceRef="Gateway_10585vl" targetRef="Activity_0uly4gr" />
+      <bpmn:sequenceFlow id="Flow_17m83u7" sourceRef="Gateway_178rd76" targetRef="Activity_0tejf9g" />
+      <bpmn:sequenceFlow id="Flow_1aie7u5" sourceRef="Activity_0o1arej" targetRef="Gateway_0r0hymu" />
+      <bpmn:sequenceFlow id="Flow_0qp549y" sourceRef="Gateway_0vgqcd9" targetRef="Gateway_0284dcm">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${interDepReqs == null}</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_1cnhiim" sourceRef="Gateway_0vgqcd9" targetRef="Activity_1cteix0" />
+      <bpmn:sequenceFlow id="Flow_0u8bvzo" sourceRef="Event_0phbekw" targetRef="Activity_0nmu6hp" />
+      <bpmn:sequenceFlow id="Flow_0i4srhg" sourceRef="Activity_0nmu6hp" targetRef="Activity_0o1arej" />
+      <bpmn:scriptTask id="Activity_09bux3w" name="Добавить&#10;МЗ" scriptFormat="groovy" camunda:resultVariable="LandDataVerifications">
+        <bpmn:incoming>Flow_0xqrh8z</bpmn:incoming>
+        <bpmn:outgoing>Flow_06hjrp4</bpmn:outgoing>
+        <bpmn:script>LandDataVerifications.put("autoAddressingEgrnLandPlot", autoAddressingEgrnLandPlot)</bpmn:script>
+      </bpmn:scriptTask>
+      <bpmn:sequenceFlow id="Flow_06hjrp4" sourceRef="Activity_09bux3w" targetRef="Gateway_1r7lh8y" />
+      <bpmn:scriptTask id="Activity_0uly4gr" name="Добавить&#10;МЗ" scriptFormat="groovy" camunda:resultVariable="LandDataVerifications">
+        <bpmn:incoming>Flow_0sfgwoh</bpmn:incoming>
+        <bpmn:outgoing>Flow_0sk7vjj</bpmn:outgoing>
+        <bpmn:script>LandDataVerifications.put("autoAddressingEgrnOwnership", autoAddressingEgrnOwnership)</bpmn:script>
+      </bpmn:scriptTask>
+      <bpmn:sequenceFlow id="Flow_0sk7vjj" sourceRef="Activity_0uly4gr" targetRef="Gateway_1ru3w8w" />
+      <bpmn:scriptTask id="Activity_0ndzrj3" name="Добавить&#10;МЗ" scriptFormat="groovy" camunda:resultVariable="newObject">
+        <bpmn:incoming>Flow_12hcyvy</bpmn:incoming>
+        <bpmn:outgoing>Flow_1mmmuuo</bpmn:outgoing>
+        <bpmn:script>newObject.put("verifications", LandDataVerifications)</bpmn:script>
+      </bpmn:scriptTask>
+      <bpmn:scriptTask id="Activity_0tejf9g" name="Добавить&#10;МЗ" scriptFormat="groovy" camunda:resultVariable="fullfilledList">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:outputParameter name="objectId">${newObject.id}</camunda:outputParameter>
+          </camunda:inputOutput>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_17m83u7</bpmn:incoming>
+        <bpmn:outgoing>Flow_1iniq03</bpmn:outgoing>
+        <bpmn:script>fullfilledList &lt;&lt; newObject</bpmn:script>
+      </bpmn:scriptTask>
+      <bpmn:sequenceFlow id="Flow_1iniq03" sourceRef="Activity_0tejf9g" targetRef="Event_1crjpdv" />
+      <bpmn:sequenceFlow id="Flow_1mmmuuo" sourceRef="Activity_0ndzrj3" targetRef="Gateway_178rd76" />
+    </bpmn:subProcess>
+    <bpmn:sequenceFlow id="Flow_1mcmi0u" sourceRef="Activity_1b2qebu" targetRef="Activity_0epb335" />
+    <bpmn:scriptTask id="Activity_0epb335" name="Формируем список здания(строения) с кадастровыми номерами" scriptFormat="groovy" camunda:resultVariable="buildPlotData">
+      <bpmn:incoming>Flow_1mcmi0u</bpmn:incoming>
+      <bpmn:outgoing>Flow_0kog4by</bpmn:outgoing>
+      <bpmn:script>def normalize(numbers) {
+    if (!numbers) {
+        return [];
+    }
+
+    if (!(numbers instanceof java.util.List)) {
+        numbers = [numbers];
+    };
+
+    numbers.removeAll([null])
+    return numbers;
+};
+
+def takeData(data, results) {
+    results.cadastral += normalize(data?.landPlotCadastralNumber);
+};
+
+def base = application?.statement?.unfinishedBuilding;
+
+def results = [
+        cadastral  : []
+];
+
+takeData(base?.objectInformation, results);
+takeData(base?.exploitationObjectInformation, results);
+takeData(base?.objectConstructionPermitIsNotRequired, results);
+takeData(base?.lackOfAddress, results);
+takeData(base?.addressMatching, results);
+
+return results.cadastral;</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_0kog4by" sourceRef="Activity_0epb335" targetRef="Activity_08h68z1" />
+    <bpmn:subProcess id="Activity_0o3eas8" name="Здание, сооружение, объект незавершенного строительства">
+      <bpmn:incoming>Flow_0vqmly3</bpmn:incoming>
+      <bpmn:outgoing>Flow_0yhau2x</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics isSequential="true" camunda:collection="${buildPlotData}" camunda:elementVariable="cadastralNumber">
+        <bpmn:loopCardinality xsi:type="bpmn:tFormalExpression">${buildPlotData.size()}</bpmn:loopCardinality>
+      </bpmn:multiInstanceLoopCharacteristics>
+      <bpmn:startEvent id="Event_0qxgzgu">
+        <bpmn:outgoing>Flow_1clsk1w</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:task id="Activity_1vbf8ea" name="Заполнить данные по объекту">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:outputParameter name="newObject">
+              <camunda:map>
+                <camunda:entry key="id">${objectId+1}</camunda:entry>
+                <camunda:entry key="type">Здание(строение), сооружение</camunda:entry>
+                <camunda:entry key="name">${cadastralNumber}</camunda:entry>
+                <camunda:entry key="subjectType">3</camunda:entry>
+              </camunda:map>
+            </camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:executionListener event="start">
+            <camunda:script scriptFormat="groovy">def element = execution.getVariable("buildPlotDataElement")
+println "Адресация, проверка данных, здания, помещения, сооружения, element: ${element}"</camunda:script>
+          </camunda:executionListener>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_1clsk1w</bpmn:incoming>
+        <bpmn:outgoing>Flow_0welo9z</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:endEvent id="Event_00xqeap">
+        <bpmn:incoming>Flow_1l56g0y</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:exclusiveGateway id="Gateway_1inlzml" default="Flow_0fofq1i">
+        <bpmn:incoming>Flow_0lxtq27</bpmn:incoming>
+        <bpmn:outgoing>Flow_1e5x96j</bpmn:outgoing>
+        <bpmn:outgoing>Flow_0fofq1i</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:task id="Activity_09bhf23" name="Подготовить данные">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:outputParameter name="BuildDataVerifications">
+              <camunda:map />
+            </camunda:outputParameter>
+            <camunda:outputParameter name="autoAddressingEgrnBuild">${false}</camunda:outputParameter>
+            <camunda:outputParameter name="autoAddressingEgrnOwnership">${false}</camunda:outputParameter>
+          </camunda:inputOutput>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_0welo9z</bpmn:incoming>
+        <bpmn:outgoing>Flow_141b7s6</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:exclusiveGateway id="Gateway_1uwkvw2">
+        <bpmn:incoming>Flow_1qh48b7</bpmn:incoming>
+        <bpmn:outgoing>Flow_0ezxdbk</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:scriptTask id="Activity_0de8hcr" name="Проверить кадастровый номер" scriptFormat="groovy" camunda:resultVariable="autoAddressingEgrnBuild">
+        <bpmn:incoming>Flow_0mpiw1f</bpmn:incoming>
+        <bpmn:outgoing>Flow_1gfnqjr</bpmn:outgoing>
+        <bpmn:script>def mz = execution.getVariable("EGRNMZElement")
+
+mz_obj = null;
+
+if (!mz || mz.isEmpty()) {
+    return "01";
+} else if (mz.containsKey('object_under_construction_record')) {
+    mz_obj = mz.object_under_construction_record;
+} else if (mz.containsKey('build_record')) {
+    mz_obj = mz.build_record;
+} else if (mz.containsKey('construction_record')) {
+    mz_obj = mz.construction_record;
+} else if (mz.containsKey('land_record')) {
+    mz_obj = mz.land_record;}
+
+autoAddressingEgrnBuild =  cadastralNumber
+
+return cadastralNumber?.toString()?.equalsIgnoreCase(mz_obj?.object?.common_data?.cad_number as String)</bpmn:script>
+      </bpmn:scriptTask>
+      <bpmn:exclusiveGateway id="Gateway_09v07vs" default="Flow_1bizvco">
+        <bpmn:incoming>Flow_09t5n9q</bpmn:incoming>
+        <bpmn:outgoing>Flow_1bizvco</bpmn:outgoing>
+        <bpmn:outgoing>Flow_0m3ufjn</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="Gateway_1onl1ui">
+        <bpmn:incoming>Flow_1stfpee</bpmn:incoming>
+        <bpmn:incoming>Flow_0m3ufjn</bpmn:incoming>
+        <bpmn:outgoing>Flow_1emwqa2</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="Gateway_1n5y16v">
+        <bpmn:incoming>Flow_1bizvco</bpmn:incoming>
+        <bpmn:outgoing>Flow_13n94n2</bpmn:outgoing>
+        <bpmn:outgoing>Flow_1ji7saw</bpmn:outgoing>
+        <bpmn:outgoing>Flow_046u6dm</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:task id="Activity_0kxzmer" name="Проверить&#10;ЕГРН&#10;ИП">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="DocSeriesIsEqual">
+              <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.documents[0]?.series?.toString()?.equalsIgnoreCase(execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.individual?.identity_doc?.document_series as String)</camunda:script>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="DocNumberIsEqual">
+              <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.documents[0]?.series?.toString()?.equalsIgnoreCase(execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.individual?.identity_doc?.document_series as String)</camunda:script>
+            </camunda:inputParameter>
+            <camunda:outputParameter name="autoAddressingEgrnOwnership">${DocSeriesIsEqual &amp;&amp; DocNumberIsEqual}</camunda:outputParameter>
+          </camunda:inputOutput>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_0arw3on</bpmn:incoming>
+        <bpmn:outgoing>Flow_1i03gx6</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:task id="Activity_00a1ex6" name="Проверить&#10;ЕГРН&#10;ЮЛ">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="OGRNIsEqual">
+              <camunda:script scriptFormat="groovy">def resident = execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.legal_entity?.entity?.resident?.ogrn?.toString()
+def govement = execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.legal_entity?.entity?.govement_entity?.ogrn?.toString()
+def ogrn = resident ?: govement
+execution.getVariable("application")?.applicant?.ogrn?.toString()?.equalsIgnoreCase(ogrn)</camunda:script>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="InnIsEqual">
+              <camunda:script scriptFormat="groovy">def resident = execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.legal_entity?.entity?.resident?.inn?.toString()
+def govement = execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.legal_entity?.entity?.govement_entity?.inn?.toString()
+def inn = resident ?: govement
+execution.getVariable("application")?.applicant?.ogrn?.toString()?.equalsIgnoreCase(inn)</camunda:script>
+            </camunda:inputParameter>
+            <camunda:outputParameter name="autoAddressingEgrnOwnership">${OGRNIsEqual &amp;&amp; InnIsEqual}</camunda:outputParameter>
+          </camunda:inputOutput>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_1i5u6pb</bpmn:incoming>
+        <bpmn:outgoing>Flow_0rj977l</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:task id="Activity_1xnirct" name="Проверить&#10;ЕГРН&#10;ФЛ">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="FirstNameIsEqual">
+              <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.firstName?.equalsIgnoreCase(execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.individual?.name as String)</camunda:script>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="LastNameIsEqual">
+              <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.lastName?.equalsIgnoreCase(execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.individual?.surname as String)</camunda:script>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="MiddleNameIsEqual">
+              <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.middleName?.equalsIgnoreCase(execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.individual?.patronymic as String)</camunda:script>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="DocSeriesIsEqual">
+              <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.documents[0]?.series?.toString()?.equalsIgnoreCase(execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.individual?.identity_doc?.document_series as String)</camunda:script>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="DocNumberIsEqual">
+              <camunda:script scriptFormat="groovy">execution.getVariable("application")?.applicant?.documents[0]?.number?.toString()?.equalsIgnoreCase(execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.individual?.identity_doc?.document_number as String)</camunda:script>
+            </camunda:inputParameter>
+            <camunda:outputParameter name="autoAddressingEgrnOwnership">${FirstNameIsEqual &amp;&amp; LastNameIsEqual &amp;&amp; MiddleNameIsEqual &amp;&amp; DocSeriesIsEqual &amp;&amp; DocNumberIsEqual}</camunda:outputParameter>
+          </camunda:inputOutput>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_1bif93g</bpmn:incoming>
+        <bpmn:outgoing>Flow_12sww6t</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:exclusiveGateway id="Gateway_1p8zz5g">
+        <bpmn:incoming>Flow_0z19z5w</bpmn:incoming>
+        <bpmn:incoming>Flow_0sknv8p</bpmn:incoming>
+        <bpmn:incoming>Flow_18wyk8p</bpmn:incoming>
+        <bpmn:incoming>Flow_12sww6t</bpmn:incoming>
+        <bpmn:incoming>Flow_0rj977l</bpmn:incoming>
+        <bpmn:incoming>Flow_1i03gx6</bpmn:incoming>
+        <bpmn:outgoing>Flow_1stfpee</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="Gateway_1its1ys" default="Flow_1bif93g">
+        <bpmn:incoming>Flow_046u6dm</bpmn:incoming>
+        <bpmn:outgoing>Flow_18wyk8p</bpmn:outgoing>
+        <bpmn:outgoing>Flow_1bif93g</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="Gateway_0utmreb" default="Flow_1i5u6pb">
+        <bpmn:incoming>Flow_1ji7saw</bpmn:incoming>
+        <bpmn:outgoing>Flow_0sknv8p</bpmn:outgoing>
+        <bpmn:outgoing>Flow_1i5u6pb</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="Gateway_11lapwt" default="Flow_0arw3on">
+        <bpmn:incoming>Flow_13n94n2</bpmn:incoming>
+        <bpmn:outgoing>Flow_0z19z5w</bpmn:outgoing>
+        <bpmn:outgoing>Flow_0arw3on</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="Gateway_17hwtjn">
+        <bpmn:incoming>Flow_1e5x96j</bpmn:incoming>
+        <bpmn:incoming>Flow_1sunnod</bpmn:incoming>
+        <bpmn:outgoing>Flow_1o9usbg</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="Gateway_09e5lla" default="Flow_0mpiw1f">
+        <bpmn:incoming>Flow_0ru9eal</bpmn:incoming>
+        <bpmn:outgoing>Flow_0a8mtsy</bpmn:outgoing>
+        <bpmn:outgoing>Flow_0mpiw1f</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="Gateway_0eew1zk">
+        <bpmn:incoming>Flow_0a8mtsy</bpmn:incoming>
+        <bpmn:incoming>Flow_04i76gp</bpmn:incoming>
+        <bpmn:outgoing>Flow_101s1pb</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="Gateway_0ebdoh3">
+        <bpmn:incoming>Flow_141b7s6</bpmn:incoming>
+        <bpmn:outgoing>Flow_0lxtq27</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:sequenceFlow id="Flow_101s1pb" sourceRef="Gateway_0eew1zk" targetRef="Activity_0e436m1" />
+      <bpmn:sequenceFlow id="Flow_0lxtq27" sourceRef="Gateway_0ebdoh3" targetRef="Gateway_1inlzml" />
+      <bpmn:sequenceFlow id="Flow_0a8mtsy" name="kpOa04 == 2" sourceRef="Gateway_09e5lla" targetRef="Gateway_0eew1zk">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${application.statement.variantChoice.kpOa04 == 2}</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_0mpiw1f" sourceRef="Gateway_09e5lla" targetRef="Activity_0de8hcr" />
+      <bpmn:sequenceFlow id="Flow_0z19z5w" name="individual == null" sourceRef="Gateway_11lapwt" targetRef="Gateway_1p8zz5g">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" language="groovy">execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.individual == null</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_0sknv8p" name="entity == null" sourceRef="Gateway_0utmreb" targetRef="Gateway_1p8zz5g">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" language="groovy">execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.legal_entity?.entity == null</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_18wyk8p" name="individual == null" sourceRef="Gateway_1its1ys" targetRef="Gateway_1p8zz5g">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression" language="groovy">execution.getVariable("EGRNMZElement")?.right_records?.right_record?.right_holders?.right_holder?.individual == null</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_12sww6t" sourceRef="Activity_1xnirct" targetRef="Gateway_1p8zz5g" />
+      <bpmn:sequenceFlow id="Flow_1bif93g" sourceRef="Gateway_1its1ys" targetRef="Activity_1xnirct" />
+      <bpmn:sequenceFlow id="Flow_0rj977l" sourceRef="Activity_00a1ex6" targetRef="Gateway_1p8zz5g" />
+      <bpmn:sequenceFlow id="Flow_1i5u6pb" sourceRef="Gateway_0utmreb" targetRef="Activity_00a1ex6" />
+      <bpmn:sequenceFlow id="Flow_1i03gx6" sourceRef="Activity_0kxzmer" targetRef="Gateway_1p8zz5g" />
+      <bpmn:sequenceFlow id="Flow_0arw3on" sourceRef="Gateway_11lapwt" targetRef="Activity_0kxzmer" />
+      <bpmn:sequenceFlow id="Flow_13n94n2" name="ИП" sourceRef="Gateway_1n5y16v" targetRef="Gateway_11lapwt">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${application.common.userType == "BUSINESSMAN"}</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_1ji7saw" name="ЮЛ" sourceRef="Gateway_1n5y16v" targetRef="Gateway_0utmreb">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${application.common.userType == "EMPLOYEE"}</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_046u6dm" name="ФЛ" sourceRef="Gateway_1n5y16v" targetRef="Gateway_1its1ys">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${application.common.userType == "PERSON_RF"}</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_1stfpee" sourceRef="Gateway_1p8zz5g" targetRef="Gateway_1onl1ui" />
+      <bpmn:sequenceFlow id="Flow_1bizvco" sourceRef="Gateway_09v07vs" targetRef="Gateway_1n5y16v" />
+      <bpmn:sequenceFlow id="Flow_0m3ufjn" name="! dataEGRNApproved" sourceRef="Gateway_09v07vs" targetRef="Gateway_1onl1ui">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${!autoAddressingEgrnBuild}</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_1gfnqjr" sourceRef="Activity_0de8hcr" targetRef="Activity_1yftp7n" />
+      <bpmn:sequenceFlow id="Flow_1emwqa2" sourceRef="Gateway_1onl1ui" targetRef="Activity_1wy6u2z" />
+      <bpmn:sequenceFlow id="Flow_0ezxdbk" sourceRef="Gateway_1uwkvw2" targetRef="Activity_09tpqnm" />
+      <bpmn:sequenceFlow id="Flow_141b7s6" sourceRef="Activity_09bhf23" targetRef="Gateway_0ebdoh3" />
+      <bpmn:sequenceFlow id="Flow_0welo9z" sourceRef="Activity_1vbf8ea" targetRef="Activity_09bhf23" />
+      <bpmn:sequenceFlow id="Flow_1clsk1w" sourceRef="Event_0qxgzgu" targetRef="Activity_1vbf8ea" />
+      <bpmn:sequenceFlow id="Flow_1e5x96j" sourceRef="Gateway_1inlzml" targetRef="Gateway_17hwtjn">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${interDepReqs == null}</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="Flow_0fofq1i" sourceRef="Gateway_1inlzml" targetRef="Activity_0k3gc05" />
+      <bpmn:task id="Activity_0k3gc05" name="Фильтр&#10;ЕГРН">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:outputParameter name="EGRNMZ">
+              <camunda:script scriptFormat="groovy">return interDepReqs.inject([], { result, it -&gt;
+    it.subject == cadastralNumber ? result = it : result; 
+});</camunda:script>
+            </camunda:outputParameter>
+          </camunda:inputOutput>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_0fofq1i</bpmn:incoming>
+        <bpmn:outgoing>Flow_1sunnod</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:sequenceFlow id="Flow_1sunnod" sourceRef="Activity_0k3gc05" targetRef="Gateway_17hwtjn" />
+      <bpmn:sequenceFlow id="Flow_1o9usbg" sourceRef="Gateway_17hwtjn" targetRef="Activity_0o7rq4e" />
+      <bpmn:scriptTask id="Activity_0o7rq4e" name="Определить&#10;Extract type" scriptFormat="groovy" camunda:resultVariable="EGRNMZElement">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:outputParameter name="cadastralNumber">33:18:000604:566</camunda:outputParameter>
+          </camunda:inputOutput>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_1o9usbg</bpmn:incoming>
+        <bpmn:outgoing>Flow_0ru9eal</bpmn:outgoing>
+        <bpmn:script>def mz = execution.getVariable("EGRNMZ")?.response
+
+
+if (!mz || mz?.isEmpty()) {
+    return [:];
+} else if (mz.containsKey('extract_about_property_under_construction')) {
+    return mz.extract_about_property_under_construction;
+} else if (mz.containsKey('extract_base_params_under_construction')) {
+    return mz.extract_base_params_under_construction;
+} else if (mz.containsKey('extract_about_property_build')) {
+    return mz.extract_about_property_build;
+} else if (mz.containsKey('extract_base_params_build')) {
+    return mz.extract_base_params_build;
+} else if (mz.containsKey('extract_about_property_construction')) {
+    return mz.extract_about_property_construction;
+} else if (mz.containsKey('extract_base_params_construction')) {
+    return mz.extract_base_params_construction;
+};
+
+return mz.extract_base_params_land</bpmn:script>
+      </bpmn:scriptTask>
+      <bpmn:sequenceFlow id="Flow_0ru9eal" sourceRef="Activity_0o7rq4e" targetRef="Gateway_09e5lla" />
+      <bpmn:scriptTask id="Activity_1wy6u2z" name="Добавить&#10;МЗ" scriptFormat="groovy" camunda:resultVariable="BuildDataVerifications">
+        <bpmn:incoming>Flow_1emwqa2</bpmn:incoming>
+        <bpmn:outgoing>Flow_04i76gp</bpmn:outgoing>
+        <bpmn:script>BuildDataVerifications.put("autoAddressingEgrnOwnership", autoAddressingEgrnOwnership)</bpmn:script>
+      </bpmn:scriptTask>
+      <bpmn:scriptTask id="Activity_0e436m1" name="Добавить&#10;МЗ" scriptFormat="groovy" camunda:resultVariable="newObject">
+        <bpmn:incoming>Flow_101s1pb</bpmn:incoming>
+        <bpmn:outgoing>Flow_1qh48b7</bpmn:outgoing>
+        <bpmn:script>newObject.put("verifications", BuildDataVerifications)</bpmn:script>
+      </bpmn:scriptTask>
+      <bpmn:scriptTask id="Activity_09tpqnm" name="Добавить&#10;МЗ" scriptFormat="groovy" camunda:resultVariable="fullfilledList">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:outputParameter name="objectId">${newObject.id}</camunda:outputParameter>
+          </camunda:inputOutput>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_0ezxdbk</bpmn:incoming>
+        <bpmn:outgoing>Flow_1l56g0y</bpmn:outgoing>
+        <bpmn:script>fullfilledList &lt;&lt; newObject</bpmn:script>
+      </bpmn:scriptTask>
+      <bpmn:sequenceFlow id="Flow_1l56g0y" sourceRef="Activity_09tpqnm" targetRef="Event_00xqeap" />
+      <bpmn:scriptTask id="Activity_1yftp7n" name="Добавить&#10;МЗ" scriptFormat="groovy" camunda:resultVariable="BuildDataVerifications">
+        <bpmn:incoming>Flow_1gfnqjr</bpmn:incoming>
+        <bpmn:outgoing>Flow_09t5n9q</bpmn:outgoing>
+        <bpmn:script>BuildDataVerifications.put("autoAddressingEgrnBuild", autoAddressingEgrnBuild)</bpmn:script>
+      </bpmn:scriptTask>
+      <bpmn:sequenceFlow id="Flow_1qh48b7" sourceRef="Activity_0e436m1" targetRef="Gateway_1uwkvw2" />
+      <bpmn:sequenceFlow id="Flow_04i76gp" sourceRef="Activity_1wy6u2z" targetRef="Gateway_0eew1zk" />
+      <bpmn:sequenceFlow id="Flow_09t5n9q" sourceRef="Activity_1yftp7n" targetRef="Gateway_09v07vs" />
+    </bpmn:subProcess>
+    <bpmn:sequenceFlow id="Flow_0vqmly3" sourceRef="Activity_08h68z1" targetRef="Activity_0o3eas8" />
+    <bpmn:sequenceFlow id="Flow_0yhau2x" sourceRef="Activity_0o3eas8" targetRef="Activity_0ygq4jj" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_0lxpcls">
+      <bpmndi:BPMNEdge id="Flow_0yhau2x_di" bpmnElement="Flow_0yhau2x">
+        <di:waypoint x="1631" y="1305" />
+        <di:waypoint x="1631" y="1860" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0vqmly3_di" bpmnElement="Flow_0vqmly3">
+        <di:waypoint x="1631" y="765" />
+        <di:waypoint x="1631" y="820" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0kog4by_di" bpmnElement="Flow_0kog4by">
+        <di:waypoint x="1310" y="117" />
+        <di:waypoint x="1626" y="117" />
+        <di:waypoint x="1626" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1mcmi0u_di" bpmnElement="Flow_1mcmi0u">
+        <di:waypoint x="1170" y="117" />
+        <di:waypoint x="1210" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ppmvbd_di" bpmnElement="Flow_1ppmvbd">
+        <di:waypoint x="980" y="117" />
+        <di:waypoint x="1070" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0axwxs3_di" bpmnElement="Flow_0axwxs3">
+        <di:waypoint x="830" y="117" />
+        <di:waypoint x="880" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12evome_di" bpmnElement="Flow_12evome">
+        <di:waypoint x="1631" y="1940" />
+        <di:waypoint x="1631" y="1982" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1n4fw8p_di" bpmnElement="Flow_1n4fw8p">
+        <di:waypoint x="690" y="117" />
+        <di:waypoint x="730" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_00rlwc9_di" bpmnElement="Flow_00rlwc9">
+        <di:waypoint x="550" y="117" />
+        <di:waypoint x="590" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1h0cyyz_di" bpmnElement="Flow_1h0cyyz">
+        <di:waypoint x="405" y="117" />
+        <di:waypoint x="450" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="369" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_189hvoh_di" bpmnElement="Activity_189hvoh" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <dc:Bounds x="450" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0hi9g51_di" bpmnElement="Activity_0hi9g51" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="590" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0x0obdq_di" bpmnElement="Activity_0x0obdq">
+        <dc:Bounds x="730" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1i6k224_di" bpmnElement="Activity_1i6k224" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="880" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1b2qebu_di" bpmnElement="Activity_1b2qebu" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="1070" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_055b3gz_di" bpmnElement="Activity_0ygq4jj" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <dc:Bounds x="1581" y="1860" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_08lhvqu_di" bpmnElement="Event_08lhvqu">
+        <dc:Bounds x="1613" y="1982" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_08h68z1_di" bpmnElement="Activity_08h68z1" isExpanded="true">
+        <dc:Bounds x="161" y="280" width="2929" height="485" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1mmmuuo_di" bpmnElement="Flow_1mmmuuo">
+        <di:waypoint x="2627" y="417" />
+        <di:waypoint x="2672" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1iniq03_di" bpmnElement="Flow_1iniq03">
+        <di:waypoint x="2865" y="417" />
+        <di:waypoint x="2929" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0sk7vjj_di" bpmnElement="Flow_0sk7vjj">
+        <di:waypoint x="2320" y="417" />
+        <di:waypoint x="2370" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_06hjrp4_di" bpmnElement="Flow_06hjrp4">
+        <di:waypoint x="1529" y="417" />
+        <di:waypoint x="1578" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0i4srhg_di" bpmnElement="Flow_0i4srhg">
+        <di:waypoint x="389" y="417" />
+        <di:waypoint x="449" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0u8bvzo_di" bpmnElement="Flow_0u8bvzo">
+        <di:waypoint x="227" y="417" />
+        <di:waypoint x="289" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1cnhiim_di" bpmnElement="Flow_1cnhiim">
+        <di:waypoint x="744" y="417" />
+        <di:waypoint x="791" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0qp549y_di" bpmnElement="Flow_0qp549y">
+        <di:waypoint x="719" y="442" />
+        <di:waypoint x="719" y="490" />
+        <di:waypoint x="959" y="490" />
+        <di:waypoint x="959" y="442" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1aie7u5_di" bpmnElement="Flow_1aie7u5">
+        <di:waypoint x="549" y="417" />
+        <di:waypoint x="594" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_17m83u7_di" bpmnElement="Flow_17m83u7">
+        <di:waypoint x="2722" y="417" />
+        <di:waypoint x="2765" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0sfgwoh_di" bpmnElement="Flow_0sfgwoh">
+        <di:waypoint x="2178" y="417" />
+        <di:waypoint x="2220" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0htgk6a_di" bpmnElement="Flow_0htgk6a">
+        <di:waypoint x="1129" y="417" />
+        <di:waypoint x="1176" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0xqrh8z_di" bpmnElement="Flow_0xqrh8z">
+        <di:waypoint x="1369" y="417" />
+        <di:waypoint x="1429" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1pwrzr3_di" bpmnElement="Flow_1pwrzr3">
+        <di:waypoint x="1603" y="392" />
+        <di:waypoint x="1603" y="357" />
+        <di:waypoint x="2153" y="357" />
+        <di:waypoint x="2153" y="392" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1901" y="329" width="84" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0rm06hk_di" bpmnElement="Flow_0rm06hk">
+        <di:waypoint x="1628" y="417" />
+        <di:waypoint x="1680" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1a6l10v_di" bpmnElement="Flow_1a6l10v">
+        <di:waypoint x="2076" y="417" />
+        <di:waypoint x="2128" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0osnj5e_di" bpmnElement="Flow_0osnj5e">
+        <di:waypoint x="1730" y="417" />
+        <di:waypoint x="1782" y="417" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1747" y="397" width="16" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_16yip39_di" bpmnElement="Flow_16yip39">
+        <di:waypoint x="1705" y="442" />
+        <di:waypoint x="1705" y="527" />
+        <di:waypoint x="1782" y="527" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1746" y="507" width="18" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ltvuo4_di" bpmnElement="Flow_0ltvuo4">
+        <di:waypoint x="1705" y="442" />
+        <di:waypoint x="1705" y="637" />
+        <di:waypoint x="1782" y="637" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1747" y="618" width="16" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0iyqru1_di" bpmnElement="Flow_0iyqru1">
+        <di:waypoint x="1832" y="637" />
+        <di:waypoint x="1879" y="637" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0qhtyzh_di" bpmnElement="Flow_0qhtyzh">
+        <di:waypoint x="1979" y="637" />
+        <di:waypoint x="2051" y="637" />
+        <di:waypoint x="2051" y="442" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1l6b9sc_di" bpmnElement="Flow_1l6b9sc">
+        <di:waypoint x="1832" y="527" />
+        <di:waypoint x="1879" y="527" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1s99blu_di" bpmnElement="Flow_1s99blu">
+        <di:waypoint x="1979" y="527" />
+        <di:waypoint x="2051" y="527" />
+        <di:waypoint x="2051" y="442" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0y4dfn7_di" bpmnElement="Flow_0y4dfn7">
+        <di:waypoint x="1832" y="417" />
+        <di:waypoint x="1879" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1vxiv3y_di" bpmnElement="Flow_1vxiv3y">
+        <di:waypoint x="1979" y="417" />
+        <di:waypoint x="2026" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_026jgqj_di" bpmnElement="Flow_026jgqj">
+        <di:waypoint x="1807" y="442" />
+        <di:waypoint x="1807" y="477" />
+        <di:waypoint x="2051" y="477" />
+        <di:waypoint x="2051" y="442" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1895" y="463" width="82" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0qjd9r9_di" bpmnElement="Flow_0qjd9r9">
+        <di:waypoint x="1807" y="552" />
+        <di:waypoint x="1807" y="587" />
+        <di:waypoint x="2051" y="587" />
+        <di:waypoint x="2051" y="442" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1904" y="573" width="63" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0xmfjg1_di" bpmnElement="Flow_0xmfjg1">
+        <di:waypoint x="1807" y="662" />
+        <di:waypoint x="1807" y="697" />
+        <di:waypoint x="2051" y="697" />
+        <di:waypoint x="2051" y="442" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1896" y="683" width="82" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_00mlrm4_di" bpmnElement="Flow_00mlrm4">
+        <di:waypoint x="891" y="417" />
+        <di:waypoint x="934" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ljisr7_di" bpmnElement="Flow_1ljisr7">
+        <di:waypoint x="984" y="417" />
+        <di:waypoint x="1029" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0r9rxuv_di" bpmnElement="Flow_0r9rxuv">
+        <di:waypoint x="1226" y="417" />
+        <di:waypoint x="1269" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1inruoh_di" bpmnElement="Flow_1inruoh">
+        <di:waypoint x="1201" y="392" />
+        <di:waypoint x="1201" y="320" />
+        <di:waypoint x="2395" y="320" />
+        <di:waypoint x="2395" y="392" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1766" y="302" width="64" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10zof72_di" bpmnElement="Flow_10zof72">
+        <di:waypoint x="644" y="417" />
+        <di:waypoint x="694" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_06nn4ts_di" bpmnElement="Flow_06nn4ts">
+        <di:waypoint x="619" y="442" />
+        <di:waypoint x="619" y="730" />
+        <di:waypoint x="2697" y="730" />
+        <di:waypoint x="2697" y="442" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2021" y="712" width="64" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12hcyvy_di" bpmnElement="Flow_12hcyvy">
+        <di:waypoint x="2420" y="417" />
+        <di:waypoint x="2527" y="417" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0phbekw_di" bpmnElement="Event_0phbekw">
+        <dc:Bounds x="191" y="399" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0nmu6hp_di" bpmnElement="Activity_0nmu6hp" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="289" y="377" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1crjpdv_di" bpmnElement="Event_1crjpdv">
+        <dc:Bounds x="2929" y="399" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1cteix0_di" bpmnElement="Activity_1cteix0" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="791" y="377" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0vgqcd9_di" bpmnElement="Gateway_0vgqcd9" isMarkerVisible="true">
+        <dc:Bounds x="694" y="392" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0o1arej_di" bpmnElement="Activity_0o1arej">
+        <dc:Bounds x="449" y="377" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_178rd76_di" bpmnElement="Gateway_178rd76" isMarkerVisible="true">
+        <dc:Bounds x="2672" y="392" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0qtljdf_di" bpmnElement="Activity_0qtljdf" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="1029" y="377" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_17atel5_di" bpmnElement="Activity_17atel5" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="1269" y="377" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1r7lh8y_di" bpmnElement="Gateway_1r7lh8y" isMarkerVisible="true">
+        <dc:Bounds x="1578" y="392" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_10585vl_di" bpmnElement="Gateway_10585vl" isMarkerVisible="true">
+        <dc:Bounds x="2128" y="392" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_04kl762_di" bpmnElement="Gateway_04kl762" isMarkerVisible="true">
+        <dc:Bounds x="1680" y="392" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0mr957a_di" bpmnElement="Activity_0mr957a" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="1879" y="597" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0asbftz_di" bpmnElement="Activity_0asbftz" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="1879" y="487" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_071kpqp_di" bpmnElement="Activity_071kpqp" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="1879" y="377" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0xqav0s_di" bpmnElement="Gateway_0xqav0s" isMarkerVisible="true">
+        <dc:Bounds x="2026" y="392" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0u24z5s_di" bpmnElement="Gateway_0u24z5s" isMarkerVisible="true">
+        <dc:Bounds x="1782" y="392" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_09ti4e1_di" bpmnElement="Gateway_09ti4e1" isMarkerVisible="true">
+        <dc:Bounds x="1782" y="502" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0pal93r_di" bpmnElement="Gateway_0pal93r" isMarkerVisible="true">
+        <dc:Bounds x="1782" y="612" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0284dcm_di" bpmnElement="Gateway_0284dcm" isMarkerVisible="true">
+        <dc:Bounds x="934" y="392" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_13hafkc_di" bpmnElement="Gateway_13hafkc" isMarkerVisible="true">
+        <dc:Bounds x="1176" y="392" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1ru3w8w_di" bpmnElement="Gateway_1ru3w8w" isMarkerVisible="true">
+        <dc:Bounds x="2370" y="392" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0r0hymu_di" bpmnElement="Gateway_0r0hymu" isMarkerVisible="true">
+        <dc:Bounds x="594" y="392" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_09bux3w_di" bpmnElement="Activity_09bux3w" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="1429" y="377" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0uly4gr_di" bpmnElement="Activity_0uly4gr" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="2220" y="377" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ndzrj3_di" bpmnElement="Activity_0ndzrj3" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="2527" y="377" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0tejf9g_di" bpmnElement="Activity_0tejf9g" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="2765" y="377" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0epb335_di" bpmnElement="Activity_0epb335" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="1210" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0o3eas8_di" bpmnElement="Activity_0o3eas8" isExpanded="true">
+        <dc:Bounds x="161" y="820" width="2940" height="485" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_09t5n9q_di" bpmnElement="Flow_09t5n9q">
+        <di:waypoint x="1529" y="958" />
+        <di:waypoint x="1578" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_04i76gp_di" bpmnElement="Flow_04i76gp">
+        <di:waypoint x="2327" y="958" />
+        <di:waypoint x="2370" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1qh48b7_di" bpmnElement="Flow_1qh48b7">
+        <di:waypoint x="2629" y="958" />
+        <di:waypoint x="2672" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1l56g0y_di" bpmnElement="Flow_1l56g0y">
+        <di:waypoint x="2867" y="958" />
+        <di:waypoint x="2929" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ru9eal_di" bpmnElement="Flow_0ru9eal">
+        <di:waypoint x="1129" y="958" />
+        <di:waypoint x="1176" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1o9usbg_di" bpmnElement="Flow_1o9usbg">
+        <di:waypoint x="984" y="958" />
+        <di:waypoint x="1029" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1sunnod_di" bpmnElement="Flow_1sunnod">
+        <di:waypoint x="889" y="958" />
+        <di:waypoint x="934" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0fofq1i_di" bpmnElement="Flow_0fofq1i">
+        <di:waypoint x="744" y="958" />
+        <di:waypoint x="789" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1e5x96j_di" bpmnElement="Flow_1e5x96j">
+        <di:waypoint x="719" y="983" />
+        <di:waypoint x="719" y="1033" />
+        <di:waypoint x="959" y="1033" />
+        <di:waypoint x="959" y="983" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1clsk1w_di" bpmnElement="Flow_1clsk1w">
+        <di:waypoint x="227" y="958" />
+        <di:waypoint x="289" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0welo9z_di" bpmnElement="Flow_0welo9z">
+        <di:waypoint x="389" y="958" />
+        <di:waypoint x="449" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_141b7s6_di" bpmnElement="Flow_141b7s6">
+        <di:waypoint x="549" y="958" />
+        <di:waypoint x="594" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ezxdbk_di" bpmnElement="Flow_0ezxdbk">
+        <di:waypoint x="2722" y="958" />
+        <di:waypoint x="2767" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1emwqa2_di" bpmnElement="Flow_1emwqa2">
+        <di:waypoint x="2178" y="958" />
+        <di:waypoint x="2227" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1gfnqjr_di" bpmnElement="Flow_1gfnqjr">
+        <di:waypoint x="1369" y="958" />
+        <di:waypoint x="1429" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0m3ufjn_di" bpmnElement="Flow_0m3ufjn">
+        <di:waypoint x="1603" y="933" />
+        <di:waypoint x="1603" y="898" />
+        <di:waypoint x="2153" y="898" />
+        <di:waypoint x="2153" y="933" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1901" y="870" width="83" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1bizvco_di" bpmnElement="Flow_1bizvco">
+        <di:waypoint x="1628" y="958" />
+        <di:waypoint x="1680" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1stfpee_di" bpmnElement="Flow_1stfpee">
+        <di:waypoint x="2076" y="958" />
+        <di:waypoint x="2128" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_046u6dm_di" bpmnElement="Flow_046u6dm">
+        <di:waypoint x="1730" y="958" />
+        <di:waypoint x="1782" y="958" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1747" y="938" width="16" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ji7saw_di" bpmnElement="Flow_1ji7saw">
+        <di:waypoint x="1705" y="983" />
+        <di:waypoint x="1705" y="1068" />
+        <di:waypoint x="1782" y="1068" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1746" y="1048" width="18" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13n94n2_di" bpmnElement="Flow_13n94n2">
+        <di:waypoint x="1705" y="983" />
+        <di:waypoint x="1705" y="1178" />
+        <di:waypoint x="1782" y="1178" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1747" y="1158" width="16" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0arw3on_di" bpmnElement="Flow_0arw3on">
+        <di:waypoint x="1832" y="1178" />
+        <di:waypoint x="1879" y="1178" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1i03gx6_di" bpmnElement="Flow_1i03gx6">
+        <di:waypoint x="1979" y="1178" />
+        <di:waypoint x="2051" y="1178" />
+        <di:waypoint x="2051" y="983" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1i5u6pb_di" bpmnElement="Flow_1i5u6pb">
+        <di:waypoint x="1832" y="1068" />
+        <di:waypoint x="1879" y="1068" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0rj977l_di" bpmnElement="Flow_0rj977l">
+        <di:waypoint x="1979" y="1068" />
+        <di:waypoint x="2051" y="1068" />
+        <di:waypoint x="2051" y="983" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1bif93g_di" bpmnElement="Flow_1bif93g">
+        <di:waypoint x="1832" y="958" />
+        <di:waypoint x="1879" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12sww6t_di" bpmnElement="Flow_12sww6t">
+        <di:waypoint x="1979" y="958" />
+        <di:waypoint x="2026" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_18wyk8p_di" bpmnElement="Flow_18wyk8p">
+        <di:waypoint x="1807" y="983" />
+        <di:waypoint x="1807" y="1018" />
+        <di:waypoint x="2051" y="1018" />
+        <di:waypoint x="2051" y="983" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1895" y="1004" width="82" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0sknv8p_di" bpmnElement="Flow_0sknv8p">
+        <di:waypoint x="1807" y="1093" />
+        <di:waypoint x="1807" y="1128" />
+        <di:waypoint x="2051" y="1128" />
+        <di:waypoint x="2051" y="983" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1904" y="1114" width="63" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0z19z5w_di" bpmnElement="Flow_0z19z5w">
+        <di:waypoint x="1807" y="1203" />
+        <di:waypoint x="1807" y="1238" />
+        <di:waypoint x="2051" y="1238" />
+        <di:waypoint x="2051" y="983" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1896" y="1224" width="82" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0mpiw1f_di" bpmnElement="Flow_0mpiw1f">
+        <di:waypoint x="1226" y="958" />
+        <di:waypoint x="1269" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0a8mtsy_di" bpmnElement="Flow_0a8mtsy">
+        <di:waypoint x="1201" y="933" />
+        <di:waypoint x="1201" y="863" />
+        <di:waypoint x="2395" y="863" />
+        <di:waypoint x="2395" y="933" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1766" y="845" width="64" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0lxtq27_di" bpmnElement="Flow_0lxtq27">
+        <di:waypoint x="644" y="958" />
+        <di:waypoint x="694" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_101s1pb_di" bpmnElement="Flow_101s1pb">
+        <di:waypoint x="2420" y="958" />
+        <di:waypoint x="2529" y="958" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0qxgzgu_di" bpmnElement="Event_0qxgzgu">
+        <dc:Bounds x="191" y="940" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1vbf8ea_di" bpmnElement="Activity_1vbf8ea" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="289" y="918" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_00xqeap_di" bpmnElement="Event_00xqeap">
+        <dc:Bounds x="2929" y="940" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1inlzml_di" bpmnElement="Gateway_1inlzml" isMarkerVisible="true">
+        <dc:Bounds x="694" y="933" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_09bhf23_di" bpmnElement="Activity_09bhf23">
+        <dc:Bounds x="449" y="918" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1uwkvw2_di" bpmnElement="Gateway_1uwkvw2" isMarkerVisible="true">
+        <dc:Bounds x="2672" y="933" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0de8hcr_di" bpmnElement="Activity_0de8hcr" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="1269" y="918" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_09v07vs_di" bpmnElement="Gateway_09v07vs" isMarkerVisible="true">
+        <dc:Bounds x="1578" y="933" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1onl1ui_di" bpmnElement="Gateway_1onl1ui" isMarkerVisible="true">
+        <dc:Bounds x="2128" y="933" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1n5y16v_di" bpmnElement="Gateway_1n5y16v" isMarkerVisible="true">
+        <dc:Bounds x="1680" y="933" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0kxzmer_di" bpmnElement="Activity_0kxzmer" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="1879" y="1138" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_00a1ex6_di" bpmnElement="Activity_00a1ex6" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="1879" y="1028" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1xnirct_di" bpmnElement="Activity_1xnirct" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="1879" y="918" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1p8zz5g_di" bpmnElement="Gateway_1p8zz5g" isMarkerVisible="true">
+        <dc:Bounds x="2026" y="933" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1its1ys_di" bpmnElement="Gateway_1its1ys" isMarkerVisible="true">
+        <dc:Bounds x="1782" y="933" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0utmreb_di" bpmnElement="Gateway_0utmreb" isMarkerVisible="true">
+        <dc:Bounds x="1782" y="1043" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_11lapwt_di" bpmnElement="Gateway_11lapwt" isMarkerVisible="true">
+        <dc:Bounds x="1782" y="1153" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_17hwtjn_di" bpmnElement="Gateway_17hwtjn" isMarkerVisible="true">
+        <dc:Bounds x="934" y="933" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_09e5lla_di" bpmnElement="Gateway_09e5lla" isMarkerVisible="true">
+        <dc:Bounds x="1176" y="933" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0eew1zk_di" bpmnElement="Gateway_0eew1zk" isMarkerVisible="true">
+        <dc:Bounds x="2370" y="933" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0ebdoh3_di" bpmnElement="Gateway_0ebdoh3" isMarkerVisible="true">
+        <dc:Bounds x="594" y="933" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0k3gc05_di" bpmnElement="Activity_0k3gc05" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="789" y="918" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0o7rq4e_di" bpmnElement="Activity_0o7rq4e" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="1029" y="918" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1wy6u2z_di" bpmnElement="Activity_1wy6u2z" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="2227" y="918" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0e436m1_di" bpmnElement="Activity_0e436m1" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="2529" y="918" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_09tpqnm_di" bpmnElement="Activity_09tpqnm" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="2767" y="918" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1yftp7n_di" bpmnElement="Activity_1yftp7n" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="1429" y="918" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
