@@ -1,0 +1,3030 @@
+{
+  "id": "9c50e765-55bb-44ca-908f-0b65c7213a50",
+  "modified": 1616871969,
+  "schema": "Applications",
+  "messageId": "6f903a61-8f2f-11eb-a50f-53ee2a916c95",
+  "history": [
+    {
+      "id": "4cade260-8599-4e81-860a-ee343a064d78",
+      "modified": 1616871950,
+      "schema": "History",
+      "date": "2021-03-27T23:05:50.653+04:00",
+      "_vertex_collection_traversal": "history",
+      "topic": "Заявление получено ведомством",
+      "comment": "Заявление получено ведомством",
+      "assignee": "Система"
+    },
+    {
+      "id": "0284542e-3b3b-476b-b18a-3b43a43df7da",
+      "modified": 1616871959,
+      "schema": "History",
+      "date": "2021-03-27T23:05:59.883+04:00",
+      "_vertex_collection_traversal": "history",
+      "topic": "Назначен исполнитель",
+      "comment": "Назначен исполнитель: Тихонов Виктор Борисович",
+      "assignee": "Тихонов Виктор Борисович"
+    },
+    {
+      "id": "3a4e69bb-4624-4104-b4f4-98d7f34d3caf",
+      "modified": 1616871962,
+      "schema": "History",
+      "date": "2021-03-27T23:06:02.494+04:00",
+      "_vertex_collection_traversal": "history",
+      "topic": "Принятие решения о приёме документов",
+      "comment": "Проверка документов для принятия решения о регистрации заявления",
+      "assignee": "Тихонов Виктор Борисович"
+    },
+    {
+      "id": "472e89d9-b901-4dd1-9b50-397f7f83a584",
+      "modified": 1616871966,
+      "schema": "History",
+      "date": "2021-03-27T23:06:06.284+04:00",
+      "_vertex_collection_traversal": "history",
+      "topic": "Заявление зарегистрировано",
+      "comment": "Заявление зарегистрировано, присвоен внутренний номер: Адресация-20210327-15677 ",
+      "assignee": "Тихонов Виктор Борисович"
+    },
+    {
+      "id": "920a37d9-2589-4933-a62f-7235d85e181e",
+      "modified": 1616871967,
+      "schema": "History",
+      "date": "2021-03-27T23:06:07.693+04:00",
+      "_vertex_collection_traversal": "history",
+      "topic": "Запрос сведения по СМЭВ",
+      "comment": "Получение сведений по запросам в СМЭВ",
+      "assignee": "Система"
+    },
+    {
+      "id": "5a9ccd11-8fd0-487c-9a12-9a6a9413eb6f",
+      "modified": 1616871969,
+      "schema": "History",
+      "date": "2021-03-27T23:06:09.299+04:00",
+      "_vertex_collection_traversal": "history",
+      "topic": "Ожидаем ответы на запросы СМЭВ",
+      "comment": "Ожидаем ответы на запросы СМЭВ",
+      "assignee": "Система"
+    }
+  ],
+  "applicant": {
+    "id": "034b4d83-5747-4404-84ea-66a88178195a",
+    "modified": 1616871950,
+    "schema": "Subject",
+    "ogrn": "0001234000009",
+    "_vertex_collection_traversal": "subject",
+    "address": {
+      "postal": {
+        "text": "170021, обл. Тверская, г. Тверь, ул. Докучаева, д. 11, кв. 44"
+      }
+    },
+    "orgBrief": true,
+    "phone": "+7(495)1241277",
+    "inn": "3905074565",
+    "fullName": "Общество с ограниченной ответственностью \"Балтинформ\"",
+    "email": "jikic92179@naymeo.com"
+  },
+  "system": {
+    "applicant": {
+      "fullName": "Общество с ограниченной ответственностью \"Балтинформ\"",
+      "id": "034b4d83-5747-4404-84ea-66a88178195a"
+    },
+    "avaliable": true,
+    "department": {
+      "fullName": "Администрация города Канаш",
+      "id": "06bfdb59-d8ab-461b-a48d-c8968612cc20"
+    },
+    "fullName": "Присвоение адреса объекту адресации, изменение и аннулирование такого адреса",
+    "orderStatusCode": "addition",
+    "processId": "71e12fa0-8f2f-11eb-93f3-46a07ba41c02",
+    "regionCode": "21",
+    "regionId": "27948d01-58d4-44a0-bce8-20252e1453f9",
+    "service": "Адресация",
+    "serviceId": "134a9fd6-9682-48e2-aaab-8b5733ce5616",
+    "shortName": "Адресация",
+    "startDate": "27.03.2021",
+    "startDateIso": "2021-03-27",
+    "status": {
+      "external": "1",
+      "internal": "05.1",
+      "system": "06.3"
+    }
+  },
+  "common": {
+    "assignee": {
+      "fullName": "Не назначен",
+      "id": "-"
+    },
+    "chanel": "ЕПГУ",
+    "currentDate": "27.03.2021",
+    "dueDate": "2021-04-09T22:05:50.486+0300",
+    "locationCodeOktmo": "MNSV75_3T",
+    "oktmo": "MNSV75_3T",
+    "orderId": 763761488,
+    "regNumber": "Адресация-20210327-15677",
+    "registrationDate": "2021-03-27T23:06:03.211+04:00",
+    "userType": "EMPLOYEE"
+  },
+  "service": "Присвоение адреса объекту адресации, изменение и аннулирование такого адреса",
+  "mzclass": "request@urn://rostelekom.ru/Addressing/1.0.2",
+  "orderStatusCode": "addition",
+  "replyTo": "eyJtaWQiOiI2ZjkwM2E2MS04ZjJmLTExZWItYTUwZi01M2VlMmE5MTZjOTUifQ==",
+  "statement": {
+    "competentOrganizationId": "C601E909FE6D4CD39D4FCE30DCF0FF63",
+    "competentOrganizationName": "Администрация города Канаш",
+    "formTarget": {
+      "id": -10000115329,
+      "name": "Присвоение адреса объекту адресации, изменение и аннулирование такого адреса"
+    },
+    "gettingResults": {
+      "isPaperDocumentRequired": false
+    },
+    "goal": 1,
+    "landPlot": {
+      "lackOfAddress": {
+        "isAdditionalInformation": false,
+        "isIdNumberRequired": false,
+        "landPlotCadastralNumber": "32:42:3434343:433"
+      }
+    },
+    "methodGettingResults": {
+      "isPaperDocumentRequired": false
+    },
+    "parkingPlace": {
+      "buildingSection": {
+        "fiasLandPlot": "443035, обл. Самарская, г. Самара, ул. Красносельская, д. 82",
+        "isAdditionalInformation": false,
+        "isIdNumberRequired": false,
+        "landPlotCadastralNumber": "34:34:3434343:433",
+        "landPlotsQuantity": 2
+      }
+    },
+    "premise": {
+      "premiseInformation": {
+        "fiasPremise": "107140, г. Москва, ул. Верхняя Красносельская, д. 1",
+        "isDescriptionLocationRequired": false,
+        "isIdNumberRequired": false,
+        "premiseCadastralNumber": "12:32:3243434:343"
+      }
+    },
+    "unfinishedBuilding": {
+      "objectInformation": {
+        "fiasPremise": "632782, обл. Новосибирская, г. Карасук, р-н. Карасукский, проезд. Адресный",
+        "isDescriptionLocationRequired": false,
+        "isIdNumberRequired": false,
+        "landPlotCadastralNumber": "32:42:3434343:434",
+        "objectName": "Дом"
+      }
+    },
+    "variantChoice": {
+      "kpOa04": 1,
+      "kpOa05": {
+        "build": true,
+        "landPlot": true,
+        "parkingPlace": true,
+        "premise": true
+      },
+      "kpOa06": 6,
+      "kpPa07": 1,
+      "kpPa08": 1,
+      "kpPa11": 1,
+      "kpPa12": 1,
+      "kpPa13": 1
+    }
+  },
+  "interDepartmentReq": [
+    {
+      "id": "fab9e7a0-e0f9-4205-95a7-b7c18fd8192e",
+      "modified": 1616871968,
+      "schema": "InterDepReq",
+      "traceId": "71e12fa0-8f2f-11eb-93f3-46a07ba41c02",
+      "request": {
+        "reqZapros": "inn",
+        "reqINNYUL": "3905074565"
+      },
+      "sendDate": "2021-03-27T22:06:08.061+0300",
+      "subject": "Общество с ограниченной ответственностью \"Балтинформ\"",
+      "description": "Cведения из Единого государственного реестра юридических лиц",
+      "requestName": "Предоставление выписки из ЕГРЮЛ, ЕГРИП в форме электронного документа",
+      "_vertex_collection_traversal": "interdepreq",
+      "provider": "Федеральная налоговая служба",
+      "name": "egrul-inn",
+      "class": "egrul-inn",
+      "clazz": "FNSVipULRequest@urn://x-artefacts-fns-vipul-tosmv-ru/311-14/4.0.6",
+      "status": "pending"
+    },
+    {
+      "id": "720ac36e-0914-4984-b18b-1595f8d2f71b",
+      "modified": 1616871987,
+      "schema": "InterDepReq",
+      "traceId": "71e12fa0-8f2f-11eb-93f3-46a07ba41c02",
+      "request": {
+        "otherOgrn": "1027200844868",
+        "requestDataType": "extractRealty",
+        "otherInn": "9204002877",
+        "otherKpp": "920401001",
+        "actualDataAgreement": {
+          "code": "01"
+        },
+        "recieveResultTypeCode": {
+          "code": "webService"
+        },
+        "otherRegDate": "1983-11-02",
+        "persDataProcessingAgreement": {
+          "code": "01"
+        },
+        "actionCode": {
+          "code": "659511111112"
+        },
+        "otherName": "Администрация города Канаш",
+        "region": "21",
+        "declarantKind": {
+          "code": "357013000000"
+        },
+        "object": {
+          "fs3RREGRNRequestObject": {
+            "objectTypeCode": {
+              "code": "002001002000"
+            },
+            "cadastralNumber": "32:42:3434343:434"
+          }
+        }
+      },
+      "personalCertificate": "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",
+      "documents": [
+        {
+          "fileName": "report_659511111111_23.xml",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report_659511111111_23.xml"
+        },
+        {
+          "fileName": "report.pdf",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report.pdf"
+        },
+        {
+          "fileName": "report 23 сценарий 659511111111.pdf",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report 23 сценарий 659511111111.pdf"
+        },
+        {
+          "fileName": "report 23 сценарий 659511111111.pdf.sig",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report 23 сценарий 659511111111.pdf.sig"
+        },
+        {
+          "fileName": "report.pdf.sig",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report.pdf.sig"
+        },
+        {
+          "fileName": "report_659511111111_23.xml.sig",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report_659511111111_23.xml.sig"
+        }
+      ],
+      "sendDate": "2021-03-27T22:06:08.250+0300",
+      "subject": "32:42:3434343:434",
+      "description": "Выписка из Единого государственного реестра недвижимости об объекте недвижимости",
+      "receiveDate": "2021-03-27T22:06:27.520+0300",
+      "requestName": "Прием обращений в ФГИС ЕГРН",
+      "_vertex_collection_traversal": "interdepreq",
+      "provider": "Росреестр",
+      "response": {
+        "extract_base_params_land": {
+          "restrict_records": {
+            "restrict_record": [
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "citizenship": {
+                            "person_citizenship_country": {
+                              "citizenship_country": {
+                                "code": 848000000643,
+                                "value": "Российская Федерация"
+                              }
+                            }
+                          },
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "05",
+                        "value": "Залогодержатель"
+                      }
+                    }
+                  }
+                },
+                "underlying_documents": {
+                  "underlying_document": {
+                    "document_name": "Договор аренды земельного участка",
+                    "document_number": "№ 81",
+                    "document_date": "2017-04-03",
+                    "document_code": {
+                      "code": 558401010209,
+                      "value": "Договор аренды (субаренды)"
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-04-14T10:44:47+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "period": {
+                    "period_info": {
+                      "end_date": "2019-04-14",
+                      "start_date": "2017-04-14"
+                    }
+                  },
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-40",
+                  "restriction_encumbrance_type": {
+                    "code": "022007000000",
+                    "value": "Ипотека"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "citizenship": {
+                            "person_citizenship_country": {
+                              "citizenship_country": {
+                                "code": 848000000643,
+                                "value": "Российская Федерация"
+                              }
+                            }
+                          },
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "05",
+                        "value": "Залогодержатель"
+                      }
+                    }
+                  }
+                },
+                "underlying_documents": {
+                  "underlying_document": {
+                    "document_name": "Договор аренды земельного участка",
+                    "document_number": "№ 81",
+                    "document_date": "2017-04-11",
+                    "document_code": {
+                      "code": 558401010209,
+                      "value": "Договор аренды (субаренды)"
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-04-14T10:32:07+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "period": {
+                    "period_info": {
+                      "end_date": "2020-04-27",
+                      "start_date": "2017-04-03"
+                    }
+                  },
+                  "restriction_encumbrance_number": "33:18:000604:566-77/048/2017-38",
+                  "restriction_encumbrance_type": {
+                    "code": "022007000000",
+                    "value": "Ипотека"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "citizenship": {
+                            "person_citizenship_country": {
+                              "citizenship_country": {
+                                "code": 848000000643,
+                                "value": "Российская Федерация"
+                              }
+                            }
+                          },
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "05",
+                        "value": "Залогодержатель"
+                      }
+                    }
+                  }
+                },
+                "underlying_documents": {
+                  "underlying_document": {
+                    "document_name": "Договор аренды земельного участка",
+                    "document_number": "№ 81",
+                    "document_date": "2017-04-12",
+                    "document_code": {
+                      "code": 558401010209,
+                      "value": "Договор аренды (субаренды)"
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-04-13T12:37:05+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-77/048/2017-36",
+                  "restriction_encumbrance_type": {
+                    "code": "022007000000",
+                    "value": "Ипотека"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-03-14T14:15:00+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-34",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-02-01T12:47:44+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-32",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              },
+              {
+                "record_info": {
+                  "registration_date": "2017-01-31T15:32:59+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-31"
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-01-27T12:14:23+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-29",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-01-27T10:00:08+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-27",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-01-27T09:13:28+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-25",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-01-16T15:02:30+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-23",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-01-16T08:51:04+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-21",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              }
+            ]
+          },
+          "recipient_statement": "Семенов Семен Семенович",
+          "details_statement": {
+            "group_top_requisites": {
+              "registration_number": "КУВИ-004/2017-2018",
+              "date_formation": "2017-05-02",
+              "organ_registr_rights": "Кольчугинский отдел Управления Росреестра по Владимирской области"
+            }
+          },
+          "land_record": {
+            "cost": {
+              "value": 21286127.84
+            },
+            "contours_location": {
+              "contours": {
+                "contour": {
+                  "entity_spatial": {
+                    "sk_id": "МСК-33",
+                    "spatials_elements": {
+                      "spatial_element": [
+                        {
+                          "ordinates": {
+                            "ordinate": [
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 1,
+                                "x": 207880.58,
+                                "y": 157121.74,
+                                "ord_nmb": 1
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 2,
+                                "x": 207831.6,
+                                "y": 157188.91,
+                                "ord_nmb": 2
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 3,
+                                "x": 207804.92,
+                                "y": 157164.58,
+                                "ord_nmb": 3
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 4,
+                                "x": 207794.48,
+                                "y": 157154.87,
+                                "ord_nmb": 4
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 5,
+                                "x": 207772.68,
+                                "y": 157173.87,
+                                "ord_nmb": 5
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 6,
+                                "x": 207763.14,
+                                "y": 157191.87,
+                                "ord_nmb": 6
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 7,
+                                "x": 207760.02,
+                                "y": 157208.74,
+                                "ord_nmb": 7
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 8,
+                                "x": 207745.97,
+                                "y": 157209.63,
+                                "ord_nmb": 8
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 9,
+                                "x": 207745.62,
+                                "y": 157209.65,
+                                "ord_nmb": 9
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 10,
+                                "x": 207684.19,
+                                "y": 157175.13,
+                                "ord_nmb": 10
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 11,
+                                "x": 207667.07,
+                                "y": 157171.46,
+                                "ord_nmb": 11
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 12,
+                                "x": 207684.55,
+                                "y": 157081.52,
+                                "ord_nmb": 12
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 13,
+                                "x": 207713.59,
+                                "y": 156956.85,
+                                "ord_nmb": 13
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 14,
+                                "x": 207757.56,
+                                "y": 156975.54,
+                                "ord_nmb": 14
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 15,
+                                "x": 207763.08,
+                                "y": 156977.89,
+                                "ord_nmb": 15
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 16,
+                                "x": 207770.34,
+                                "y": 156981.39,
+                                "ord_nmb": 16
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 17,
+                                "x": 207769.76,
+                                "y": 156982.61,
+                                "ord_nmb": 17
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 18,
+                                "x": 207804.17,
+                                "y": 156997.47,
+                                "ord_nmb": 18
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 19,
+                                "x": 207800.42,
+                                "y": 157002.59,
+                                "ord_nmb": 19
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 20,
+                                "x": 207780.69,
+                                "y": 157023.38,
+                                "ord_nmb": 20
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 21,
+                                "x": 207847.9,
+                                "y": 157088.86,
+                                "ord_nmb": 21
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 1,
+                                "x": 207880.58,
+                                "y": 157121.74,
+                                "ord_nmb": 22
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "ordinates": {
+                            "ordinate": [
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 22,
+                                "x": 207812.97,
+                                "y": 157055.87,
+                                "ord_nmb": 1
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 23,
+                                "x": 207788.18,
+                                "y": 157084.31,
+                                "ord_nmb": 2
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 24,
+                                "x": 207815.25,
+                                "y": 157108.1,
+                                "ord_nmb": 3
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 25,
+                                "x": 207746.16,
+                                "y": 157190.47,
+                                "ord_nmb": 4
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 26,
+                                "x": 207691.75,
+                                "y": 157145.73,
+                                "ord_nmb": 5
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 27,
+                                "x": 207681.75,
+                                "y": 157115.73,
+                                "ord_nmb": 6
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 28,
+                                "x": 207767.49,
+                                "y": 157015.72,
+                                "ord_nmb": 7
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 22,
+                                "x": 207812.97,
+                                "y": 157055.87,
+                                "ord_nmb": 8
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "address_location": {
+              "address": {
+                "readable_address": "Владимирская обл, район Кольчугинский, МО г. Кольчугино (городское поселение), г. Кольчугино, ул. Луговая, д. 13"
+              }
+            },
+            "params": {
+              "area": {
+                "value": 17474
+              },
+              "permitted_use": {
+                "permitted_use_established": {
+                  "by_document": "Для производственных целей"
+                }
+              },
+              "category": {
+                "type": {
+                  "code": "003002000000",
+                  "value": "Земли населенных пунктов"
+                }
+              }
+            },
+            "record_info": {
+              "registration_date": "2012-03-11T06:57:37+00:00"
+            },
+            "object": {
+              "common_data": {
+                "cad_number": "33:18:000604:566",
+                "quarter_cad_number": "33:18:000604",
+                "type": {
+                  "code": "002001001000",
+                  "value": "land_record"
+                }
+              },
+              "subtype": {
+                "code": "01",
+                "value": "Землепользование"
+              }
+            }
+          },
+          "details_request": {
+            "date_received_request": "2017-05-02",
+            "date_receipt_request_reg_authority_rights": "2017-05-02"
+          },
+          "status": "Сведения об объекте недвижимости имеют статус \"временные\""
+        }
+      },
+      "name": "egrn",
+      "senderCertificate": "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",
+      "mzStateHold": {
+        "internalId": "720ac36e-0914-4984-b18b-1595f8d2f71b",
+        "messageId": "7f15c4f2-8f2f-11eb-a50f-674692aa93b5",
+        "traceId": "71e12fa0-8f2f-11eb-93f3-46a07ba41c02",
+        "reqObjId": "720ac36e-0914-4984-b18b-1595f8d2f71b",
+        "type": "Mz"
+      },
+      "originalMessageId": "7f15c4f2-8f2f-11eb-a50f-674692aa93b5",
+      "class": "egrn",
+      "clazz": "Request@urn://x-artefacts-rosreestr-gov-ru/virtual-services/egrn-statement/1.1.2",
+      "status": "ok"
+    },
+    {
+      "id": "3afe291f-e4d3-494f-8402-255e912fdc11",
+      "modified": 1616872046,
+      "schema": "InterDepReq",
+      "traceId": "71e12fa0-8f2f-11eb-93f3-46a07ba41c02",
+      "request": {
+        "otherOgrn": "1027200844868",
+        "requestDataType": "extractRealty",
+        "otherInn": "9204002877",
+        "otherKpp": "920401001",
+        "actualDataAgreement": {
+          "code": "01"
+        },
+        "recieveResultTypeCode": {
+          "code": "webService"
+        },
+        "otherRegDate": "1983-11-02",
+        "persDataProcessingAgreement": {
+          "code": "01"
+        },
+        "actionCode": {
+          "code": "659511111112"
+        },
+        "otherName": "Администрация города Канаш",
+        "region": "21",
+        "declarantKind": {
+          "code": "357013000000"
+        },
+        "object": {
+          "fs3RREGRNRequestObject": {
+            "objectTypeCode": {
+              "code": "002001003000"
+            },
+            "cadastralNumber": "12:32:3243434:343"
+          }
+        }
+      },
+      "personalCertificate": "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",
+      "documents": [
+        {
+          "fileName": "report_659511111111_23.xml",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report_659511111111_23.xml"
+        },
+        {
+          "fileName": "report.pdf",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report.pdf"
+        },
+        {
+          "fileName": "report 23 сценарий 659511111111.pdf",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report 23 сценарий 659511111111.pdf"
+        },
+        {
+          "fileName": "report 23 сценарий 659511111111.pdf.sig",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report 23 сценарий 659511111111.pdf.sig"
+        },
+        {
+          "fileName": "report.pdf.sig",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report.pdf.sig"
+        },
+        {
+          "fileName": "report_659511111111_23.xml.sig",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report_659511111111_23.xml.sig"
+        }
+      ],
+      "sendDate": "2021-03-27T22:06:08.479+0300",
+      "subject": "12:32:3243434:343",
+      "description": "Выписка из Единого государственного реестра недвижимости об объекте недвижимости",
+      "receiveDate": "2021-03-27T22:07:26.055+0300",
+      "requestName": "Прием обращений в ФГИС ЕГРН",
+      "_vertex_collection_traversal": "interdepreq",
+      "provider": "Росреестр",
+      "response": {
+        "extract_base_params_land": {
+          "restrict_records": {
+            "restrict_record": [
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "citizenship": {
+                            "person_citizenship_country": {
+                              "citizenship_country": {
+                                "code": 848000000643,
+                                "value": "Российская Федерация"
+                              }
+                            }
+                          },
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "05",
+                        "value": "Залогодержатель"
+                      }
+                    }
+                  }
+                },
+                "underlying_documents": {
+                  "underlying_document": {
+                    "document_name": "Договор аренды земельного участка",
+                    "document_number": "№ 81",
+                    "document_date": "2017-04-03",
+                    "document_code": {
+                      "code": 558401010209,
+                      "value": "Договор аренды (субаренды)"
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-04-14T10:44:47+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "period": {
+                    "period_info": {
+                      "end_date": "2019-04-14",
+                      "start_date": "2017-04-14"
+                    }
+                  },
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-40",
+                  "restriction_encumbrance_type": {
+                    "code": "022007000000",
+                    "value": "Ипотека"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "citizenship": {
+                            "person_citizenship_country": {
+                              "citizenship_country": {
+                                "code": 848000000643,
+                                "value": "Российская Федерация"
+                              }
+                            }
+                          },
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "05",
+                        "value": "Залогодержатель"
+                      }
+                    }
+                  }
+                },
+                "underlying_documents": {
+                  "underlying_document": {
+                    "document_name": "Договор аренды земельного участка",
+                    "document_number": "№ 81",
+                    "document_date": "2017-04-11",
+                    "document_code": {
+                      "code": 558401010209,
+                      "value": "Договор аренды (субаренды)"
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-04-14T10:32:07+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "period": {
+                    "period_info": {
+                      "end_date": "2020-04-27",
+                      "start_date": "2017-04-03"
+                    }
+                  },
+                  "restriction_encumbrance_number": "33:18:000604:566-77/048/2017-38",
+                  "restriction_encumbrance_type": {
+                    "code": "022007000000",
+                    "value": "Ипотека"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "citizenship": {
+                            "person_citizenship_country": {
+                              "citizenship_country": {
+                                "code": 848000000643,
+                                "value": "Российская Федерация"
+                              }
+                            }
+                          },
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "05",
+                        "value": "Залогодержатель"
+                      }
+                    }
+                  }
+                },
+                "underlying_documents": {
+                  "underlying_document": {
+                    "document_name": "Договор аренды земельного участка",
+                    "document_number": "№ 81",
+                    "document_date": "2017-04-12",
+                    "document_code": {
+                      "code": 558401010209,
+                      "value": "Договор аренды (субаренды)"
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-04-13T12:37:05+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-77/048/2017-36",
+                  "restriction_encumbrance_type": {
+                    "code": "022007000000",
+                    "value": "Ипотека"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-03-14T14:15:00+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-34",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-02-01T12:47:44+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-32",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              },
+              {
+                "record_info": {
+                  "registration_date": "2017-01-31T15:32:59+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-31"
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-01-27T12:14:23+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-29",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-01-27T10:00:08+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-27",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-01-27T09:13:28+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-25",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-01-16T15:02:30+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-23",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-01-16T08:51:04+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-21",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              }
+            ]
+          },
+          "recipient_statement": "Семенов Семен Семенович",
+          "details_statement": {
+            "group_top_requisites": {
+              "registration_number": "КУВИ-004/2017-2018",
+              "date_formation": "2017-05-02",
+              "organ_registr_rights": "Кольчугинский отдел Управления Росреестра по Владимирской области"
+            }
+          },
+          "land_record": {
+            "cost": {
+              "value": 21286127.84
+            },
+            "contours_location": {
+              "contours": {
+                "contour": {
+                  "entity_spatial": {
+                    "sk_id": "МСК-33",
+                    "spatials_elements": {
+                      "spatial_element": [
+                        {
+                          "ordinates": {
+                            "ordinate": [
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 1,
+                                "x": 207880.58,
+                                "y": 157121.74,
+                                "ord_nmb": 1
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 2,
+                                "x": 207831.6,
+                                "y": 157188.91,
+                                "ord_nmb": 2
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 3,
+                                "x": 207804.92,
+                                "y": 157164.58,
+                                "ord_nmb": 3
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 4,
+                                "x": 207794.48,
+                                "y": 157154.87,
+                                "ord_nmb": 4
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 5,
+                                "x": 207772.68,
+                                "y": 157173.87,
+                                "ord_nmb": 5
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 6,
+                                "x": 207763.14,
+                                "y": 157191.87,
+                                "ord_nmb": 6
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 7,
+                                "x": 207760.02,
+                                "y": 157208.74,
+                                "ord_nmb": 7
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 8,
+                                "x": 207745.97,
+                                "y": 157209.63,
+                                "ord_nmb": 8
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 9,
+                                "x": 207745.62,
+                                "y": 157209.65,
+                                "ord_nmb": 9
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 10,
+                                "x": 207684.19,
+                                "y": 157175.13,
+                                "ord_nmb": 10
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 11,
+                                "x": 207667.07,
+                                "y": 157171.46,
+                                "ord_nmb": 11
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 12,
+                                "x": 207684.55,
+                                "y": 157081.52,
+                                "ord_nmb": 12
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 13,
+                                "x": 207713.59,
+                                "y": 156956.85,
+                                "ord_nmb": 13
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 14,
+                                "x": 207757.56,
+                                "y": 156975.54,
+                                "ord_nmb": 14
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 15,
+                                "x": 207763.08,
+                                "y": 156977.89,
+                                "ord_nmb": 15
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 16,
+                                "x": 207770.34,
+                                "y": 156981.39,
+                                "ord_nmb": 16
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 17,
+                                "x": 207769.76,
+                                "y": 156982.61,
+                                "ord_nmb": 17
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 18,
+                                "x": 207804.17,
+                                "y": 156997.47,
+                                "ord_nmb": 18
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 19,
+                                "x": 207800.42,
+                                "y": 157002.59,
+                                "ord_nmb": 19
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 20,
+                                "x": 207780.69,
+                                "y": 157023.38,
+                                "ord_nmb": 20
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 21,
+                                "x": 207847.9,
+                                "y": 157088.86,
+                                "ord_nmb": 21
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 1,
+                                "x": 207880.58,
+                                "y": 157121.74,
+                                "ord_nmb": 22
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "ordinates": {
+                            "ordinate": [
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 22,
+                                "x": 207812.97,
+                                "y": 157055.87,
+                                "ord_nmb": 1
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 23,
+                                "x": 207788.18,
+                                "y": 157084.31,
+                                "ord_nmb": 2
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 24,
+                                "x": 207815.25,
+                                "y": 157108.1,
+                                "ord_nmb": 3
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 25,
+                                "x": 207746.16,
+                                "y": 157190.47,
+                                "ord_nmb": 4
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 26,
+                                "x": 207691.75,
+                                "y": 157145.73,
+                                "ord_nmb": 5
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 27,
+                                "x": 207681.75,
+                                "y": 157115.73,
+                                "ord_nmb": 6
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 28,
+                                "x": 207767.49,
+                                "y": 157015.72,
+                                "ord_nmb": 7
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 22,
+                                "x": 207812.97,
+                                "y": 157055.87,
+                                "ord_nmb": 8
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "address_location": {
+              "address": {
+                "readable_address": "Владимирская обл, район Кольчугинский, МО г. Кольчугино (городское поселение), г. Кольчугино, ул. Луговая, д. 13"
+              }
+            },
+            "params": {
+              "area": {
+                "value": 17474
+              },
+              "permitted_use": {
+                "permitted_use_established": {
+                  "by_document": "Для производственных целей"
+                }
+              },
+              "category": {
+                "type": {
+                  "code": "003002000000",
+                  "value": "Земли населенных пунктов"
+                }
+              }
+            },
+            "record_info": {
+              "registration_date": "2012-03-11T06:57:37+00:00"
+            },
+            "object": {
+              "common_data": {
+                "cad_number": "33:18:000604:566",
+                "quarter_cad_number": "33:18:000604",
+                "type": {
+                  "code": "002001001000",
+                  "value": "land_record"
+                }
+              },
+              "subtype": {
+                "code": "01",
+                "value": "Землепользование"
+              }
+            }
+          },
+          "details_request": {
+            "date_received_request": "2017-05-02",
+            "date_receipt_request_reg_authority_rights": "2017-05-02"
+          },
+          "status": "Сведения об объекте недвижимости имеют статус \"временные\""
+        }
+      },
+      "name": "egrn",
+      "senderCertificate": "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",
+      "mzStateHold": {
+        "internalId": "3afe291f-e4d3-494f-8402-255e912fdc11",
+        "messageId": "81d09f34-8f2f-11eb-a50f-37e509e73fc5",
+        "traceId": "71e12fa0-8f2f-11eb-93f3-46a07ba41c02",
+        "reqObjId": "3afe291f-e4d3-494f-8402-255e912fdc11",
+        "type": "Mz"
+      },
+      "originalMessageId": "81d09f34-8f2f-11eb-a50f-37e509e73fc5",
+      "class": "egrn",
+      "clazz": "Request@urn://x-artefacts-rosreestr-gov-ru/virtual-services/egrn-statement/1.1.2",
+      "status": "ok"
+    },
+    {
+      "id": "eecef408-c56a-4bcb-9a4d-a710158a1039",
+      "modified": 1616871996,
+      "schema": "InterDepReq",
+      "traceId": "71e12fa0-8f2f-11eb-93f3-46a07ba41c02",
+      "request": {
+        "otherOgrn": "1027200844868",
+        "requestDataType": "extractRealty",
+        "otherInn": "9204002877",
+        "otherKpp": "920401001",
+        "actualDataAgreement": {
+          "code": "01"
+        },
+        "recieveResultTypeCode": {
+          "code": "webService"
+        },
+        "otherRegDate": "1983-11-02",
+        "persDataProcessingAgreement": {
+          "code": "01"
+        },
+        "actionCode": {
+          "code": "659511111112"
+        },
+        "otherName": "Администрация города Канаш",
+        "region": "21",
+        "declarantKind": {
+          "code": "357013000000"
+        },
+        "object": {
+          "fs3RREGRNRequestObject": {
+            "objectTypeCode": {
+              "code": "002001009000"
+            },
+            "cadastralNumber": "34:34:3434343:433"
+          }
+        }
+      },
+      "personalCertificate": "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",
+      "documents": [
+        {
+          "fileName": "report_659511111111_23.xml",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report_659511111111_23.xml"
+        },
+        {
+          "fileName": "report.pdf",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report.pdf"
+        },
+        {
+          "fileName": "report 23 сценарий 659511111111.pdf",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report 23 сценарий 659511111111.pdf"
+        },
+        {
+          "fileName": "report 23 сценарий 659511111111.pdf.sig",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report 23 сценарий 659511111111.pdf.sig"
+        },
+        {
+          "fileName": "report.pdf.sig",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report.pdf.sig"
+        },
+        {
+          "fileName": "report_659511111111_23.xml.sig",
+          "url": "s3://mz-mock-adapter/mz-sitex/actionCode_659511111111_23/report_659511111111_23.xml.sig"
+        }
+      ],
+      "sendDate": "2021-03-27T22:06:08.693+0300",
+      "subject": "34:34:3434343:433",
+      "description": "Выписка из Единого государственного реестра недвижимости об объекте недвижимости",
+      "receiveDate": "2021-03-27T22:06:36.322+0300",
+      "requestName": "Прием обращений в ФГИС ЕГРН",
+      "_vertex_collection_traversal": "interdepreq",
+      "provider": "Росреестр",
+      "response": {
+        "extract_base_params_land": {
+          "restrict_records": {
+            "restrict_record": [
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "citizenship": {
+                            "person_citizenship_country": {
+                              "citizenship_country": {
+                                "code": 848000000643,
+                                "value": "Российская Федерация"
+                              }
+                            }
+                          },
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "05",
+                        "value": "Залогодержатель"
+                      }
+                    }
+                  }
+                },
+                "underlying_documents": {
+                  "underlying_document": {
+                    "document_name": "Договор аренды земельного участка",
+                    "document_number": "№ 81",
+                    "document_date": "2017-04-03",
+                    "document_code": {
+                      "code": 558401010209,
+                      "value": "Договор аренды (субаренды)"
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-04-14T10:44:47+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "period": {
+                    "period_info": {
+                      "end_date": "2019-04-14",
+                      "start_date": "2017-04-14"
+                    }
+                  },
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-40",
+                  "restriction_encumbrance_type": {
+                    "code": "022007000000",
+                    "value": "Ипотека"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "citizenship": {
+                            "person_citizenship_country": {
+                              "citizenship_country": {
+                                "code": 848000000643,
+                                "value": "Российская Федерация"
+                              }
+                            }
+                          },
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "05",
+                        "value": "Залогодержатель"
+                      }
+                    }
+                  }
+                },
+                "underlying_documents": {
+                  "underlying_document": {
+                    "document_name": "Договор аренды земельного участка",
+                    "document_number": "№ 81",
+                    "document_date": "2017-04-11",
+                    "document_code": {
+                      "code": 558401010209,
+                      "value": "Договор аренды (субаренды)"
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-04-14T10:32:07+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "period": {
+                    "period_info": {
+                      "end_date": "2020-04-27",
+                      "start_date": "2017-04-03"
+                    }
+                  },
+                  "restriction_encumbrance_number": "33:18:000604:566-77/048/2017-38",
+                  "restriction_encumbrance_type": {
+                    "code": "022007000000",
+                    "value": "Ипотека"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "citizenship": {
+                            "person_citizenship_country": {
+                              "citizenship_country": {
+                                "code": 848000000643,
+                                "value": "Российская Федерация"
+                              }
+                            }
+                          },
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "05",
+                        "value": "Залогодержатель"
+                      }
+                    }
+                  }
+                },
+                "underlying_documents": {
+                  "underlying_document": {
+                    "document_name": "Договор аренды земельного участка",
+                    "document_number": "№ 81",
+                    "document_date": "2017-04-12",
+                    "document_code": {
+                      "code": 558401010209,
+                      "value": "Договор аренды (субаренды)"
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-04-13T12:37:05+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-77/048/2017-36",
+                  "restriction_encumbrance_type": {
+                    "code": "022007000000",
+                    "value": "Ипотека"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-08",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-24",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-03-14T14:15:00+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-34",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-02-01T12:47:44+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-32",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              },
+              {
+                "record_info": {
+                  "registration_date": "2017-01-31T15:32:59+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-31"
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-01-27T12:14:23+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-29",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-01-27T10:00:08+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-27",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федерации"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Семенов",
+                          "birth_date": "2006-10-23",
+                          "name": "Семен",
+                          "birth_place": "Москва",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "Гражданин Российской Федерации"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "Арендатор"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-01-27T09:13:28+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-25",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "Аренда"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Семенович",
+                          "identity_doc": {
+                            "document_issuer": "УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЧЕРЕМУШКИ",
+                            "document_name": "Паспорт гражданина Российской Федерации",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "Паспорт гражданина Российской Федер°ÑÐ¸Ð¸"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Ð¡ÐµÐ¼ÐµÐ½Ð¾Ð²",
+                          "birth_date": "2006-10-23",
+                          "name": "Ð¡ÐµÐ¼ÐµÐ½",
+                          "birth_place": "ÐÐ¾ÑÐºÐ²Ð°",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "ÐÑÐ°Ð¶Ð´Ð°Ð½Ð¸Ð½ Ð Ð¾ÑÑÐ¸Ð¹ÑÐºÐ¾Ð¹ Ð¤ÐµÐ´ÐµÑÐ°ÑÐ¸Ð¸"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "ÐÑÐµÐ½Ð´Ð°ÑÐ¾Ñ"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-01-16T15:02:30+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-23",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "ÐÑÐµÐ½Ð´Ð°"
+                  }
+                }
+              },
+              {
+                "restrict_parties": {
+                  "restricted_rights_parties": {
+                    "restricted_rights_party": {
+                      "subject": {
+                        "individual": {
+                          "patronymic": "Ð¡ÐµÐ¼ÐµÐ½Ð¾Ð²Ð¸Ñ",
+                          "identity_doc": {
+                            "document_issuer": "Ð£Ð¤ÐÐ¡ Ð ÐÐ¡Ð¡ÐÐ ÐÐ ÐÐÐ . ÐÐÐ¡ÐÐÐ ÐÐ Ð ÐÐÐÐÐ£ Ð§ÐÐ ÐÐÐ£Ð¨ÐÐ",
+                            "document_name": "ÐÐ°ÑÐ¿Ð¾ÑÑ Ð³ÑÐ°Ð¶Ð´Ð°Ð½Ð¸Ð½Ð° Ð Ð¾ÑÑÐ¸Ð¹ÑÐºÐ¾Ð¹ Ð¤ÐµÐ´ÐµÑÐ°ÑÐ¸Ð¸",
+                            "document_number": 388423,
+                            "document_date": "2011-11-07",
+                            "document_code": {
+                              "code": "008001001000",
+                              "value": "ÐÐ°ÑÐ¿Ð¾ÑÑ Ð³ÑÐ°Ð¶Ð´Ð°Ð½Ð¸Ð½Ð° Ð Ð¾ÑÑÐ¸Ð¹ÑÐºÐ¾Ð¹ Ð¤ÐµÐ´ÐµÑÐ°ÑÐ¸Ð¸"
+                            },
+                            "document_series": 4511
+                          },
+                          "surname": "Ð¡ÐµÐ¼ÐµÐ½Ð¾Ð²",
+                          "birth_date": "2006-10-23",
+                          "name": "Ð¡ÐµÐ¼ÐµÐ½",
+                          "birth_place": "ÐÐ¾ÑÐºÐ²Ð°",
+                          "snils": "121-320-412 76",
+                          "individual_type": {
+                            "code": "007003001000",
+                            "value": "ÐÑÐ°Ð¶Ð´Ð°Ð½Ð¸Ð½ Ð Ð¾ÑÑÐ¸Ð¹ÑÐºÐ¾Ð¹ Ð¤ÐµÐ´ÐµÑÐ°ÑÐ¸Ð¸"
+                          }
+                        }
+                      },
+                      "type": {
+                        "code": "01",
+                        "value": "ÐÑÐµÐ½Ð´Ð°ÑÐ¾Ñ"
+                      }
+                    }
+                  }
+                },
+                "record_info": {
+                  "registration_date": "2017-01-16T08:51:04+00:00"
+                },
+                "restrictions_encumbrances_data": {
+                  "restriction_encumbrance_number": "33:18:000604:566-33/001/2017-21",
+                  "restriction_encumbrance_type": {
+                    "code": "022006000000",
+                    "value": "ÐÑÐµÐ½Ð´Ð°"
+                  }
+                }
+              }
+            ]
+          },
+          "recipient_statement": "Ð¡ÐµÐ¼ÐµÐ½Ð¾Ð² Ð¡ÐµÐ¼ÐµÐ½ Ð¡ÐµÐ¼ÐµÐ½Ð¾Ð²Ð¸Ñ",
+          "details_statement": {
+            "group_top_requisites": {
+              "registration_number": "ÐÐ£ÐÐ-004/2017-2018",
+              "date_formation": "2017-05-02",
+              "organ_registr_rights": "ÐÐ¾Ð»ÑÑÑÐ³Ð¸Ð½ÑÐºÐ¸Ð¹ Ð¾ÑÐ´ÐµÐ» Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ñ Ð Ð¾ÑÑÐµÐµÑÑÑÐ° Ð¿Ð¾ ÐÐ»Ð°Ð´Ð¸Ð¼Ð¸ÑÑÐºÐ¾Ð¹ Ð¾Ð±Ð»Ð°ÑÑÐ¸"
+            }
+          },
+          "land_record": {
+            "cost": {
+              "value": 21286127.84
+            },
+            "contours_location": {
+              "contours": {
+                "contour": {
+                  "entity_spatial": {
+                    "sk_id": "ÐÐ¡Ð-33",
+                    "spatials_elements": {
+                      "spatial_element": [
+                        {
+                          "ordinates": {
+                            "ordinate": [
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 1,
+                                "x": 207880.58,
+                                "y": 157121.74,
+                                "ord_nmb": 1
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 2,
+                                "x": 207831.6,
+                                "y": 157188.91,
+                                "ord_nmb": 2
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 3,
+                                "x": 207804.92,
+                                "y": 157164.58,
+                                "ord_nmb": 3
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 4,
+                                "x": 207794.48,
+                                "y": 157154.87,
+                                "ord_nmb": 4
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 5,
+                                "x": 207772.68,
+                                "y": 157173.87,
+                                "ord_nmb": 5
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 6,
+                                "x": 207763.14,
+                                "y": 157191.87,
+                                "ord_nmb": 6
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 7,
+                                "x": 207760.02,
+                                "y": 157208.74,
+                                "ord_nmb": 7
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 8,
+                                "x": 207745.97,
+                                "y": 157209.63,
+                                "ord_nmb": 8
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 9,
+                                "x": 207745.62,
+                                "y": 157209.65,
+                                "ord_nmb": 9
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 10,
+                                "x": 207684.19,
+                                "y": 157175.13,
+                                "ord_nmb": 10
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 11,
+                                "x": 207667.07,
+                                "y": 157171.46,
+                                "ord_nmb": 11
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 12,
+                                "x": 207684.55,
+                                "y": 157081.52,
+                                "ord_nmb": 12
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 13,
+                                "x": 207713.59,
+                                "y": 156956.85,
+                                "ord_nmb": 13
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 14,
+                                "x": 207757.56,
+                                "y": 156975.54,
+                                "ord_nmb": 14
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 15,
+                                "x": 207763.08,
+                                "y": 156977.89,
+                                "ord_nmb": 15
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 16,
+                                "x": 207770.34,
+                                "y": 156981.39,
+                                "ord_nmb": 16
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 17,
+                                "x": 207769.76,
+                                "y": 156982.61,
+                                "ord_nmb": 17
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 18,
+                                "x": 207804.17,
+                                "y": 156997.47,
+                                "ord_nmb": 18
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 19,
+                                "x": 207800.42,
+                                "y": 157002.59,
+                                "ord_nmb": 19
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 20,
+                                "x": 207780.69,
+                                "y": 157023.38,
+                                "ord_nmb": 20
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 21,
+                                "x": 207847.9,
+                                "y": 157088.86,
+                                "ord_nmb": 21
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 1,
+                                "x": 207880.58,
+                                "y": 157121.74,
+                                "ord_nmb": 22
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "ordinates": {
+                            "ordinate": [
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 22,
+                                "x": 207812.97,
+                                "y": 157055.87,
+                                "ord_nmb": 1
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 23,
+                                "x": 207788.18,
+                                "y": 157084.31,
+                                "ord_nmb": 2
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 24,
+                                "x": 207815.25,
+                                "y": 157108.1,
+                                "ord_nmb": 3
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 25,
+                                "x": 207746.16,
+                                "y": 157190.47,
+                                "ord_nmb": 4
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 26,
+                                "x": 207691.75,
+                                "y": 157145.73,
+                                "ord_nmb": 5
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 27,
+                                "x": 207681.75,
+                                "y": 157115.73,
+                                "ord_nmb": 6
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 28,
+                                "x": 207767.49,
+                                "y": 157015.72,
+                                "ord_nmb": 7
+                              },
+                              {
+                                "delta_geopoint": 0.1,
+                                "num_geopoint": 22,
+                                "x": 207812.97,
+                                "y": 157055.87,
+                                "ord_nmb": 8
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "address_location": {
+              "address": {
+                "readable_address": "ÐÐ»Ð°Ð´Ð¸Ð¼Ð¸ÑÑÐºÐ°Ñ Ð¾Ð±Ð», ÑÐ°Ð¹Ð¾Ð½ ÐÐ¾Ð»ÑÑÑÐ³Ð¸Ð½ÑÐºÐ¸Ð¹, ÐÐ Ð³. ÐÐ¾Ð»ÑÑÑÐ³Ð¸Ð½Ð¾ (Ð³Ð¾ÑÐ¾Ð´ÑÐºÐ¾Ðµ Ð¿Ð¾ÑÐµÐ»ÐµÐ½Ð¸Ðµ), Ð³. ÐÐ¾Ð»ÑÑÑÐ³Ð¸Ð½Ð¾, ÑÐ». ÐÑÐ³Ð¾Ð²Ð°Ñ, Ð´. 13"
+              }
+            },
+            "params": {
+              "area": {
+                "value": 17474
+              },
+              "permitted_use": {
+                "permitted_use_established": {
+                  "by_document": "ÐÐ»Ñ Ð¿ÑÐ¾Ð¸Ð·Ð²Ð¾Ð´ÑÑÐ²ÐµÐ½Ð½ÑÑ ÑÐµÐ»ÐµÐ¹"
+                }
+              },
+              "category": {
+                "type": {
+                  "code": "003002000000",
+                  "value": "ÐÐµÐ¼Ð»Ð¸ Ð½Ð°ÑÐµÐ»ÐµÐ½Ð½ÑÑ Ð¿ÑÐ½ÐºÑÐ¾Ð²"
+                }
+              }
+            },
+            "record_info": {
+              "registration_date": "2012-03-11T06:57:37+00:00"
+            },
+            "object": {
+              "common_data": {
+                "cad_number": "33:18:000604:566",
+                "quarter_cad_number": "33:18:000604",
+                "type": {
+                  "code": "002001001000",
+                  "value": "land_record"
+                }
+              },
+              "subtype": {
+                "code": "01",
+                "value": "ÐÐµÐ¼Ð»ÐµÐ¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°Ð½Ð¸Ðµ"
+              }
+            }
+          },
+          "details_request": {
+            "date_received_request": "2017-05-02",
+            "date_receipt_request_reg_authority_rights": "2017-05-02"
+          },
+          "status": "Ð¡Ð²ÐµÐ´ÐµÐ½Ð¸Ñ Ð¾Ð± Ð¾Ð±ÑÐµÐºÑÐµ Ð½ÐµÐ´Ð²Ð¸Ð¶Ð¸Ð¼Ð¾ÑÑÐ¸ Ð¸Ð¼ÐµÑÑ ÑÑÐ°ÑÑÑ \"Ð²ÑÐµÐ¼ÐµÐ½Ð½ÑÐµ\""
+        }
+      },
+      "name": "egrn",
+      "senderCertificate": "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",
+      "mzStateHold": {
+        "internalId": "eecef408-c56a-4bcb-9a4d-a710158a1039",
+        "messageId": "84fe1166-8f2f-11eb-a50f-3b02e1be243d",
+        "traceId": "71e12fa0-8f2f-11eb-93f3-46a07ba41c02",
+        "reqObjId": "eecef408-c56a-4bcb-9a4d-a710158a1039",
+        "type": "Mz"
+      },
+      "originalMessageId": "84fe1166-8f2f-11eb-a50f-3b02e1be243d",
+      "class": "egrn",
+      "clazz": "Request@urn://x-artefacts-rosreestr-gov-ru/virtual-services/egrn-statement/1.1.2",
+      "status": "ok"
+    }
+  ],
+  "representative": {
+    "category": 1,
+    "citizenship": "Ð ÐÐ¡Ð¡ÐÐ¯",
+    "documents": [
+      {
+        "number": 231232,
+        "series": 1231,
+        "name": "ÐÐ°ÑÐ¿Ð¾ÑÑ Ð Ð¤",
+        "issueIdCode": 112312,
+        "issueDate": "05.10.2020",
+        "type": "ÐÐ°ÑÐ¿Ð¾ÑÑ Ð Ð¤",
+        "issueOrg": "Ð£Ð¤ÐÐ¡ Ð¿Ð¾ ÑÐ°Ð¹Ð¾Ð½Ñ Ð¢Ð²Ð¸Ð½ ÐÐ¸ÐºÑ"
+      }
+    ],
+    "email": "tyu_yty@inbox.ru",
+    "firstName": "ÐÐ²Ð°Ð½",
+    "fullName": "ÐÐ²Ð°Ð½Ð¾Ð² ÐÐ²Ð°Ð½ ÐÐ²Ð°Ð½Ð¾Ð²Ð¸Ñ",
+    "lastName": "ÐÐ²Ð°Ð½Ð¾Ð²",
+    "middleName": "ÐÐ²Ð°Ð½Ð¾Ð²Ð¸Ñ",
+    "phone": "+7(916)3119400",
+    "snils": "000-000-600 22"
+  }
+}
