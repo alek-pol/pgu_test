@@ -2191,157 +2191,58 @@
     <bpmn:sequenceFlow id="Flow_04xpj2l" sourceRef="Activity_182w78d" targetRef="Activity_1cxomgz" />
     <bpmn:sequenceFlow id="Flow_0ipg3r3" sourceRef="Activity_1cxomgz" targetRef="Activity_0z773ji" />
     <bpmn:sequenceFlow id="Flow_1ji4q2i" sourceRef="StartEvent_1" targetRef="Activity_12ql9gq" />
-    <bpmn:scriptTask id="Activity_05p51uu" name="Кадастровые номера ЗУ" scriptFormat="groovy" camunda:resultVariable="landCadastralNumber">
-      <bpmn:incoming>Flow_127cppt</bpmn:incoming>
-      <bpmn:outgoing>Flow_0xd3b5d</bpmn:outgoing>
-      <bpmn:script>def normalize(numbers) {
-    if (!numbers) {
-        return [];
-    }
-
-    if (!(numbers instanceof java.util.List)) {
-        numbers = [numbers];
-    };
-
-    numbers.removeAll([null])
-    return numbers;
-};
-
-def takeData(data, results) {
-    results.cadastral += normalize(data?.landPlotCadastralNumber);
-};
-
-def base = application?.statement?.landPlot;
-
-def results = [cadastral: []];
-
-takeData(base?.divideLandPlot, results);
-takeData(base?.unitedLandPlot?.unitedLandPlotData, results);
-takeData(base?.selectedLandPlotInformation, results);
-takeData(base?.infoRepartitionLandPlot?.infoRepartitionLandPlotTypeData, results);
-takeData(base?.lackOfAddress, results);
-takeData(base?.bringingAddressAccordanceLayoutTerritory, results);
-
-return results.cadastral;</bpmn:script>
-    </bpmn:scriptTask>
-    <bpmn:scriptTask id="Activity_0vu6256" name="Кадастровый номер здания" scriptFormat="groovy" camunda:resultVariable="buildCadastralNumber">
-      <bpmn:incoming>Flow_0xd3b5d</bpmn:incoming>
-      <bpmn:outgoing>Flow_1meicf3</bpmn:outgoing>
-      <bpmn:script>def normalize(numbers) {
-    if (!numbers) {
-        return [];
-    }
-
-    if (!(numbers instanceof java.util.List)) {
-        numbers = [numbers];
-    };
-
-    numbers.removeAll([null])
-    return numbers;
-};
-
-def takeData(data, results) {
-    results.cadastral += normalize(data?.landPlotCadastralNumber);
-};
-
-def base = application?.statement?.unfinishedBuilding;
-
-def results = [
-        cadastral  : []
-];
-
-takeData(base?.objectInformation, results);
-takeData(base?.exploitationObjectInformation, results);
-takeData(base?.objectConstructionPermitIsNotRequired, results);
-takeData(base?.lackOfAddress, results);
-takeData(base?.addressMatching, results);
-
-return results.cadastral;</bpmn:script>
-    </bpmn:scriptTask>
     <bpmn:scriptTask id="Activity_1q61dd9" name="Кадастровый номер помещения" scriptFormat="groovy" camunda:resultVariable="roomCadastralNumber">
-      <bpmn:incoming>Flow_1meicf3</bpmn:incoming>
+      <bpmn:incoming>Flow_00ydqqh</bpmn:incoming>
       <bpmn:outgoing>Flow_1a8iofi</bpmn:outgoing>
-      <bpmn:script>def normalize(numbers) {
-    if (!numbers) {
-        return [];
-    }
-
-    if (!(numbers instanceof java.util.List)) {
-        numbers = [numbers];
-    };
-
-    numbers.removeAll([null])
+      <bpmn:script>def results = [ ];
+static def normalize(numbers) {
+    if (!numbers) return [];
+    if (!(numbers instanceof List)) numbers = [numbers];
+    numbers.removeAll([null]);
     return numbers;
 };
+def takeData = { data, CNKey -&gt; results += normalize(data?.get(CNKey)) };
 
-def takeData(data, results) {
-    results.cadastral += normalize(data?.premiseCadastralNumber);
-};
 
-def takeDataB(data, results) {
-    results.cadastral += normalize(data?.buildingCadastralNumber);
-};
-
-def takeDataL(data, results) {
-    results.cadastral += normalize(data?.landPlotCadastralNumber);
-};
-
+// Извлекаем КН Помещений - из раздела Помещений
 def base = application?.statement?.premise;
-
-def results = [
-        cadastral  : []
-];
-
-
-takeData(base?.premiseInformation, results);
-takeDataB(base?.buildingSection, results);
-takeData(base?.premiseSectionInformation?.premiseInformationOwn, results);
-takeData(base?.unitedPremiseInfo?.unitedPremiseInfoBlock, results);
-takeData(base?.reorganizationSpaceInformation, results);
-takeData(base?.lackOfAddress, results);
-takeDataL(base?.bringingAddressAccordance, results);
+takeData(base?.premiseInformation, "premiseCadastralNumber");
+//takeData(base?.buildingSection, "buildingCadastralNumber");
+takeData(base?.premiseSectionInformation?.premiseInformationOwn, "premiseCadastralNumber");
+takeData(base?.unitedPremiseInfo?.unitedPremiseInfoBlock, "premiseCadastralNumber");
+//takeData(base?.reorganizationSpaceInformation, "premiseCadastralNumber");
+takeData(base?.lackOfAddress, "premiseCadastralNumber");
+takeData(base?.bringingAddressAccordance, "landPlotCadastralNumber");
+// 2, 5 перенесены в Здания
 
 
-return results.cadastral;</bpmn:script>
+return results;</bpmn:script>
     </bpmn:scriptTask>
     <bpmn:scriptTask id="Activity_0wodb4p" name="Кадастровый номер машино-места" scriptFormat="groovy" camunda:resultVariable="parkCadastralNumber">
       <bpmn:incoming>Flow_1a8iofi</bpmn:incoming>
       <bpmn:outgoing>Flow_06a9sb8</bpmn:outgoing>
-      <bpmn:script>def normalize(numbers) {
-    if (!numbers) {
-        return [];
-    }
-
-    if (!(numbers instanceof java.util.List)) {
-        numbers = [numbers];
-    };
-
-    numbers.removeAll([null])
+      <bpmn:script>def results = [ ];
+static def normalize(numbers) {
+    if (!numbers) return [];
+    if (!(numbers instanceof List)) numbers = [numbers];
+    numbers.removeAll([null]);
     return numbers;
 };
+def takeData = { data, CNKey -&gt; results += normalize(data?.get(CNKey)) };
 
-def takeData(data, results) {
-    results.cadastral += normalize(data?.landPlotCadastralNumber);
-};
 
-def takeDataB(data, results) {
-    results.cadastral += normalize(data?.landPlotCadastralNumber);
-};
-
+// Извлекаем КН Парк.мест - из раздела Парк.мест
 def base = application?.statement?.parkingPlace;
+//takeData(base?.buildingSection, "landPlotCadastralNumber");
+takeData(base?.roomSection, "landPlotCadastralNumber");
+takeData(base?.consolidationOfPremises?.consolidationOfPremisesBlock, "landPlotCadastralNumber");
+//takeData(base?.redevelopmentOfCommonAreas, "landPlotCadastralNumber");
+takeData(base?.lackOfAddress, "landPlotCadastralNumber");
+takeData(base?.bringingAddressAccordanceProjectDocumentation, "landPlotCadastralNumber");
+// 1 - 4 перенесены в Здания
 
-def results = [
-        cadastral  : []
-];
 
-takeData(base?.buildingSection, results);
-takeData(base?.roomSection, results);
-takeData(base?.consolidationOfPremises?.consolidationOfPremisesBlock, results);
-takeData(base?.redevelopmentOfCommonAreas, results);
-takeDataB(base?.lackOfAddress, results);
-takeData(base?.bringingAddressAccordanceProjectDocumentation, results);
-
-return results.cadastral;</bpmn:script>
+return results;</bpmn:script>
     </bpmn:scriptTask>
     <bpmn:scriptTask id="Activity_07f3rxn" name="Формируем список кадастровых номеров субъектов" scriptFormat="groovy" camunda:resultVariable="cadastralNumbers">
       <bpmn:extensionElements>
@@ -2403,9 +2304,7 @@ result</bpmn:script>
       <bpmn:incoming>Flow_0ipg3r3</bpmn:incoming>
       <bpmn:outgoing>Flow_127cppt</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:sequenceFlow id="Flow_127cppt" sourceRef="Activity_0z773ji" targetRef="Activity_05p51uu" />
-    <bpmn:sequenceFlow id="Flow_0xd3b5d" sourceRef="Activity_05p51uu" targetRef="Activity_0vu6256" />
-    <bpmn:sequenceFlow id="Flow_1meicf3" sourceRef="Activity_0vu6256" targetRef="Activity_1q61dd9" />
+    <bpmn:sequenceFlow id="Flow_127cppt" sourceRef="Activity_0z773ji" targetRef="Activity_0agh06j" />
     <bpmn:sequenceFlow id="Flow_1a8iofi" sourceRef="Activity_1q61dd9" targetRef="Activity_0wodb4p" />
     <bpmn:sequenceFlow id="Flow_06a9sb8" sourceRef="Activity_0wodb4p" targetRef="Activity_07f3rxn" />
     <bpmn:subProcess id="Activity_0mshqb3">
@@ -2628,6 +2527,79 @@ return subjectName;</camunda:script>
         </camunda:inputOutput>
       </bpmn:extensionElements>
     </bpmn:serviceTask>
+    <bpmn:scriptTask id="Activity_063raup" name="Кадастровый номер здания" scriptFormat="groovy" camunda:resultVariable="buildCadastralNumber">
+      <bpmn:incoming>Flow_0ycr39n</bpmn:incoming>
+      <bpmn:outgoing>Flow_00ydqqh</bpmn:outgoing>
+      <bpmn:script>def results = [ ];
+static def normalize(numbers) {
+    if (!numbers) return [];
+    if (!(numbers instanceof List)) numbers = [numbers];
+    numbers.removeAll([null]);
+    return numbers;
+};
+def takeData = { data, CNKey -&gt; results += normalize(data?.get(CNKey)) };
+
+// Извлекаем КН Зданий - из раздела Зданий
+def base = application?.statement?.unfinishedBuilding;
+//takeData(base?.objectInformation, "landPlotCadastralNumber");
+//takeData(base?.exploitationObjectInformation, "landPlotCadastralNumber");
+//takeData(base?.objectConstructionPermitIsNotRequired, "landPlotCadastralNumber");
+//takeData(base?.lackOfAddress, "landPlotCadastralNumber");
+takeData(base?.addressMatching, "landPlotCadastralNumber");
+// 1 - 4 перенесены в ЗУ
+
+// Извлекаем КН Зданий - из раздела Помещений
+base = application?.statement?.premise;
+takeData(base?.buildingSection, "buildingCadastralNumber");
+takeData(base?.reorganizationSpaceInformation, "premiseCadastralNumber");
+
+// Извлекаем КН Зданий - из раздела Парк.мест
+base = application?.statement?.parkingPlace;
+takeData(base?.buildingSection, "landPlotCadastralNumber");
+takeData(base?.redevelopmentOfCommonAreas, "landPlotCadastralNumber");
+
+
+
+
+return results;
+</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:scriptTask id="Activity_0agh06j" name="Кадастровые номера ЗУ" scriptFormat="groovy" camunda:resultVariable="landCadastralNumber">
+      <bpmn:incoming>Flow_127cppt</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ycr39n</bpmn:outgoing>
+      <bpmn:script>def results = [ ];
+static def normalize(numbers) {
+    if (!numbers) return [];
+    if (!(numbers instanceof List)) numbers = [numbers];
+    numbers.removeAll([null]);
+    return numbers;
+};
+def takeData = { data, CNKey -&gt; results += normalize(data?.get(CNKey)) };
+
+
+// Извлекаем КН ЗУ - из раздела ЗУ
+def base = application?.statement?.landPlot;
+
+takeData(base?.divideLandPlot, "landPlotCadastralNumber");
+takeData(base?.unitedLandPlot?.unitedLandPlotData,  "landPlotCadastralNumber");
+takeData(base?.selectedLandPlotInformation, "landPlotCadastralNumber");
+takeData(base?.infoRepartitionLandPlot?.infoRepartitionLandPlotTypeData,  "landPlotCadastralNumber");
+takeData(base?.lackOfAddress, "landPlotCadastralNumber");
+takeData(base?.bringingAddressAccordanceLayoutTerritory, "landPlotCadastralNumber");
+
+
+// Извлекаем КН ЗУ - из раздела Зданий
+base = application?.statement?.unfinishedBuilding;
+
+takeData(base?.objectInformation, "landPlotCadastralNumber");
+takeData(base?.exploitationObjectInformation, "landPlotCadastralNumber");
+takeData(base?.objectConstructionPermitIsNotRequired, "landPlotCadastralNumber");
+takeData(base?.lackOfAddress, "landPlotCadastralNumber");
+
+return results;</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_0ycr39n" sourceRef="Activity_0agh06j" targetRef="Activity_063raup" />
+    <bpmn:sequenceFlow id="Flow_00ydqqh" sourceRef="Activity_063raup" targetRef="Activity_1q61dd9" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_17q248n">
@@ -2654,14 +2626,6 @@ return subjectName;</camunda:script>
       <bpmndi:BPMNEdge id="Flow_1a8iofi_di" bpmnElement="Flow_1a8iofi">
         <di:waypoint x="1510" y="240" />
         <di:waypoint x="1550" y="240" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1meicf3_di" bpmnElement="Flow_1meicf3">
-        <di:waypoint x="1370" y="240" />
-        <di:waypoint x="1410" y="240" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0xd3b5d_di" bpmnElement="Flow_0xd3b5d">
-        <di:waypoint x="1230" y="240" />
-        <di:waypoint x="1270" y="240" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_127cppt_di" bpmnElement="Flow_127cppt">
         <di:waypoint x="1090" y="240" />
@@ -2691,6 +2655,14 @@ return subjectName;</camunda:script>
         <di:waypoint x="319" y="240" />
         <di:waypoint x="359" y="240" />
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ycr39n_di" bpmnElement="Flow_0ycr39n">
+        <di:waypoint x="1230" y="240" />
+        <di:waypoint x="1270" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_00ydqqh_di" bpmnElement="Flow_00ydqqh">
+        <di:waypoint x="1370" y="240" />
+        <di:waypoint x="1410" y="240" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
         <dc:Bounds x="152" y="222" width="36" height="36" />
       </bpmndi:BPMNShape>
@@ -2712,12 +2684,6 @@ return subjectName;</camunda:script>
       <bpmndi:BPMNShape id="Activity_1cxomgz_di" bpmnElement="Activity_1cxomgz" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
         <dc:Bounds x="649" y="200" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_05p51uu_di" bpmnElement="Activity_05p51uu" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
-        <dc:Bounds x="1130" y="200" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0vu6256_di" bpmnElement="Activity_0vu6256" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
-        <dc:Bounds x="1270" y="200" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1q61dd9_di" bpmnElement="Activity_1q61dd9" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
         <dc:Bounds x="1410" y="200" width="100" height="80" />
       </bpmndi:BPMNShape>
@@ -2730,8 +2696,11 @@ return subjectName;</camunda:script>
       <bpmndi:BPMNShape id="Activity_0z773ji_di" bpmnElement="Activity_0z773ji" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
         <dc:Bounds x="990" y="200" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1g9hx2n_di" bpmnElement="Activity_1g9hx2n" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
-        <dc:Bounds x="2640" y="630" width="100" height="80" />
+      <bpmndi:BPMNShape id="Activity_0agh06j_di" bpmnElement="Activity_0agh06j" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="1130" y="200" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_063raup_di" bpmnElement="Activity_063raup" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="1270" y="200" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0mshqb3_di" bpmnElement="Activity_0mshqb3" isExpanded="true">
         <dc:Bounds x="2080" y="85" width="1290" height="310" />
@@ -2816,6 +2785,9 @@ return subjectName;</camunda:script>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_12rc2lk_di" bpmnElement="Activity_12rc2lk">
         <dc:Bounds x="2860" y="510" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1g9hx2n_di" bpmnElement="Activity_1g9hx2n" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <dc:Bounds x="2640" y="630" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

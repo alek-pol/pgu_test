@@ -8,34 +8,39 @@ def application = new JsonSlurper().parseText(inputFile.text)
 // begin import to bpmn
 
 static def normalize(numbers) {
-    if (!numbers) {
-        return []
-    }
-
-    if (!(numbers instanceof java.util.List)) {
-        numbers = [numbers]
-    }
-
-    numbers.removeAll([null])
-    return numbers
+    if (!numbers) return [];
+    if (!(numbers instanceof List)) numbers = [numbers];
+    numbers.removeAll([null]);
+    return numbers;
 };
 
-static def takeData(data, results) {
-    results.cadastral += normalize(data?.landPlotCadastralNumber)
-};
+//def results = [cadastral: []]
 
+//static def takeData(data, CNKey, results) {
+//    results.cadastral += normalize(data?[CNKey])
+//};
+
+def cadastral = []
+// извлекаем КН Зем.Уч. из раздела ЗУ
 def base = application?.statement?.landPlot
+//takeData(base?.divideLandPlot, "landPlotCadastralNumber", results)
+//takeData(base?.unitedLandPlot?.unitedLandPlotData, "landPlotCadastralNumber", results)
+//takeData(base?.selectedLandPlotInformation, "landPlotCadastralNumber", results)
+//takeData(base?.infoRepartitionLandPlot?.infoRepartitionLandPlotTypeData, "landPlotCadastralNumber", results)
+//takeData(base?.lackOfAddress, "landPlotCadastralNumber", results)
+//takeData(base?.bringingAddressAccordanceLayoutTerritory, "landPlotCadastralNumber", results)
 
-def results = [cadastral: []]
+def take = { data, CNKey ->
+    cadastral += normalize(data?[CNKey])
+};
 
-takeData(base?.divideLandPlot, results)
-takeData(base?.unitedLandPlot?.unitedLandPlotData, results)
-takeData(base?.selectedLandPlotInformation, results)
-takeData(base?.infoRepartitionLandPlot?.infoRepartitionLandPlotTypeData, results)
-takeData(base?.lackOfAddress, results)
-takeData(base?.bringingAddressAccordanceLayoutTerritory, results)
+
+take(base?.lackOfAddress, "landPlotCadastralNumber")
+
+
+//def results = [cadastral: []]
 
 // return results.cadastral;
 
 // end import to bpmn
-println results.cadastral
+println cadastral
